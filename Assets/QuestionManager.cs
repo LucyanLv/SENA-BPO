@@ -29,6 +29,7 @@ public class QuestionManager : MonoBehaviour
     {
         if (other.CompareTag("Player") && !hasEncounteredObject)
         {
+            Debug.Log("coli");
             hasEncounteredObject = true;
             panel.SetActive(true);
         }
