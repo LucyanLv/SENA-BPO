@@ -9,78 +9,99 @@ public class QuestionManager : MonoBehaviour
     public Text questionText;
     public Button[] answerButtons;
 
-    private bool hasEncounteredObject = false;
+    private bool isActive = false;
+    private bool hasAnswered = false;
 
-    private string[] questions = { "¿Cuál es la capital de Francia?", "¿En qué año comenzó la Segunda Guerra Mundial?", "¿Cuántos planetas hay en nuestro sistema solar?" };
-    private string[][] answers = {
-        new string[] { "Madrid", "París", "Berlín", "Londres" },
-        new string[] { "1939", "1945", "1942", "1918" },
-        new string[] { "7", "8", "9", "10" }
-    };
-    private int currentQuestionIndex = 0;
+    public float reactivationDelay = 5f; // Delay before reactivating the panel
+
+    public BaseDatos questionDatabase; // Reference to the Question Database scriptable object
 
     private void Start()
     {
         panel.SetActive(false);
-        DisplayQuestion();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player") && !hasEncounteredObject)
+        if (other.CompareTag("Player") && !isActive)
         {
-            Debug.Log("coli");
-            hasEncounteredObject = true;
+            Debug.Log("Entered Trigger Zone");
+            isActive = true;
             panel.SetActive(true);
+            LoadNextQuestion();
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player") && isActive)
+        {
+            isActive = false;
+            panel.SetActive(false);
         }
     }
 
     public void OnAnswerSelected(int answerIndex)
     {
-        if (currentQuestionIndex < questions.Length)
+        if (!hasAnswered)
         {
+            hasAnswered = true;
             CheckAnswer(answerIndex);
-            currentQuestionIndex++;
-            DisplayQuestion();
+            StartCoroutine(ReactivatePanel());
         }
-        else
-        {
-            Debug.Log("No more questions!");
-           
-        }
+    }
+
+    private IEnumerator ReactivatePanel()
+    {
+        yield return new WaitForSeconds(reactivationDelay);
+        isActive = false;
+        hasAnswered = false;
+        panel.SetActive(false);
     }
 
     private void CheckAnswer(int answerIndex)
     {
-        string correctAnswer = answers[currentQuestionIndex][0];
-        string selectedAnswer = answers[currentQuestionIndex][answerIndex];
+        int correctAnswerIndex = questionDatabase.CurrentQuestion.CorrectAnswer;
 
-        if (selectedAnswer == correctAnswer)
+        if (answerIndex == correctAnswerIndex)
         {
-            Debug.Log("¡Respuesta correcta!");
-     
+            Debug.Log("Correct Answer!");
         }
         else
         {
-            Debug.Log("Respuesta incorrecta");
-       
+            Debug.Log("Incorrect Answer");
         }
     }
 
-    private void DisplayQuestion()
+    private void LoadNextQuestion()
     {
-        if (currentQuestionIndex < questions.Length)
+        questionDatabase.MoveToNextQuestion(); // Move to the next question
+
+        QuestionStruct currentQuestion = questionDatabase.CurrentQuestion;
+
+        if (currentQuestion != null)
         {
-            questionText.text = questions[currentQuestionIndex];
+            questionText.text = currentQuestion.Question;
+            List<string> answers = currentQuestion.Answers;
+
             for (int i = 0; i < answerButtons.Length; i++)
             {
-                answerButtons[i].GetComponentInChildren<Text>().text = answers[currentQuestionIndex][i];
+                // Assign the option of response to the button text
+                Text buttonText = answerButtons[i].GetComponentInChildren<Text>();
+                if (buttonText != null && i < answers.Count)
+                {
+                    buttonText.text = answers[i];
+                }
+                else
+                {
+                    Debug.LogWarning("Text component not found in button " + i);
+                }
             }
         }
         else
         {
             Debug.Log("No more questions!");
-         
+            panel.SetActive(false); // Deactivate the panel when all questions are answered
         }
     }
 }

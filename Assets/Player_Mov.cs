@@ -9,39 +9,55 @@ public class Player_Mov : MonoBehaviour
     [Header("PC")]
 
     public float speedPC;
-    public float desx, desy;
-    private Vector2 direccionMov;
+    // public float desx, desy;
+    private Vector2 input;
+   // private Vector2 direccionMov;
+    private bool IsMoving;
+    private Animator animator;
     public void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-
+        animator = GetComponent<Animator>();
     }
     public void Update()
-    { 
-        
-          
-    }
-
-    private void FixedUpdate()
     {
-        movementCapture();
-        movement();
-        
-    }
+        if (!IsMoving)
+        {
+            input.x = Input.GetAxisRaw("Horizontal");
+            input.y = Input.GetAxisRaw("Vertical");
+            if (input.x != 0) input.y = 0;
+            if (input != Vector2.zero)
+            {
+                animator.SetFloat("Movex", input.x);
+                animator.SetFloat("Movey", input.y);
+                var targetpos = transform.position;
+                targetpos.x += input.x;
+                targetpos.y += input.y;
 
+                StartCoroutine(Move(targetpos));
+
+
+            }
+        }
+        animator.SetBool("IsMoving", IsMoving);
+
+    }
+    IEnumerator Move(Vector3 targetpos)
+    {
+        IsMoving = true;
+        while((targetpos - transform.position).sqrMagnitude> Mathf.Epsilon)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, targetpos, speedPC * Time.deltaTime);
+            yield return null;
+        }
+        transform.position = targetpos;
+        IsMoving = false;
+    }
+   
     //PC
-    void movementCapture()
-    {
-        desx = Input.GetAxisRaw("Horizontal");
-        desy = Input.GetAxisRaw("Vertical");
-        direccionMov = new Vector2(desx, desy);
-    }
+   
 
-    void movement()
-    {
-        rb.velocity = new Vector2(x: direccionMov.x * speedPC, y: direccionMov.y * speedPC) * Time.deltaTime;
-    }
-
+   
 }
 
 

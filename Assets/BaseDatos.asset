@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 766b5dfeed8e222449a7a1a94562e6d7, type: 3}
+  m_Name: BaseDatos
+  m_EditorClassIdentifier: 
+  questions:
+  - question: "\xBFQu\xE9 significa el t\xE9rmino \"IVR\" en un call center?"
+    answers:
+    - "a) Interacci\xF3n Virtual R\xE1pida"
+    - 'b) Indicador de Volumen de Respuestas '
+    - c) Respuesta Vocal Interactiva
+    - d) Informe de Ventas Relevantes
+    correctAnswer: 0
+  - question: "\xBFCu\xE1l de las siguientes opciones es una t\xE9cnica eficaz para
+      manejar a un cliente enojado?"
+    answers:
+    - "a) Ignorar sus quejas y continuar con la soluci\xF3n."
+    - "b) Mostrar empat\xEDa y escuchar activamente sus preocupaciones."
+    - c) Decirle que no hay nada que puedas hacer para ayudar.
+    - d) nose
+    correctAnswer: 0
+  - question: "En un contexto de call center, \xBFqu\xE9 significa el acr\xF3nimo
+      \"SLA\"?"
+    answers:
+    - a) Servicio de Llamada Automatizada
+    - "b) Seguridad y Liderazgo en Atenci\xF3n"
+    - c) Acuerdo de Nivel de Servicio
+    - "d) Soporte L\xF3gico Avanzado"
+    correctAnswer: 0
+  - question: "\xBFQu\xE9 debe hacer un agente de call center si no puede resolver
+      el problema de un cliente de inmediato?"
+    answers:
+    - "a) Cerrar la llamada y dejar que el cliente lo resuelva por s\xED mismo."
+    - b) Transferir la llamada a otro agente sin informar al cliente.
+    - "c) Proporcionar una soluci\xF3n temporal y luego seguir investigando"
+    - "d) Decir al cliente que llame de nuevo m\xE1s tarde."
+    correctAnswer: 0
+  - question: "\xBFCu\xE1l de las siguientes opciones es un ejemplo de un indicador
+      clave de rendimiento (KPI) com\xFAnmente utilizado en un call center?"
+    answers:
+    - a) Temperatura de la sala de descanso
+    - "b) Velocidad del viento en la ubicaci\xF3n del centro"
+    - c) Tiempo promedio de espera en la fila
+    - "d) Tama\xF1o de la pantalla del monitor"
+    correctAnswer: 0
+  - question: "\xBFQu\xE9 es el \"cross-selling\" en un contexto de call center?"
+    answers:
+    - a) Transferir llamadas entre diferentes departamentos.
+    - b) Vender productos o servicios adicionales al cliente durante la llamada.
+    - "c) Proporcionar informaci\xF3n sobre la pol\xEDtica de devoluciones."
+    - "d) Resolver problemas t\xE9cnicos en los dispositivos del cliente."
+    correctAnswer: 0
+  questionsShowed: 050000000400000001000000080000000600000005000000
