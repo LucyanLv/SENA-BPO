@@ -17,8 +17,8 @@ MonoBehaviour:
     answers:
     - "a) Interacci\xF3n Virtual R\xE1pida"
     - 'b) Indicador de Volumen de Respuestas '
-    - c) Respuesta Vocal Interactiva
-    - d) Informe de Ventas Relevantes
+    - c)  Informe de Ventas Relevantes
+    - d)Respuesta Vocal Interactiva
     correctAnswer: 0
   - question: "\xBFCu\xE1l de las siguientes opciones es una t\xE9cnica eficaz para
       manejar a un cliente enojado?"
@@ -26,7 +26,7 @@ MonoBehaviour:
     - "a) Ignorar sus quejas y continuar con la soluci\xF3n."
     - "b) Mostrar empat\xEDa y escuchar activamente sus preocupaciones."
     - c) Decirle que no hay nada que puedas hacer para ayudar.
-    - d) nose
+    - "d) Pedirle que env\xEDe un correo electr\xF3nico en lugar de hablar por tel\xE9fono."
     correctAnswer: 0
   - question: "En un contexto de call center, \xBFqu\xE9 significa el acr\xF3nimo
       \"SLA\"?"
@@ -59,4 +59,39 @@ MonoBehaviour:
     - "c) Proporcionar informaci\xF3n sobre la pol\xEDtica de devoluciones."
     - "d) Resolver problemas t\xE9cnicos en los dispositivos del cliente."
     correctAnswer: 0
-  questionsShowed: 050000000400000001000000080000000600000005000000
+  - question: "\xBFCu\xE1l es el prop\xF3sito principal de un guion de llamadas en
+      un call center?"
+    answers:
+    - "a) Limitar la conversaci\xF3n con el cliente."
+    - "b) Asegurarse de que los agentes no se desv\xEDen del tema."
+    - "c) Proporcionar una estructura para la conversaci\xF3n y ayudar al agente
+      a guiar al cliente."
+    - "d) Hacer que las llamadas sean m\xE1s largas para cumplir con los objetivos
+      de tiempo."
+    correctAnswer: 0
+  - question: "\xBFQu\xE9 significa el t\xE9rmino \"tiempo de espera\" en un call
+      center?"
+    answers:
+    - a) El tiempo que un agente pasa en pausa durante una llamada.
+    - "b) El tiempo que un cliente est\xE1 dispuesto a esperar en la l\xEDnea."
+    - c) El tiempo que un agente dedica a hablar con un cliente.
+    - d) El tiempo que se necesita para resolver un problema del cliente.
+    correctAnswer: 0
+  - question: "\xBFCu\xE1l es el prop\xF3sito de un ACD en un call center?"
+    answers:
+    - a) Control de Acceso al Directorio
+    - "b) Distribuci\xF3n Autom\xE1tica de Llamadas"
+    - "c) Conexi\xF3n de Audio Directo"
+    - "d) An\xE1lisis de Comunicaci\xF3n de Datos"
+    correctAnswer: 0
+  - question: "\xBFQu\xE9 es un \"CRM\" y c\xF3mo se utiliza en un call center?"
+    answers:
+    - "a) Control de Respuesta M\xFAltiple, utilizado para manejar m\xFAltiples llamadas
+      simult\xE1neas."
+    - "b) Comunicaci\xF3n y Registro de Mensajes, utilizado para enviar mensajes
+      a los clientes."
+    - "c) Gesti\xF3n de Relaciones con el Cliente, utilizado para mantener registros
+      de interacciones y detalles de clientes."
+    - "d) Central de Respuesta Moderna, utilizado para proporcionar respuestas autom\xE1ticas
+      a los clientes."
+    correctAnswer: 0
