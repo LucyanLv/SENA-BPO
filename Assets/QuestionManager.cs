@@ -91,10 +91,11 @@ public class QuestionManager : MonoBehaviour
                 if (buttonText != null && i < answers.Count)
                 {
                     buttonText.text = answers[i];
+                    answerButtons[i].gameObject.SetActive(true);
                 }
                 else
                 {
-                    Debug.LogWarning("Text component not found in button " + i);
+                    answerButtons[i].gameObject.SetActive(false);
                 }
             }
         }

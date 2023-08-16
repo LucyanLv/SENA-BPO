@@ -6,8 +6,6 @@ using UnityEngine;
 public class BaseDatos : ScriptableObject
 {
     [SerializeField] List<QuestionStruct> questions = new List<QuestionStruct>();
-    [SerializeField] List<int> questionsShowed = new List<int>();
-
     [NonSerialized] private int currentQuestionIndex = 0;
 
     public QuestionStruct CurrentQuestion
@@ -22,7 +20,6 @@ public class BaseDatos : ScriptableObject
     }
 
     public List<QuestionStruct> Questions { get => questions; set => questions = value; }
-    public List<int> QuestionsShowed { get => questionsShowed; set => questionsShowed = value; }
 
     public void MoveToNextQuestion()
     {
