@@ -10,7 +10,7 @@ public class QuizController : MonoBehaviour
     public float timeBetweenPrints = 7.0f;
     public List<Question> questions = new List<Question>();
 
-    private Question lastPrinted = null; // Guarda la última cadena impresa
+    private Question lastPrinted = null; 
 
     public TextMeshProUGUI questionText;
     public TextMeshProUGUI[] answerTexts;
@@ -37,8 +37,9 @@ public class QuizController : MonoBehaviour
 
                 for (int i = 0; i < randomQuestion.answerOptions.Count; i++)
                 {
-                    option++;
+                   
                     answerTexts[i].text = option + " " + randomQuestion.answerOptions[i].answerText;
+                    option++;
                 }
 
                 lastPrinted = randomQuestion;
