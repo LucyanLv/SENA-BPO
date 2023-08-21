@@ -14,6 +14,9 @@ public class Player_Mov : MonoBehaviour
    // private Vector2 direccionMov;
     private bool IsMoving;
     private Animator animator;
+
+    public Vector3 targetpos;
+
     public void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -30,7 +33,7 @@ public class Player_Mov : MonoBehaviour
             {
                 animator.SetFloat("Movex", input.x);
                 animator.SetFloat("Movey", input.y);
-                var targetpos = transform.position;
+                targetpos = transform.position;
                 targetpos.x += input.x;
                 targetpos.y += input.y;
 
@@ -53,11 +56,25 @@ public class Player_Mov : MonoBehaviour
         transform.position = targetpos;
         IsMoving = false;
     }
-   
-    //PC
-   
 
-   
+    //PC
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log("uwu colision");
+        targetpos = transform.position;
+        StopCoroutine(Move(transform.position));
+        IsMoving =false;
+
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("uwu colision");
+        StopCoroutine(Move(transform.position));
+        targetpos = transform.position;
+        IsMoving = false;
+    }
 }
 
 
