@@ -12,9 +12,11 @@ public class QuestionManager : MonoBehaviour
     private bool isActive = false;
     private bool hasAnswered = false;
 
-    public float reactivationDelay = 5f; // Delay before reactivating the panel
+    public float reactivationDelay = 5f; 
 
-    public BaseDatos questionDatabase; // Reference to the Question Database scriptable object
+    public BaseDatos questionDatabase; 
+
+    
 
     private void Start()
     {
@@ -70,12 +72,13 @@ public class QuestionManager : MonoBehaviour
         else
         {
             Debug.Log("Incorrect Answer");
+            FindObjectOfType<Energia_player>().DecreaseEnergy(1); 
         }
     }
 
     private void LoadNextQuestion()
     {
-        questionDatabase.MoveToNextQuestion(); // Move to the next question
+        questionDatabase.MoveToNextQuestion(); 
 
         QuestionStruct currentQuestion = questionDatabase.CurrentQuestion;
 
@@ -86,7 +89,7 @@ public class QuestionManager : MonoBehaviour
 
             for (int i = 0; i < answerButtons.Length; i++)
             {
-                // Assign the option of response to the button text
+                
                 Text buttonText = answerButtons[i].GetComponentInChildren<Text>();
                 if (buttonText != null && i < answers.Count)
                 {
@@ -102,7 +105,7 @@ public class QuestionManager : MonoBehaviour
         else
         {
             Debug.Log("No more questions!");
-            panel.SetActive(false); // Deactivate the panel when all questions are answered
+            panel.SetActive(false); 
         }
     }
 }
