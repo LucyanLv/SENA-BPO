@@ -11,11 +11,12 @@ public class Player_Mov : MonoBehaviour
     public float speedPC;
     // public float desx, desy;
     private Vector2 input;
-   // private Vector2 direccionMov;
+    // private Vector2 direccionMov;
     private bool IsMoving;
     private Animator animator;
+    [SerializeField]
+    public bool canMove = true;
 
-    public Vector3 targetpos;
 
     public void Start()
     {
@@ -24,28 +25,28 @@ public class Player_Mov : MonoBehaviour
     }
     public void Update()
     {
-        if (!IsMoving)
+
+        input.x = Input.GetAxis("Horizontal");
+        input.y = Input.GetAxis("Vertical");
+
+
+        if (input != Vector2.zero && canMove)
         {
-            input.x = Input.GetAxisRaw("Horizontal");
-            input.y = Input.GetAxisRaw("Vertical");
-            if (input.x != 0) input.y = 0;
-            if (input != Vector2.zero)
-            {
-                animator.SetFloat("Movex", input.x);
-                animator.SetFloat("Movey", input.y);
-                targetpos = transform.position;
-                targetpos.x += input.x;
-                targetpos.y += input.y;
-
-                StartCoroutine(Move(targetpos));
-
-
-            }
+            animator.SetFloat("Movex", input.x);
+            animator.SetFloat("Movey", input.y);
+            IsMoving = true;
+            rb.velocity = new Vector2(input.x * speedPC, input.y * speedPC);
         }
+        else
+        {
+            rb.velocity = Vector2.zero;
+            IsMoving = false;
+        }
+
         animator.SetBool("IsMoving", IsMoving);
 
     }
-    IEnumerator Move(Vector3 targetpos)
+    /*IEnumerator Move(Vector3 targetpos)
     {
         IsMoving = true;
         while((targetpos - transform.position).sqrMagnitude> Mathf.Epsilon)
@@ -55,26 +56,10 @@ public class Player_Mov : MonoBehaviour
         }
         transform.position = targetpos;
         IsMoving = false;
-    }
+    }*/
 
     //PC
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        Debug.Log("uwu colision");
-        targetpos = transform.position;
-        StopCoroutine(Move(transform.position));
-        IsMoving =false;
-
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        Debug.Log("uwu colision");
-        StopCoroutine(Move(transform.position));
-        targetpos = transform.position;
-        IsMoving = false;
-    }
 }
 
 
