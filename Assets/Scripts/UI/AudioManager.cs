@@ -6,7 +6,7 @@ using UnityEngine.UI;
 using UnityEngine.UIElements;
 using Image = UnityEngine.UI.Image;
 
-public class AudioManager : MonoBehaviour
+public class SoundManager : MonoBehaviour
 {
     public static bool sound = true;
     public Sprite soundOn;
