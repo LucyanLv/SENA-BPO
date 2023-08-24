@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{d41655db-afb4-47dd-950f-86dc1ecf7120}">
 		<property name="name">
-			<value>clickSelect</value>
+			<value>mouseClick</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>
@@ -84,7 +84,7 @@
 	</object>
 	<object class="MultiSound" id="{afc4b5f1-229f-4e2a-b064-de3f2d2f47af}">
 		<relationship name="sounds">
-			<destination>{3dda1e76-09c8-4881-b769-202a21852a35}</destination>
+			<destination>{d7a38105-6d73-4a1e-b89b-492d7dae47c5}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{f8a43bd5-fd66-4c52-b235-1ecc336d2015}">
@@ -99,9 +99,9 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{03acf8f3-b4c1-4f06-96c5-36e079a8fdd6}" />
-	<object class="SingleSound" id="{3dda1e76-09c8-4881-b769-202a21852a35}">
+	<object class="SingleSound" id="{d7a38105-6d73-4a1e-b89b-492d7dae47c5}">
 		<relationship name="audioFile">
-			<destination>{27829ae0-31a0-4d40-aecf-a16c93db93ba}</destination>
+			<destination>{7cce8a81-f8f3-4035-93ca-c627ef7d6d07}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{52ffcb58-f7fc-418c-a8df-c1386a3ae56e}" />
