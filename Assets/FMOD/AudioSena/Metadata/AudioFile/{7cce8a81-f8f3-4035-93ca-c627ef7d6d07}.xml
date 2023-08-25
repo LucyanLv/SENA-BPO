@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="AudioFile" id="{27829ae0-31a0-4d40-aecf-a16c93db93ba}">
+	<object class="AudioFile" id="{7cce8a81-f8f3-4035-93ca-c627ef7d6d07}">
 		<property name="assetPath">
-			<value>Choose1.wav</value>
+			<value>Choose2.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>
@@ -11,7 +11,7 @@
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>0.5</value>
+			<value>0.065532879818594097</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{17428460-e97f-4c6c-80d8-c9513ef7eb11}</destination>
