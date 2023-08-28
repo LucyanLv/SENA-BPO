@@ -42,7 +42,7 @@ MonoBehaviour:
   Path: Assets/FMOD/AudioSena/Build/Desktop/Character.bank
   Name: Character
   StudioPath: bank:/Character
-  lastModified: 638283435056457510
+  lastModified: 638288323544620576
   FileSizes:
   - Name: Desktop
     Value: 9280
@@ -62,7 +62,7 @@ MonoBehaviour:
   Path: Assets/FMOD/AudioSena/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638284796689667475
+  lastModified: 638288323544640591
   FileSizes:
   - Name: Desktop
     Value: 1096
@@ -82,7 +82,7 @@ MonoBehaviour:
   Path: Assets/FMOD/AudioSena/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638284796689632889
+  lastModified: 638288323544630575
   FileSizes:
   - Name: Desktop
     Value: 1036
@@ -107,68 +107,16 @@ MonoBehaviour:
   - {fileID: 3039642076170059710}
   EditorEvents:
   - {fileID: -8046343672312100724}
-  - {fileID: 2683181232952450702}
   - {fileID: 8916627231506953682}
   - {fileID: 5914997006272505797}
+  - {fileID: 6782476630736456360}
   EditorParameters: []
   MasterBanks:
   - {fileID: -2907690379013984242}
   StringsBanks:
   - {fileID: -3061600195291323152}
-  cacheTime: 638284796689667475
+  cacheTime: 638288323544699207
   cacheVersion: 131605
---- !u!114 &472925830430161348
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Music/whereIsTheMusic
-  m_EditorClassIdentifier: 
-  Name: whereIsTheMusic
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 3599623941
-    data2: 363300602
-  Type: 1
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &2683181232952450702
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music
-  m_EditorClassIdentifier: 
-  Path: event:/Music
-  Guid:
-    Data1: 762157425
-    Data2: 1074627542
-    Data3: -756808265
-    Data4: -354436332
-  Banks:
-  - {fileID: 3039642076170059710}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: 472925830430161348}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 106000
 --- !u!114 &3039642076170059710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -184,7 +132,7 @@ MonoBehaviour:
   Path: Assets/FMOD/AudioSena/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638284747585110447
+  lastModified: 638288323544699207
   FileSizes:
   - Name: Desktop
     Value: 918208
@@ -216,6 +164,58 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &6782476630736456360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/music
+  m_EditorClassIdentifier: 
+  Path: event:/music
+  Guid:
+    Data1: 762157425
+    Data2: 1074627542
+    Data3: -756808265
+    Data4: -354436332
+  Banks:
+  - {fileID: 3039642076170059710}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 7554483865076336130}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 106000
+--- !u!114 &7554483865076336130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/music/whereIsTheMusic
+  m_EditorClassIdentifier: 
+  Name: whereIsTheMusic
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3599623941
+    data2: 363300602
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &8733841925986152505
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -231,7 +231,7 @@ MonoBehaviour:
   Path: Assets/FMOD/AudioSena/Build/Desktop/FX.bank
   Name: FX
   StudioPath: bank:/FX
-  lastModified: 638284796689492465
+  lastModified: 638288323544630575
   FileSizes:
   - Name: Desktop
     Value: 4832
