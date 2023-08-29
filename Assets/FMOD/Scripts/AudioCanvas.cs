@@ -6,17 +6,17 @@ using UnityEngine.EventSystems;
 
 public class AudioCanvas : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    [SerializeField] EventReference mouseClick;
-
-    [SerializeField] EventReference mouseEnter;
+    [SerializeField] string mouseClickEventPath = "event:/mouseClick"; // Ruta del evento de clic
+    [SerializeField] string mouseEnterEventPath = "event:/mouseEnter"; // Ruta del evento de entrada
 
     private bool isMouseOver = false;
 
     public void OnPointerEnter(PointerEventData eventData)
     {
         isMouseOver = true;
-        RuntimeManager.PlayOneShot(mouseEnter);
+        RuntimeManager.PlayOneShot(mouseEnterEventPath);
     }
+
     public void OnPointerExit(PointerEventData eventData)
     {
         isMouseOver = false;
@@ -24,10 +24,6 @@ public class AudioCanvas : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
     public void PlaySoundEvent()
     {
-        {
-            RuntimeManager.PlayOneShot(mouseClick);
-        }
+        RuntimeManager.PlayOneShot(mouseClickEventPath);
     }
-
-
 }

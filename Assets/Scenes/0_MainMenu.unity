@@ -1207,20 +1207,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30ab86dbe704ae7478d039f229c695cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseClick:
-    Guid:
-      Data1: -736733733
-      Data2: 1205710772
-      Data3: -595193963
-      Data4: 544329502
-    Path: event:/mouseClick
-  mouseEnter:
-    Guid:
-      Data1: 200794721
-      Data2: 1126271846
-      Data3: 381455286
-      Data4: 654100497
-    Path: event:/mouseEnter
+  mouseClickEventPath: event:/mouseClick
+  mouseEnterEventPath: event:/mouseEnter
 --- !u!1 &123474127
 GameObject:
   m_ObjectHideFlags: 0
@@ -2058,20 +2046,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30ab86dbe704ae7478d039f229c695cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseClick:
-    Guid:
-      Data1: -736733733
-      Data2: 1205710772
-      Data3: -595193963
-      Data4: 544329502
-    Path: event:/mouseClick
-  mouseEnter:
-    Guid:
-      Data1: 200794721
-      Data2: 1126271846
-      Data3: 381455286
-      Data4: 654100497
-    Path: event:/mouseEnter
+  mouseClickEventPath: event:/mouseClick
+  mouseEnterEventPath: event:/mouseEnter
 --- !u!1 &309071296
 GameObject:
   m_ObjectHideFlags: 0
@@ -2430,6 +2406,7 @@ GameObject:
   - component: {fileID: 363438548}
   - component: {fileID: 363438547}
   - component: {fileID: 363438546}
+  - component: {fileID: 363438549}
   m_Layer: 5
   m_Name: Button_Sound
   m_TagString: Untagged
@@ -2501,7 +2478,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 363438547}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 363438549}
+        m_TargetAssemblyTypeName: AudioCanvas, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &363438547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2540,6 +2529,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 363438544}
   m_CullTransparentMesh: 1
+--- !u!114 &363438549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 363438544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30ab86dbe704ae7478d039f229c695cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseClickEventPath: event:/mouseClick
+  mouseEnterEventPath: event:/mouseEnter
 --- !u!1 &365328841
 GameObject:
   m_ObjectHideFlags: 0
@@ -6344,6 +6347,7 @@ GameObject:
   - component: {fileID: 1146748529}
   - component: {fileID: 1146748528}
   - component: {fileID: 1146748531}
+  - component: {fileID: 1146748532}
   m_Layer: 5
   m_Name: Button_Tutorial
   m_TagString: Untagged
@@ -6416,6 +6420,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1146748532}
+        m_TargetAssemblyTypeName: AudioCanvas, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1146748531}
         m_TargetAssemblyTypeName: PanelSelect, Assembly-CSharp
         m_MethodName: changePanel
@@ -6491,6 +6507,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panelSelect: 5
+--- !u!114 &1146748532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146748526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30ab86dbe704ae7478d039f229c695cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseClickEventPath: event:/mouseClick
+  mouseEnterEventPath: event:/mouseEnter
 --- !u!1 &1149605956
 GameObject:
   m_ObjectHideFlags: 0
@@ -6623,6 +6653,7 @@ GameObject:
   - component: {fileID: 1156187427}
   - component: {fileID: 1156187429}
   - component: {fileID: 1156187428}
+  - component: {fileID: 1156187430}
   m_Layer: 5
   m_Name: Records
   m_TagString: Untagged
@@ -6695,6 +6726,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1156187426}
   m_CullTransparentMesh: 1
+--- !u!114 &1156187430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1156187426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30ab86dbe704ae7478d039f229c695cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseClickEventPath: event:/mouseClick
+  mouseEnterEventPath: event:/mouseEnter
 --- !u!1 &1178081282
 GameObject:
   m_ObjectHideFlags: 0
@@ -7517,6 +7562,7 @@ GameObject:
   - component: {fileID: 1421719106}
   - component: {fileID: 1421719105}
   - component: {fileID: 1421719108}
+  - component: {fileID: 1421719109}
   m_Layer: 5
   m_Name: Button_Back
   m_TagString: Untagged
@@ -7589,6 +7635,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1421719109}
+        m_TargetAssemblyTypeName: AudioCanvas, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1421719108}
         m_TargetAssemblyTypeName: PanelSelect, Assembly-CSharp
         m_MethodName: changePanel
@@ -7664,6 +7722,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panelSelect: 2
+--- !u!114 &1421719109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1421719103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30ab86dbe704ae7478d039f229c695cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseClickEventPath: event:/mouseClick
+  mouseEnterEventPath: event:/mouseEnter
 --- !u!1 &1441151072
 GameObject:
   m_ObjectHideFlags: 0
@@ -9175,20 +9247,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30ab86dbe704ae7478d039f229c695cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseClick:
-    Guid:
-      Data1: -736733733
-      Data2: 1205710772
-      Data3: -595193963
-      Data4: 544329502
-    Path: event:/mouseClick
-  mouseEnter:
-    Guid:
-      Data1: 200794721
-      Data2: 1126271846
-      Data3: 381455286
-      Data4: 654100497
-    Path: event:/mouseEnter
+  mouseClickEventPath: event:/mouseClick
+  mouseEnterEventPath: event:/mouseEnter
 --- !u!1 &1580582257
 GameObject:
   m_ObjectHideFlags: 0
@@ -10617,6 +10677,7 @@ GameObject:
   - component: {fileID: 1706410668}
   - component: {fileID: 1706410667}
   - component: {fileID: 1706410670}
+  - component: {fileID: 1706410671}
   m_Layer: 5
   m_Name: Button_Options
   m_TagString: Untagged
@@ -10689,6 +10750,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1706410671}
+        m_TargetAssemblyTypeName: AudioCanvas, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1706410670}
         m_TargetAssemblyTypeName: PanelSelect, Assembly-CSharp
         m_MethodName: changePanel
@@ -10764,6 +10837,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panelSelect: 4
+--- !u!114 &1706410671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1706410665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30ab86dbe704ae7478d039f229c695cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseClickEventPath: event:/mouseClick
+  mouseEnterEventPath: event:/mouseEnter
 --- !u!1 &1722366279
 GameObject:
   m_ObjectHideFlags: 0
@@ -11058,20 +11145,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30ab86dbe704ae7478d039f229c695cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseClick:
-    Guid:
-      Data1: -736733733
-      Data2: 1205710772
-      Data3: -595193963
-      Data4: 544329502
-    Path: event:/mouseClick
-  mouseEnter:
-    Guid:
-      Data1: 200794721
-      Data2: 1126271846
-      Data3: 381455286
-      Data4: 654100497
-    Path: event:/mouseEnter
+  mouseClickEventPath: event:/mouseClick
+  mouseEnterEventPath: event:/mouseEnter
 --- !u!1 &1766206724
 GameObject:
   m_ObjectHideFlags: 0
@@ -11169,6 +11244,7 @@ GameObject:
   - component: {fileID: 1769150025}
   - component: {fileID: 1769150024}
   - component: {fileID: 1769150027}
+  - component: {fileID: 1769150028}
   m_Layer: 5
   m_Name: Button_Back
   m_TagString: Untagged
@@ -11241,6 +11317,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1769150028}
+        m_TargetAssemblyTypeName: AudioCanvas, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1769150027}
         m_TargetAssemblyTypeName: PanelSelect, Assembly-CSharp
         m_MethodName: changePanel
@@ -11316,6 +11404,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panelSelect: 2
+--- !u!114 &1769150028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1769150022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30ab86dbe704ae7478d039f229c695cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseClickEventPath: event:/mouseClick
+  mouseEnterEventPath: event:/mouseEnter
 --- !u!1 &1775906521
 GameObject:
   m_ObjectHideFlags: 0
@@ -11573,6 +11675,7 @@ GameObject:
   - component: {fileID: 1846712937}
   - component: {fileID: 1846712936}
   - component: {fileID: 1846712939}
+  - component: {fileID: 1846712940}
   m_Layer: 5
   m_Name: Button_Credits
   m_TagString: Untagged
@@ -11645,6 +11748,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1846712940}
+        m_TargetAssemblyTypeName: AudioCanvas, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1846712939}
         m_TargetAssemblyTypeName: PanelSelect, Assembly-CSharp
         m_MethodName: changePanel
@@ -11720,6 +11835,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panelSelect: 6
+--- !u!114 &1846712940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1846712934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30ab86dbe704ae7478d039f229c695cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseClickEventPath: event:/mouseClick
+  mouseEnterEventPath: event:/mouseEnter
 --- !u!1 &1862453161
 GameObject:
   m_ObjectHideFlags: 0
@@ -12636,20 +12765,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30ab86dbe704ae7478d039f229c695cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseClick:
-    Guid:
-      Data1: -736733733
-      Data2: 1205710772
-      Data3: -595193963
-      Data4: 544329502
-    Path: event:/clickSelect
-  mouseEnter:
-    Guid:
-      Data1: 200794721
-      Data2: 1126271846
-      Data3: 381455286
-      Data4: 654100497
-    Path: event:/clickEnter
+  mouseClickEventPath: event:/mouseClick
+  mouseEnterEventPath: event:/mouseEnter
 --- !u!1 &1994894670
 GameObject:
   m_ObjectHideFlags: 0
@@ -12738,6 +12855,7 @@ GameObject:
   - component: {fileID: 2001149040}
   - component: {fileID: 2001149039}
   - component: {fileID: 2001149038}
+  - component: {fileID: 2001149041}
   - component: {fileID: 2001149037}
   m_Layer: 5
   m_Name: Button_Back
@@ -12824,6 +12942,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 2001149041}
+        m_TargetAssemblyTypeName: AudioCanvas, Assembly-CSharp
+        m_MethodName: PlaySoundEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 2001149037}
         m_TargetAssemblyTypeName: PanelSelect, Assembly-CSharp
         m_MethodName: changePanel
@@ -12886,6 +13016,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2001149035}
   m_CullTransparentMesh: 1
+--- !u!114 &2001149041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001149035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30ab86dbe704ae7478d039f229c695cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseClickEventPath: event:/mouseClick
+  mouseEnterEventPath: event:/mouseEnter
 --- !u!1 &2026597885
 GameObject:
   m_ObjectHideFlags: 0
