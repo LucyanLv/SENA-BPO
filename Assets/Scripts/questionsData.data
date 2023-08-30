@@ -1,0 +1,202 @@
+[{
+        "questionText": "¿Cuál es el rol de un supervisor en un centro de contacto?",
+        "answerOptions": [{
+                "answerText": "Realizar llamadas a clientes.",
+                "isCorect": false,
+                "id": 1
+            }, {
+                "answerText": "Gestionar la tecnología de la empresa.",
+                "isCorect": false,
+                "id": 2
+            }, {
+                "answerText": "Coordinar las tareas de los agentes.",
+                "isCorect": true,
+                "id": 3
+            }, {
+                "answerText": "Desarrollar estrategias de marketing.",
+                "isCorect": false,
+                "id": 4
+            }
+        ]
+    }, {
+        "questionText": "¿Qué se entiende por ITO en el contexto de la tercerización de procesos?",
+        "answerOptions": [{
+                "answerText": "Tercerización de procesos comerciales.",
+                "isCorect": false,
+                "id": 1
+            }, {
+                "answerText": "Tercerización de procesos tecnológicos.",
+                "isCorect": true,
+                "id": 2
+            }, {
+                "answerText": "Tercerización de procesos de marketing.",
+                "isCorect": false,
+                "id": 3
+            }, {
+                "answerText": "Tercerización de procesos de manufactura.",
+                "isCorect": false,
+                "id": 4
+            }
+        ]
+    }, {
+        "questionText": "¿Cuál de las siguientes opciones describe mejor una campaña en un Contact Center?",
+        "answerOptions": [{
+                "answerText": "La ubicación física de un centro de contacto.",
+                "isCorect": false,
+                "id": 1
+            }, {
+                "answerText": "El horario de atención al cliente.",
+                "isCorect": false,
+                "id": 2
+            }, {
+                "answerText": "Un proyecto específico para el que se contrata un Contact Center.",
+                "isCorect": true,
+                "id": 2
+            }, {
+                "answerText": "El número total de agentes en un centro.",
+                "isCorect": false,
+                "id": 2
+            }
+        ]
+    }, {
+        "questionText": "¿Qué implica la función de inbound en un Contact Center?",
+        "answerOptions": [{
+                "answerText": "Realizar llamadas salientes a clientes.",
+                "isCorect": false,
+                "id": 1
+            }, {
+                "answerText": " Recibir llamadas de clientes.",
+                "isCorect": true,
+                "id": 3
+            }, {
+                "answerText": "Gestionar la logística interna del centro.",
+                "isCorect": false,
+                "id": 2
+            }, {
+                "answerText": "Coordinar el soporte técnico de la empresa.",
+                "isCorect": false,
+                "id": 2
+            }
+        ]
+    }, {
+        "questionText": "¿Cuál es el propósito principal de LOG OUT en el contexto de un centro de contacto?",
+        "answerOptions": [{
+                "answerText": "Ingresar al sistema.",
+                "isCorect": false,
+                "id": 1
+            }, {
+                "answerText": "Realizar un seguimiento de llamadas.",
+                "isCorect": false,
+                "id": 3
+            }, {
+                "answerText": "Procesar datos de clientes.",
+                "isCorect": false,
+                "id": 2
+            }, {
+                "answerText": "Desconectarse del sistema al finalizar la sesión.",
+                "isCorect": true,
+                "id": 2
+            }
+        ]
+    }, {
+        "questionText": "¿Qué significa BPO en la industria de tercerización?",
+        "answerOptions": [{
+                "answerText": "Tercerización de procesos de tecnología.",
+                "isCorect": false,
+                "id": 1
+            }, {
+                "answerText": "Tercerización de procesos comerciales.",
+                "isCorect": true,
+                "id": 3
+            }, {
+                "answerText": "Tercerización de procesos creativos.",
+                "isCorect": false,
+                "id": 2
+            }, {
+                "answerText": "Tercerización de procesos de fabricación.",
+                "isCorect": false,
+                "id": 2
+            }
+        ]
+    }, {
+        "questionText": "¿Cuál es el papel de un agente en un centro de contacto?",
+        "answerOptions": [{
+                "answerText": "Coordinar las tareas de los supervisores.",
+                "isCorect": false,
+                "id": 1
+            }, {
+                "answerText": "Gestionar la infraestructura tecnológica.",
+                "isCorect": false,
+                "id": 3
+            }, {
+                "answerText": "Realizar ventas en campo.",
+                "isCorect": false,
+                "id": 2
+            }, {
+                "answerText": "Gestionar el contacto con los clientes.",
+                "isCorect": true,
+                "id": 2
+            }
+        ]
+    }, {
+        "questionText": "¿Cuál de las siguientes opciones describe el KPO?",
+        "answerOptions": [{
+                "answerText": "Tercerización de procesos de tecnología avanzada.",
+                "isCorect": false,
+                "id": 1
+            }, {
+                "answerText": "Tercerización de procesos de conocimiento especializado.",
+                "isCorect": true,
+                "id": 3
+            }, {
+                "answerText": "Tercerización de procesos de manufactura.",
+                "isCorect": false,
+                "id": 2
+            }, {
+                "answerText": "Tercerización de procesos de atención al cliente.",
+                "isCorect": false,
+                "id": 2
+            }
+        ]
+    }, {
+        "questionText": "¿Qué implica la función de OUTBOUND en un centro de contacto?",
+        "answerOptions": [{
+                "answerText": "Recibir llamadas de clientes.",
+                "isCorect": false,
+                "id": 1
+            }, {
+                "answerText": "Realizar llamadas a clientes.",
+                "isCorect": true,
+                "id": 3
+            }, {
+                "answerText": "Gestionar la infraestructura tecnológica.",
+                "isCorect": false,
+                "id": 2
+            }, {
+                "answerText": "Coordinar la logística interna del centro.",
+                "isCorect": false,
+                "id": 2
+            }
+        ]
+    }, {
+        "questionText": "¿Cuál es el propósito del LOG IN en el contexto de un centro de contacto?",
+                        "answerOptions": [{
+                                "answerText": "Registrar las ventas realizadas.",
+                                "isCorect": false,
+                                "id": 1
+                            }, {
+                                "answerText": "Iniciar una campaña de marketing.",
+                                "isCorect": false,
+                                "id": 3
+                            }, {
+                                "answerText": " Ingresar al sistema con usuario y contraseña.",
+                                "isCorect": true,
+                                "id": 2
+                            }, {
+                                "answerText": " Desconectarse del sistema al final del día.",
+                                "isCorect": false,
+                                "id": 4
+                            }
+                        ]
+                    }
+        ]
