@@ -57,6 +57,8 @@ public class QuestionsLauncher : MonoBehaviour
                 // For simplicity, let's assume we're changing a sprite
                 // GetComponent<SpriteRenderer>().sprite = raisedHandSprite;
                 advisor.transform.Find("Triangle").gameObject.SetActive(true);
+                Transform nombre = advisor.transform.Find("Emojis All");
+                nombre.Find("Emoji_Pregunta").gameObject.SetActive(true);
 
                 yield return new WaitForSeconds(Random.Range(5f, 10f)); // Wait for random time before next hand raise
                 Debug.Log("ya baje mi manita " + advisor.gameObject.name);
@@ -163,17 +165,23 @@ public class QuestionsLauncher : MonoBehaviour
     private void CheckAnswer(int answerIndex)
     {
         Debug.Log($"respondio {answerIndex} que es {randomQuestion.answerOptions[answerIndex].answerText}");
+        hideQuestion = true;
+        timeShowingQuiestion = 5;
+
         if (randomQuestion.answerOptions[answerIndex].isCorect)
         {
             Debug.Log("Correct Answer!");
+            //Caritas.activar
         }
         else
         {
             Debug.Log("Incorrect Answer");
             FindObjectOfType<Energia_player>().DecreaseEnergy(2);
-            hideQuestion = true;
+            
+            //Caritas.desactivar
         }
         isHandRaised = false;
+        
     }
 }
 
