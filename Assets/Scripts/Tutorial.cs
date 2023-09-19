@@ -4,10 +4,19 @@ using UnityEngine;
 
 public class Tutorial : MonoBehaviour
 {
-    public GameObject Text1;
-    public GameObject Text2;
-    public GameObject Text3;
-    public GameObject Text4;
+    public Player_Mov player;
+    public GameObject text1;
+    public GameObject text2;
+    public GameObject text3;
+    public GameObject text4;
+    public GameObject panel;
+    public GameObject indic1;
+
+    void Awake()
+    {
+        player.canMove=false;
+        text1.SetActive(true);
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -19,5 +28,27 @@ public class Tutorial : MonoBehaviour
     void Update()
     {
         
+    }
+    public void texto2()
+    {
+        text1.SetActive(false);
+        text2.SetActive(true);
+    }
+    public void texto3()
+    {
+        text2.SetActive(false);
+        text3.SetActive(true);
+    }
+    public void texto4()
+    {
+        text3.SetActive(false);
+        text4.SetActive(true);
+    }
+    public void run()
+    {
+        text4.SetActive(false);
+        panel.SetActive(false);
+        indic1.SetActive(true);
+        player.canMove=true;
     }
 }
