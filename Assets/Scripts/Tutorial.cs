@@ -8,9 +8,10 @@ public class Tutorial : MonoBehaviour
     public GameObject text1;
     public GameObject text2;
     public GameObject text3;
-    public GameObject text4;
+    public GameObject text4,text5,text6;
     public GameObject panel;
     public GameObject indic1;
+    public GameObject flecha,circulo;
 
     void Awake()
     {
@@ -49,6 +50,17 @@ public class Tutorial : MonoBehaviour
         text4.SetActive(false);
         panel.SetActive(false);
         indic1.SetActive(true);
+        flecha.SetActive(true);
+        circulo.SetActive(true);
         player.canMove=true;
+    }
+    public void texto5()
+    {
+        panel.SetActive(true);
+        text5.SetActive(true);
+        flecha.SetActive(false);
+        circulo.SetActive(false);
+        player.canMove=false;
+
     }
 }
