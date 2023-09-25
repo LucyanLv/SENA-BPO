@@ -9,6 +9,7 @@ public class Question
 {
     public string questionText;
     public List<AnswerOption> answerOptions;
+    public int level;
 
     public Question(){}
 

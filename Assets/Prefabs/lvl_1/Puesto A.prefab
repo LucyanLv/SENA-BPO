@@ -539,7 +539,7 @@ GameObject:
   m_Component:
   - component: {fileID: 735543154931262471}
   m_Layer: 0
-  m_Name: Emojis All
+  m_Name: Emojis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -572,8 +572,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5962845567625098108}
-  - component: {fileID: 4595975319540016322}
   - component: {fileID: 2600032133595686276}
+  - component: {fileID: 6272904176915687137}
   m_Layer: 0
   m_Name: Puesto A
   m_TagString: Untagged
@@ -601,18 +601,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4595975319540016322
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5962845567625098109}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffe42b8003cb4014881b907847a23458, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &2600032133595686276
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -658,6 +646,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 7.380895, y: 7.740123}
   m_EdgeRadius: 0
+--- !u!114 &6272904176915687137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5962845567625098109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffe42b8003cb4014881b907847a23458, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5962845567982789733
 GameObject:
   m_ObjectHideFlags: 0

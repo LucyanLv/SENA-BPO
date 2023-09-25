@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
 
-public class QuestionsLauncher : MonoBehaviour
+public class QuestionsManager : MonoBehaviour
 {
     [SerializeField] public GameObject questionCanvas;
     [SerializeField] private bool isHandRaised = false;
@@ -22,7 +22,6 @@ public class QuestionsLauncher : MonoBehaviour
     private Question lastPrinted = null;
 
     public TextMeshProUGUI questionText;
-    public TextMeshProUGUI[] answerTexts;
     public TextMeshProUGUI[] answerButtons;
 
     Question randomQuestion = null;
@@ -53,16 +52,17 @@ public class QuestionsLauncher : MonoBehaviour
                 hideQuestion = false;
                 timeSinceLastHandRaise = 0f;
                 Debug.Log("yo el asistente del " + advisor.gameObject.name + " y TENGO MI MANO LEVANTADA");
+                advisor.GetComponent<WorkStation>().ChangeState(StationState.HandRaised);
                 // Play hand raise animation or change sprite
                 // For simplicity, let's assume we're changing a sprite
                 // GetComponent<SpriteRenderer>().sprite = raisedHandSprite;
-                advisor.transform.Find("Triangle").gameObject.SetActive(true);
-                Transform nombre = advisor.transform.Find("Emojis All");
+                //advisor.transform.Find("Emojis").Find("Emoji_Pregunta").gameObject.SetActive(true);
+                Transform nombre = advisor.transform.Find("Emojis");
                 nombre.Find("Emoji_Pregunta").gameObject.SetActive(true);
 
                 yield return new WaitForSeconds(Random.Range(5f, 10f)); // Wait for random time before next hand raise
                 Debug.Log("ya baje mi manita " + advisor.gameObject.name);
-                advisor.transform.Find("Triangle").gameObject.SetActive(false);
+                nombre.Find("Emoji_Pregunta").gameObject.SetActive(false);
 
                 advisor = advisors[Random.Range(0, advisors.Count)];
                 isHandRaised = false;
@@ -136,7 +136,7 @@ public class QuestionsLauncher : MonoBehaviour
             questionText.text = randomQuestion.questionText;
             for (int i = 0; i < randomQuestion.answerOptions.Count; i++)
             {
-                answerTexts[i].text = option + ") " + randomQuestion.answerOptions[i].answerText;
+                answerButtons[i].text = option + ") " + randomQuestion.answerOptions[i].answerText;
                 option++;
             }
             lastPrinted = randomQuestion;
@@ -162,7 +162,7 @@ public class QuestionsLauncher : MonoBehaviour
         }
     }
 
-    private void CheckAnswer(int answerIndex)
+    private async void CheckAnswer(int answerIndex)
     {
         Debug.Log($"respondio {answerIndex} que es {randomQuestion.answerOptions[answerIndex].answerText}");
         hideQuestion = true;
@@ -171,13 +171,22 @@ public class QuestionsLauncher : MonoBehaviour
         if (randomQuestion.answerOptions[answerIndex].isCorect)
         {
             Debug.Log("Correct Answer!");
+            advisor.transform.Find("Emojis").Find("Emoji_OK").gameObject.SetActive(true);
+            hideQuestionPanel();
+            await System.Threading.Tasks.Task.Delay(5000);// 5 segundos 
+            Debug.Log("correct Answer ACA BAJO LO FELIZ");
+            advisor.transform.Find("Emojis").Find("Emoji_OK").gameObject.SetActive(true);
             //Caritas.activar
         }
         else
         {
             Debug.Log("Incorrect Answer");
             FindObjectOfType<Energia_player>().DecreaseEnergy(2);
-            
+            advisor.transform.Find("Emojis").Find("Emoji_Enojado").gameObject.SetActive(true);
+            hideQuestionPanel();
+            await System.Threading.Tasks.Task.Delay(5000);// 5 segundos 
+            Debug.Log("Incorrect Answer ACA BAJO LO ENOJADO");
+            advisor.transform.Find("Emojis").Find("Emoji_Enojado").gameObject.SetActive(false);
             //Caritas.desactivar
         }
         isHandRaised = false;

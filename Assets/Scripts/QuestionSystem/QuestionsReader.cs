@@ -22,15 +22,11 @@ public class QuestionsReader : MonoBehaviour
     [ContextMenu("Load")]
     public void Load()
     {
-        Debug.Log("HA entrado al load");
         string path = Path.Combine(Application.persistentDataPath, FileName);
         string questionsInfoJson = File.ReadAllText(path);
-        Debug.Log($"HA leido {questionsInfoJson} questions");
         List<Question> loadedQuestions = JsonUtility.FromJson<QuestionWrapper>("{\"questions\":" + questionsInfoJson + "}").questions;
-        Debug.Log($"HA puesto en json {loadedQuestions} questions");
         questions.AddRange(loadedQuestions);
         Debug.Log($"HA cargado {questions.Count} questions");
-
     }
 
     [System.Serializable]

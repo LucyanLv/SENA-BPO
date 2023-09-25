@@ -1,5 +1,6 @@
 [{
         "questionText": "¿Cuál es el rol de un supervisor en un centro de contacto?",
+        "level": 1,
         "answerOptions": [{
                 "answerText": "Realizar llamadas a clientes.",
                 "isCorect": false,
@@ -20,6 +21,7 @@
         ]
     }, {
         "questionText": "¿Qué se entiende por ITO en el contexto de la tercerización de procesos?",
+        "level": 1,
         "answerOptions": [{
                 "answerText": "Tercerización de procesos comerciales.",
                 "isCorect": false,
@@ -40,6 +42,7 @@
         ]
     }, {
         "questionText": "¿Cuál de las siguientes opciones describe mejor una campaña en un Contact Center?",
+        "level": 1,
         "answerOptions": [{
                 "answerText": "La ubicación física de un centro de contacto.",
                 "isCorect": false,
@@ -60,6 +63,7 @@
         ]
     }, {
         "questionText": "¿Qué implica la función de inbound en un Contact Center?",
+        "level": 1,
         "answerOptions": [{
                 "answerText": "Realizar llamadas salientes a clientes.",
                 "isCorect": false,
@@ -80,6 +84,7 @@
         ]
     }, {
         "questionText": "¿Cuál es el propósito principal de LOG OUT en el contexto de un centro de contacto?",
+        "level": 1,
         "answerOptions": [{
                 "answerText": "Ingresar al sistema.",
                 "isCorect": false,
@@ -100,6 +105,7 @@
         ]
     }, {
         "questionText": "¿Qué significa BPO en la industria de tercerización?",
+        "level": 1,
         "answerOptions": [{
                 "answerText": "Tercerización de procesos de tecnología.",
                 "isCorect": false,
@@ -120,6 +126,7 @@
         ]
     }, {
         "questionText": "¿Cuál es el papel de un agente en un centro de contacto?",
+        "level": 1,
         "answerOptions": [{
                 "answerText": "Coordinar las tareas de los supervisores.",
                 "isCorect": false,
@@ -140,6 +147,7 @@
         ]
     }, {
         "questionText": "¿Cuál de las siguientes opciones describe el KPO?",
+        "level": 1,
         "answerOptions": [{
                 "answerText": "Tercerización de procesos de tecnología avanzada.",
                 "isCorect": false,
@@ -160,6 +168,7 @@
         ]
     }, {
         "questionText": "¿Qué implica la función de OUTBOUND en un centro de contacto?",
+        "level": 1,
         "answerOptions": [{
                 "answerText": "Recibir llamadas de clientes.",
                 "isCorect": false,
@@ -180,23 +189,24 @@
         ]
     }, {
         "questionText": "¿Cuál es el propósito del LOG IN en el contexto de un centro de contacto?",
-                        " answerOptions ": [{
-                                " answerText ": " Registrar las ventas realizadas.",
-                                " isCorect ": false,
-                                " id ": 1
-                            }, {
-                                " answerText ": " Iniciar una campaña de marketing.",
-                                " isCorect ": false,
-                                " id ": 3
-                            }, {
-                                " answerText ": " Ingresar al sistema con usuario y contraseña.",
-                                " isCorect ": true,
-                                " id ": 2
-                            }, {
-                                " answerText ": " Desconectarse del sistema al final del día.",
-                                " isCorect ": false,
-                                " id ": 2
-                            }
-                        ]
-                    }
+        "level": 1,
+        "answerOptions ": [{
+                " answerText ": " Registrar las ventas realizadas.",
+                " isCorect ": false,
+                " id ": 1
+            }, {
+                " answerText ": " Iniciar una campaña de marketing.",
+                " isCorect ": false,
+                " id ": 3
+            }, {
+                " answerText ": " Ingresar al sistema con usuario y contraseña.",
+                " isCorect ": true,
+                " id ": 2
+            }, {
+                " answerText ": " Desconectarse del sistema al final del día.",
+                " isCorect ": false,
+                " id ": 2
+            }
         ]
+    }
+]
