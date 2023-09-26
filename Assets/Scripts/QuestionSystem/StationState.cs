@@ -1,8 +1,8 @@
 public enum StationState
 {
-    Trabajando,
-    HandRaised, // el asesor tiene una duda 
-    Preguntando, // pregunta en proceso, el supervisor se acerco y ve la duda
-    DudaOk, // duda resuelta correctamente x el jugador 
-    DudaMal // duda resuelta INcorrectamente x el jugador  
+    Trabajando = 0,
+    HandRaised = 8, // el asesor tiene una duda 
+    Preguntando = 13, // pregunta en proceso, el supervisor se acerco y ve la duda
+    DudaOk = 5,// duda resuelta correctamente x el jugador 
+    DudaMal = 6 // duda resuelta INcorrectamente x el jugador  
 }

@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using TMPro;
 using UnityEngine;
-using UnityEngine.SocialPlatforms.Impl;
+
 
 public class QuestionsManager : MonoBehaviour
 {
@@ -14,9 +16,13 @@ public class QuestionsManager : MonoBehaviour
     private bool hideQuestion = false;
 
     [SerializeField] private float timeSinceLastHandRaise = 0f;
-    [SerializeField] private float timeShowingQuiestion = 30f;
+    [SerializeField] private int timeShowingQuiestion = 30;
 
-    public List<GameObject> advisors = new List<GameObject>();
+    [SerializeField] private float timeBetwenHandsRaise = 60f;
+
+    [SerializeField] private int quiestionsLeft = 10;
+
+    public List<GameObject> workStationadvisors = new List<GameObject>();
     public List<Question> questions = new List<Question>();
 
     private Question lastPrinted = null;
@@ -27,78 +33,74 @@ public class QuestionsManager : MonoBehaviour
     Question randomQuestion = null;
     GameObject advisor;
     private bool hasAnswered = false;
+    [SerializeField] private int myLevel;
 
-
+    private void Awake()
+    {
+        Debug.Log("aca se awakea el manager");
+    }
     private void Start()
     {
-        questions.AddRange(GetComponent<QuestionsReader>().questions);
-        advisor = advisors[Random.Range(0, advisors.Count)];
-        Debug.Log("yo el asistente del " + advisor.gameObject.name + " y empezare a preguntar");
-        StartCoroutine(HandRaiseCoroutine());
+        List<Question> levelQuestions = GetComponent<QuestionsReader>().questions.Where(q => q.level <= myLevel).ToList<Question>();
+        questions.AddRange(levelQuestions);
+        LaunchQuestion();
     }
 
     private void Update()
     {
         timeSinceLastHandRaise += canAsk ? Time.deltaTime : 0;
-    }
 
-    private IEnumerator HandRaiseCoroutine()
-    {
-        while (canAsk)
+        if (timeSinceLastHandRaise >= Random.Range(35f, 50f) && canAsk && quiestionsLeft > 0)
         {
-            if (timeSinceLastHandRaise >= Random.Range(5f, 10f))
-            {
-                isHandRaised = true;
-                hideQuestion = false;
-                timeSinceLastHandRaise = 0f;
-                Debug.Log("yo el asistente del " + advisor.gameObject.name + " y TENGO MI MANO LEVANTADA");
-                advisor.GetComponent<WorkStation>().ChangeState(StationState.HandRaised);
-                // Play hand raise animation or change sprite
-                // For simplicity, let's assume we're changing a sprite
-                // GetComponent<SpriteRenderer>().sprite = raisedHandSprite;
-                //advisor.transform.Find("Emojis").Find("Emoji_Pregunta").gameObject.SetActive(true);
-                Transform nombre = advisor.transform.Find("Emojis");
-                nombre.Find("Emoji_Pregunta").gameObject.SetActive(true);
-
-                yield return new WaitForSeconds(Random.Range(5f, 10f)); // Wait for random time before next hand raise
-                Debug.Log("ya baje mi manita " + advisor.gameObject.name);
-                nombre.Find("Emoji_Pregunta").gameObject.SetActive(false);
-
-                advisor = advisors[Random.Range(0, advisors.Count)];
-                isHandRaised = false;
-                canAsk = false;
-
-                yield return new WaitForSeconds(Random.Range(10f, 20f));
-                Debug.Log("y bien juicioso espere pa volver a levantar la manita " + advisor.gameObject.name);
-                canAsk = true;
-                timeSinceLastHandRaise = 0;
-            }
-
-            yield return null;
+            LaunchQuestion();
         }
     }
 
-    public void launchQuestionPanel(Collider2D collision)
+    private void LaunchQuestion()
+    {
+        Debug.Log("////////////// inicio a preguntar ///////////////");
+        advisor = workStationadvisors[Random.Range(0, workStationadvisors.Count)];
+        Debug.Log("yo el asistente del " + advisor.gameObject.name + " y empezare a preguntar");
+        if (canAsk)
+        {
+            isHandRaised = true;
+            hideQuestion = false;
+            advisor.GetComponent<WorkStation>().ChangeState(StationState.HandRaised);
+
+
+            /* advisor = workStationadvisors[Random.Range(0, workStationadvisors.Count)];
+             isHandRaised = false;
+             canAsk = false;
+
+
+             Debug.Log("y bien juicioso espere pa volver a levantar la manita " + advisor.gameObject.name);
+             canAsk = true;
+             timeSinceLastHandRaise = 0;*/
+        }
+
+
+    }
+
+    public void launchQuestionPanel()
     {
 
-        if (collision.CompareTag("Player") && isHandRaised && canAsk)
+        if (isHandRaised && canAsk)
         {
             canAsk = false;
-            showingQuestion = StartCoroutine(ShowQuestion());
+            ShowQuestion();
 
         }
     }
 
-    private IEnumerator ShowQuestion()
+    private async void ShowQuestion()
     {
         showQuestionPanel();
 
-        yield return new WaitForSeconds(timeShowingQuiestion);
+        await Task.Delay(timeShowingQuiestion * 1000);
 
         if (hideQuestion)
         {
             hideQuestionPanel();
-            yield break;
         }
 
         if (!hasAnswered)
@@ -108,7 +110,7 @@ public class QuestionsManager : MonoBehaviour
         hideQuestionPanel();
     }
 
-    private void hideQuestionPanel()
+    public void hideQuestionPanel()
     {
         questionCanvas.SetActive(false);
         GameObject.FindObjectOfType<Player_Mov>().canMove = true;
@@ -162,36 +164,27 @@ public class QuestionsManager : MonoBehaviour
         }
     }
 
-    private async void CheckAnswer(int answerIndex)
+    private void CheckAnswer(int answerIndex)
     {
         Debug.Log($"respondio {answerIndex} que es {randomQuestion.answerOptions[answerIndex].answerText}");
         hideQuestion = true;
         timeShowingQuiestion = 5;
+        hideQuestionPanel();
 
         if (randomQuestion.answerOptions[answerIndex].isCorect)
         {
-            Debug.Log("Correct Answer!");
-            advisor.transform.Find("Emojis").Find("Emoji_OK").gameObject.SetActive(true);
-            hideQuestionPanel();
-            await System.Threading.Tasks.Task.Delay(5000);// 5 segundos 
-            Debug.Log("correct Answer ACA BAJO LO FELIZ");
-            advisor.transform.Find("Emojis").Find("Emoji_OK").gameObject.SetActive(true);
-            //Caritas.activar
+
+            advisor.gameObject.GetComponent<WorkStation>().ChangeState(StationState.DudaOk);
         }
         else
         {
-            Debug.Log("Incorrect Answer");
-            FindObjectOfType<Energia_player>().DecreaseEnergy(2);
-            advisor.transform.Find("Emojis").Find("Emoji_Enojado").gameObject.SetActive(true);
-            hideQuestionPanel();
-            await System.Threading.Tasks.Task.Delay(5000);// 5 segundos 
-            Debug.Log("Incorrect Answer ACA BAJO LO ENOJADO");
-            advisor.transform.Find("Emojis").Find("Emoji_Enojado").gameObject.SetActive(false);
-            //Caritas.desactivar
+            advisor.gameObject.GetComponent<WorkStation>().ChangeState(StationState.DudaMal);
+
         }
         isHandRaised = false;
-        
+
     }
+
 }
 
 

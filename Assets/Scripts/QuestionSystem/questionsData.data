@@ -190,7 +190,7 @@
     }, {
         "questionText": "¿Cuál es el propósito del LOG IN en el contexto de un centro de contacto?",
         "level": 1,
-        "answerOptions ": [{
+        "answerOptions": [{
                 " answerText ": " Registrar las ventas realizadas.",
                 " isCorect ": false,
                 " id ": 1
