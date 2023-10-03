@@ -5,10 +5,11 @@ using UnityEngine;
 public class Tutorial : MonoBehaviour
 {
     public Player_Mov player;
-    public GameObject text1,launch,questionEmon;
+    public Pregunta_Tutorial tuto;
+    public GameObject text1,launch,questionEmon,menu;
     public GameObject text2;
     public GameObject text3;
-    public GameObject text4,text5,text6,text7,text8,text9,text10,text11;
+    public GameObject text4,text5,text6,text7,text8,text9,text10,text11,text12,text13;
     public GameObject panel;
     public GameObject indic1;
     public GameObject flecha,circulo;
@@ -17,18 +18,6 @@ public class Tutorial : MonoBehaviour
     {
         player.canMove=false;
         text1.SetActive(true);
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
     public void texto2()
     {
@@ -57,8 +46,16 @@ public class Tutorial : MonoBehaviour
     public void run2()
     { 
         panel.SetActive(false);
+        text11.SetActive(false);
         player.canMove=true;
         StartCoroutine(time());}
+
+    public void run3()
+    {
+        panel.SetActive(false);
+        tuto.questionpanel.SetActive(true);
+        player.canMove=false;
+    }
         
         
     public void texto5()
@@ -98,11 +95,32 @@ public class Tutorial : MonoBehaviour
     {
         text10.SetActive(false);
         text11.SetActive(true);}
+
+        public void texto12()
+    {
+        text11.SetActive(false);
+        tuto.textin.SetActive(false);
+
+        text12.SetActive(true);}
+
+        public void texto13()
+        {
+            text12.SetActive(false);
+            text13.SetActive(true);
+            StartCoroutine(time2());
+        }
         
         IEnumerator time()
         {
             yield return new WaitForSeconds(2f);
             questionEmon.SetActive(true);
             launch.SetActive(true);
+            
+        }
+        IEnumerator time2()
+        {
+            yield return new WaitForSeconds(1f);
+            menu.SetActive(true);
+            
         }
 }

@@ -6,12 +6,18 @@ using UnityEngine.UI;
 
 public class MenuPausa : MonoBehaviour
 {
+    [Header("Pausa")]
     public GameObject menuOpciones;
     public GameObject menuControles;
     public GameObject menuSonido;
     public GameObject laPausa;
     public GameObject BotonP;
     private bool juegoP;
+    
+    [Header("Musica")]
+    public Toggle musica;
+    public Toggle efectos;
+
 
 
 
@@ -99,6 +105,30 @@ public class MenuPausa : MonoBehaviour
         Time.timeScale=0f;
 
     }
+
+    public void MusicOn()
+    {
+        if(musica.isOn)
+        {
+            Debug.Log("hay musica imaginaria");
+        }
+        else
+        {
+            Debug.Log("Ya no hay musica imaginaria");
+        }
+    }
+    public void EfectsOn()
+    {
+        if(efectos.isOn)
+        {
+            Debug.Log("hay efectos imaginarios");
+        }
+        else
+        {
+            Debug.Log("Ya no hay efectos imaginarios");
+        }
+    }
+
     
       
 
