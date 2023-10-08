@@ -30,8 +30,13 @@ public class WorkStation : MonoBehaviour
             Debug.Log(Mathf.Floor(duration));
             if (duration <= 0f)
             {
+                
+                if (Estado.Equals(StationState.Preguntando))
+                {
+                    FindObjectOfType<ShowQuiestionController>().NotAnswered();
+                    ChangeState(StationState.DudaMal);
+                }
                 ChangeState(StationState.Trabajando);
-                //TODO ENVIAR PENALIZACION AL JUGADOR 
             }
         }
 
@@ -54,6 +59,8 @@ public class WorkStation : MonoBehaviour
                     ChangeState(StationState.Trabajando);
                 }
                 break;
+            
+
         }
     }
     public void ChangeState(StationState nuevoEstado)
@@ -82,7 +89,7 @@ public class WorkStation : MonoBehaviour
                 break;
             case StationState.DudaMal:
                 Debug.Log("Incorrect Answer");
-                FindObjectOfType<Energia_player>().DecreaseEnergy(2);
+                FindObjectOfType<EnergyController>().DecreaseEnergy(2);
                 emojis.Find("Emoji_Enojado").gameObject.SetActive(true);
                 duration = (int)Estado;
                 break;

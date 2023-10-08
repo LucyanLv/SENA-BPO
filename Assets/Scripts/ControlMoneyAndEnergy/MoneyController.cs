@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GameManager : MonoBehaviour
+public class MoneyController : MonoBehaviour
 {
     [SerializeField] private float timeInterval = 60f; // Intervalo de tiempo en segundos
     [SerializeField] private int initialMoney = 100;

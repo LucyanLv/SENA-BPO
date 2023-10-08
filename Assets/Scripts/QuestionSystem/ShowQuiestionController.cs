@@ -20,7 +20,7 @@ public class ShowQuiestionController : MonoBehaviour
     {
         if (!hasAnswered)
         {
-            FindObjectOfType<Energia_player>().DecreaseEnergy(2);
+            FindObjectOfType<EnergyController>().DecreaseEnergy(2);
         }
         questionCanvas.SetActive(false);
         GameObject.FindObjectOfType<Player_Mov>().canMove = true;
@@ -39,6 +39,13 @@ public class ShowQuiestionController : MonoBehaviour
         hasAnswered = true;
         StartCoroutine(Parpadear(correct));
     }
+    public void NotAnswered()
+    {
+        hasAnswered = true;
+        StartCoroutine(Parpadear(false));
+    }
+
+
 
     private void loadQuestion(Question question)
     {
