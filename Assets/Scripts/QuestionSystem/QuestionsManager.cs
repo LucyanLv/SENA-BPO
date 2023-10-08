@@ -1,58 +1,76 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
-using TMPro;
 using UnityEngine;
-
 
 public class QuestionsManager : MonoBehaviour
 {
-    [SerializeField] public GameObject questionCanvas;
-    [SerializeField] private bool isHandRaised = false;
-    [SerializeField] private bool canAsk = true;
-
-    public Coroutine showingQuestion { get; private set; }
-    private bool hideQuestion = false;
+    [SerializeField] public bool canAsk = true;
+    [SerializeField] private bool isAsking = false;
 
     [SerializeField] private float timeSinceLastHandRaise = 0f;
     [SerializeField] private int timeShowingQuiestion = 30;
 
     [SerializeField] private float timeBetwenHandsRaise = 60f;
 
-    [SerializeField] private int quiestionsLeft = 10;
+    [SerializeField] private int questionsLeft = 10;
 
     public List<GameObject> workStationadvisors = new List<GameObject>();
     public List<Question> questions = new List<Question>();
 
     private Question lastPrinted = null;
 
-    public TextMeshProUGUI questionText;
-    public TextMeshProUGUI[] answerButtons;
-
-    Question randomQuestion = null;
+    Question randomQuestion = new Question();
     GameObject advisor;
-    private bool hasAnswered = false;
+
     [SerializeField] private int myLevel;
 
-    private void Awake()
-    {
-        Debug.Log("aca se awakea el manager");
-    }
     private void Start()
     {
+        AnswerOption a = new AnswerOption();
+        a.answerText = "shi";
+        a.isCorect = true;
+        a.id = 1;
+
+        AnswerOption a1 = new AnswerOption();
+        a1.answerText = "shi 2";
+        a1.isCorect = true;
+        a1.id = 2;
+
+        AnswerOption a3 = new AnswerOption();
+        a3.answerText = "nop";
+        a3.isCorect = false;
+        a3.id = 3;
+
+        AnswerOption a4 = new AnswerOption();
+        a4.answerText = "nope";
+        a4.isCorect = false;
+        a4.id = 4;
+
+
+        randomQuestion.level = 1;
+        randomQuestion.questionText = "ESTO ES UNA PREGUNTA";
+        List<AnswerOption> ans = new List<AnswerOption>() { a, a1, a3, a4 };
+        randomQuestion.answerOptions = ans;
+
         List<Question> levelQuestions = GetComponent<QuestionsReader>().questions.Where(q => q.level <= myLevel).ToList<Question>();
         questions.AddRange(levelQuestions);
-        LaunchQuestion();
+        //LaunchQuestion();
     }
 
     private void Update()
     {
         timeSinceLastHandRaise += canAsk ? Time.deltaTime : 0;
-
-        if (timeSinceLastHandRaise >= Random.Range(35f, 50f) && canAsk && quiestionsLeft > 0)
+        Debug.Log("timeSinceLastHandRaise " + Mathf.Floor(timeSinceLastHandRaise));
+        
+        if (timeSinceLastHandRaise >= Random.Range(4f, 8f) && canAsk && questionsLeft > 0)
         {
             LaunchQuestion();
+        }
+        else if (questionsLeft <= 0)
+        {
+            Debug.Log("NIVEL TERMINADOOOOOOOO WIIIIIIIIIII ");
+            canAsk = false;
         }
     }
 
@@ -63,85 +81,18 @@ public class QuestionsManager : MonoBehaviour
         Debug.Log("yo el asistente del " + advisor.gameObject.name + " y empezare a preguntar");
         if (canAsk)
         {
-            isHandRaised = true;
-            hideQuestion = false;
-            advisor.GetComponent<WorkStation>().ChangeState(StationState.HandRaised);
-
-
-            /* advisor = workStationadvisors[Random.Range(0, workStationadvisors.Count)];
-             isHandRaised = false;
-             canAsk = false;
-
-
-             Debug.Log("y bien juicioso espere pa volver a levantar la manita " + advisor.gameObject.name);
-             canAsk = true;
-             timeSinceLastHandRaise = 0;*/
-        }
-
-
-    }
-
-    public void launchQuestionPanel()
-    {
-
-        if (isHandRaised && canAsk)
-        {
+            isAsking = true;
             canAsk = false;
-            ShowQuestion();
-
+            advisor.GetComponent<WorkStation>().ChangeState(StationState.HandRaised);
         }
-    }
-
-    private async void ShowQuestion()
-    {
-        showQuestionPanel();
-
-        await Task.Delay(timeShowingQuiestion * 1000);
-
-        if (hideQuestion)
-        {
-            hideQuestionPanel();
-        }
-
-        if (!hasAnswered)
-        {
-            FindObjectOfType<Energia_player>().DecreaseEnergy(2);
-        }
-        hideQuestionPanel();
-    }
-
-    public void hideQuestionPanel()
-    {
-        questionCanvas.SetActive(false);
-        GameObject.FindObjectOfType<Player_Mov>().canMove = true;
-        canAsk = true;
         timeSinceLastHandRaise = 0;
     }
 
-    private void showQuestionPanel()
+    public void LaunchQuestionPanel()
     {
-        GameObject.FindObjectOfType<Player_Mov>().canMove = false;
-        loadQuestion();
-        questionCanvas.SetActive(true);
-    }
-
-    private void loadQuestion()
-    {
-        randomQuestion = GetRandomQuestion();
-        randomQuestion.sortAnswersRandomly();
-
-        char option = 'A';
-        if (randomQuestion != lastPrinted)
+        if (isAsking && !canAsk)
         {
-            Debug.Log(randomQuestion.questionText);
-
-            questionText.text = randomQuestion.questionText;
-            for (int i = 0; i < randomQuestion.answerOptions.Count; i++)
-            {
-                answerButtons[i].text = option + ") " + randomQuestion.answerOptions[i].answerText;
-                option++;
-            }
-            lastPrinted = randomQuestion;
+            FindObjectOfType<ShowQuiestionController>().ShowQuestionPanel(randomQuestion);
         }
     }
 
@@ -152,39 +103,26 @@ public class QuestionsManager : MonoBehaviour
         {
             random = questions[Random.Range(0, questions.Count)];
         }
+        random.sortAnswersRandomly();
+        randomQuestion = random;
         return random;
     }
 
-    public void OnAnswerSelected(int answerIndex)
-    {
-        if (!hasAnswered)
-        {
-            hasAnswered = true;
-            CheckAnswer(answerIndex);
-        }
-    }
-
-    private void CheckAnswer(int answerIndex)
+    public void CheckAnswer(int answerIndex)
     {
         Debug.Log($"respondio {answerIndex} que es {randomQuestion.answerOptions[answerIndex].answerText}");
-        hideQuestion = true;
-        timeShowingQuiestion = 5;
-        hideQuestionPanel();
 
         if (randomQuestion.answerOptions[answerIndex].isCorect)
         {
-
-            advisor.gameObject.GetComponent<WorkStation>().ChangeState(StationState.DudaOk);
+            questionsLeft--;
+            FindObjectOfType<ShowQuiestionController>().Answered(true);
+            advisor.GetComponent<WorkStation>().ChangeState(StationState.DudaOk);
         }
         else
         {
-            advisor.gameObject.GetComponent<WorkStation>().ChangeState(StationState.DudaMal);
-
+            FindObjectOfType<ShowQuiestionController>().Answered(false);
+            advisor.GetComponent<WorkStation>().ChangeState(StationState.DudaMal);
         }
-        isHandRaised = false;
-
+        canAsk = false;
     }
-
 }
-
-
