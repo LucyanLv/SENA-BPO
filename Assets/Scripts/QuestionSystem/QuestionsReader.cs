@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
@@ -14,7 +13,7 @@ public class QuestionsReader : MonoBehaviour
     public void Save()
     {
         string questionsInfoJson = JsonUtility.ToJson(questions);
-        string path = Path.Combine(Application.persistentDataPath, FileName);
+        string path = Path.Combine(Application.streamingAssetsPath, FileName);
         File.WriteAllText(path, questionsInfoJson);
         Debug.Log(path);
     }
@@ -22,7 +21,7 @@ public class QuestionsReader : MonoBehaviour
     [ContextMenu("Load")]
     public void Load()
     {
-        string path = Path.Combine(Application.persistentDataPath, FileName);
+        string path = Path.Combine(Application.streamingAssetsPath, FileName);
         string questionsInfoJson = File.ReadAllText(path);
         List<Question> loadedQuestions = JsonUtility.FromJson<QuestionWrapper>("{\"questions\":" + questionsInfoJson + "}").questions;
         questions.AddRange(loadedQuestions);

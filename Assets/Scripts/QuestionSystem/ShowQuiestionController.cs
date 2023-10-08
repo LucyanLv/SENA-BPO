@@ -28,7 +28,6 @@ public class ShowQuiestionController : MonoBehaviour
 
     public void ShowQuestionPanel(Question question)
     {
-        Debug.Log("MOSTRANDO PREGUNTA");
         GameObject.FindObjectOfType<Player_Mov>().canMove = false;
         loadQuestion(question);
         questionCanvas.SetActive(true);
@@ -50,13 +49,11 @@ public class ShowQuiestionController : MonoBehaviour
         questionText.text = question.questionText;
         for (int i = 0; i < question.answerOptions.Count; i++)
         {
-            answerButtons[i].text = option + ") " + question.answerOptions[i].answerText;
+            answerButtons[i].text = $"{option}) {question.answerOptions[i].answerText} **** {question.answerOptions[i].isCorect} ";
             option++;
         }
 
     }
-
-
     
 
     private IEnumerator Parpadear(bool correct)
@@ -65,7 +62,7 @@ public class ShowQuiestionController : MonoBehaviour
         float tiempoTotal = 3f;  // Duración total del parpadeo (3 segundos)
         float tiempoPorColor = 0.5f;  // Tiempo por cada color (0.5 segundos)
         Color color1 = correct ? Color.green : Color.red;
-        Color color2 = correct ? new Color(40, 168, 44) : new Color(208, 35, 81);
+        Color color2 = correct ? new Color(0, 255, 179) : new Color(255, 0, 72);
         while (tiempoTotal > 0f)
         {
             questionCanvas.GetComponent<Image>().color = color1;

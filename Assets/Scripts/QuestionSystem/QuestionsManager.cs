@@ -27,35 +27,9 @@ public class QuestionsManager : MonoBehaviour
 
     private void Start()
     {
-        AnswerOption a = new AnswerOption();
-        a.answerText = "shi";
-        a.isCorect = true;
-        a.id = 1;
-
-        AnswerOption a1 = new AnswerOption();
-        a1.answerText = "shi 2";
-        a1.isCorect = true;
-        a1.id = 2;
-
-        AnswerOption a3 = new AnswerOption();
-        a3.answerText = "nop";
-        a3.isCorect = false;
-        a3.id = 3;
-
-        AnswerOption a4 = new AnswerOption();
-        a4.answerText = "nope";
-        a4.isCorect = false;
-        a4.id = 4;
-
-
-        randomQuestion.level = 1;
-        randomQuestion.questionText = "ESTO ES UNA PREGUNTA";
-        List<AnswerOption> ans = new List<AnswerOption>() { a, a1, a3, a4 };
-        randomQuestion.answerOptions = ans;
-
         List<Question> levelQuestions = GetComponent<QuestionsReader>().questions.Where(q => q.level <= myLevel).ToList<Question>();
         questions.AddRange(levelQuestions);
-        //LaunchQuestion();
+        
     }
 
     private void Update()
@@ -92,7 +66,7 @@ public class QuestionsManager : MonoBehaviour
     {
         if (isAsking && !canAsk)
         {
-            FindObjectOfType<ShowQuiestionController>().ShowQuestionPanel(randomQuestion);
+            FindObjectOfType<ShowQuiestionController>().ShowQuestionPanel(GetRandomQuestion());
         }
     }
 
