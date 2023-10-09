@@ -1,5 +1,25 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8800224106148824348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD/AudioSena/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638323932755917006
+  FileSizes:
+  - Name: Desktop
+    Value: 1096
+  Exists: 1
 --- !u!114 &-8451996199979880215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19,6 +39,70 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 1096
+  Exists: 1
+--- !u!114 &-7899561606212192691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/music/whereIsTheMusic
+  m_EditorClassIdentifier: 
+  Name: whereIsTheMusic
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3599623941
+    data2: 363300602
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-5733400346448596249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD/AudioSena/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638323932755893853
+  FileSizes:
+  - Name: Desktop
+    Value: 1036
+  Exists: 1
+--- !u!114 &-5534444930034047102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Music.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD/AudioSena/Build/Desktop/Music.bank
+  Name: Music
+  StudioPath: bank:/Music
+  lastModified: 638323932788670558
+  FileSizes:
+  - Name: Desktop
+    Value: 918208
   Exists: 1
 --- !u!114 &-4552389936163608343
 MonoBehaviour:
@@ -44,6 +128,87 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-4121355739109878879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/mouseClick
+  m_EditorClassIdentifier: 
+  Path: event:/mouseClick
+  Guid:
+    Data1: -736733733
+    Data2: 1205710772
+    Data3: -595193963
+    Data4: 544329502
+  Banks:
+  - {fileID: 4506748174023575490}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-3708514278932708160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/FootSteps
+  m_EditorClassIdentifier: 
+  Path: event:/FootSteps
+  Guid:
+    Data1: 1252916913
+    Data2: 1303316885
+    Data3: -178516847
+    Data4: 646639789
+  Banks:
+  - {fileID: 5537104650044143451}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 31
+--- !u!114 &-2378654159065367958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/mouseEnter
+  m_EditorClassIdentifier: 
+  Path: event:/mouseEnter
+  Guid:
+    Data1: 200794721
+    Data2: 1126271846
+    Data3: 381455286
+    Data4: 654100497
+  Banks:
+  - {fileID: 4506748174023575490}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-1944909386763327423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -132,22 +297,22 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: -8451996199979880215}
-  - {fileID: 3836802454644584618}
-  - {fileID: 8960015826671018529}
-  - {fileID: 5977025996408198903}
-  - {fileID: -727747104910691191}
+  - {fileID: -8800224106148824348}
+  - {fileID: 5537104650044143451}
+  - {fileID: 4506748174023575490}
+  - {fileID: -5733400346448596249}
+  - {fileID: -5534444930034047102}
   EditorEvents:
-  - {fileID: 5561762085769148839}
-  - {fileID: 9139183214455289220}
-  - {fileID: -1944909386763327423}
-  - {fileID: -502071713599282328}
+  - {fileID: -3708514278932708160}
+  - {fileID: -2378654159065367958}
+  - {fileID: -4121355739109878879}
+  - {fileID: 5991699206052276163}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 5977025996408198903}
+  - {fileID: -5733400346448596249}
   StringsBanks:
-  - {fileID: -8451996199979880215}
-  cacheTime: 638311518324555641
+  - {fileID: -8800224106148824348}
+  cacheTime: 638323932788670558
   cacheVersion: 131605
 --- !u!114 &3836802454644584618
 MonoBehaviour:
@@ -165,6 +330,46 @@ MonoBehaviour:
   Name: Character
   StudioPath: bank:/Character
   lastModified: 638311518324425478
+  FileSizes:
+  - Name: Desktop
+    Value: 9280
+  Exists: 1
+--- !u!114 &4506748174023575490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/FX.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD/AudioSena/Build/Desktop/FX.bank
+  Name: FX
+  StudioPath: bank:/FX
+  lastModified: 638323932755639570
+  FileSizes:
+  - Name: Desktop
+    Value: 4832
+  Exists: 1
+--- !u!114 &5537104650044143451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Character.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD/AudioSena/Build/Desktop/Character.bank
+  Name: Character
+  StudioPath: bank:/Character
+  lastModified: 638323932754721540
   FileSizes:
   - Name: Desktop
     Value: 9280
@@ -216,6 +421,34 @@ MonoBehaviour:
   - Name: Desktop
     Value: 1036
   Exists: 1
+--- !u!114 &5991699206052276163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/music
+  m_EditorClassIdentifier: 
+  Path: event:/music
+  Guid:
+    Data1: 762157425
+    Data2: 1074627542
+    Data3: -756808265
+    Data4: -354436332
+  Banks:
+  - {fileID: -5534444930034047102}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -7899561606212192691}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 106000
 --- !u!114 &8960015826671018529
 MonoBehaviour:
   m_ObjectHideFlags: 0
