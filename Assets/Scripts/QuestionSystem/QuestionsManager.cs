@@ -25,6 +25,9 @@ public class QuestionsManager : MonoBehaviour
 
     [SerializeField] private int myLevel;
 
+    [SerializeField] int conteoBien=0;
+    [SerializeField] int conteoMal=0;
+
     private void Start()
     {
         List<Question> levelQuestions = GetComponent<QuestionsReader>().questions.Where(q => q.level <= myLevel).ToList<Question>();
@@ -89,11 +92,15 @@ public class QuestionsManager : MonoBehaviour
         if (randomQuestion.answerOptions[answerIndex].isCorect)
         {
             questionsLeft--;
+            conteoBien++;
+            Debug.Log("correcto"+conteoBien);
             FindObjectOfType<ShowQuiestionController>().Answered(true);
             advisor.GetComponent<WorkStation>().ChangeState(StationState.DudaOk);
         }
         else
         {
+            conteoMal++;
+            Debug.Log("incorrecto"+conteoMal);
             FindObjectOfType<ShowQuiestionController>().Answered(false);
             advisor.GetComponent<WorkStation>().ChangeState(StationState.DudaMal);
         }

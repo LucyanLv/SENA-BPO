@@ -14,6 +14,9 @@ public class ShowQuiestionController : MonoBehaviour
     public TextMeshProUGUI[] answerButtons;
     public Question question = new Question();
 
+    
+    
+
 
     [ContextMenu("HidePanel")]
     public void HideQuestionPanel()
@@ -38,11 +41,14 @@ public class ShowQuiestionController : MonoBehaviour
     {
         hasAnswered = true;
         StartCoroutine(Parpadear(correct));
+        
+        
     }
     public void NotAnswered()
     {
         hasAnswered = true;
         StartCoroutine(Parpadear(false));
+        
     }
 
 
@@ -66,7 +72,7 @@ public class ShowQuiestionController : MonoBehaviour
     private IEnumerator Parpadear(bool correct)
     {
         Debug.Log("a parpadear");
-        float tiempoTotal = 3f;  // Duración total del parpadeo (3 segundos)
+        float tiempoTotal = 3f;  // Duraciï¿½n total del parpadeo (3 segundos)
         float tiempoPorColor = 0.5f;  // Tiempo por cada color (0.5 segundos)
         Color color1 = correct ? Color.green : Color.red;
         Color color2 = correct ? new Color(0, 255, 179) : new Color(255, 0, 72);
