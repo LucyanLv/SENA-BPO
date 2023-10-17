@@ -6,7 +6,7 @@ using UnityEngine;
 public class WorkStation : MonoBehaviour
 {
     private float timer = 0f;
-    public float duration = 0f;  // Duración en segundos
+    public float duration = 0f;  // Duraciï¿½n en segundos
     public float TiempoTranscurrido { get; private set; }
     [SerializeField] private int level;
     public StationState Estado { get; set; }
