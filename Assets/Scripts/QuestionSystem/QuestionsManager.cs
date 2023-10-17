@@ -25,6 +25,10 @@ public class QuestionsManager : MonoBehaviour
 
     [SerializeField] private int myLevel;
 
+    [SerializeField]  Final_Nivel final;
+    public  int conteoBien=0;
+    public int conteoMal=0;
+
     private void Start()
     {
         List<Question> levelQuestions = GetComponent<QuestionsReader>().questions.Where(q => q.level <= myLevel).ToList<Question>();
@@ -44,6 +48,7 @@ public class QuestionsManager : MonoBehaviour
         else if (questionsLeft <= 0)
         {
             Debug.Log("NIVEL TERMINADOOOOOOOO WIIIIIIIIIII ");
+            final.Nivelend();
             canAsk = false;
         }
     }
@@ -89,11 +94,13 @@ public class QuestionsManager : MonoBehaviour
         if (randomQuestion.answerOptions[answerIndex].isCorect)
         {
             questionsLeft--;
+            conteoBien++;
             FindObjectOfType<ShowQuiestionController>().Answered(true);
             advisor.GetComponent<WorkStation>().ChangeState(StationState.DudaOk);
         }
         else
         {
+            conteoMal++;
             FindObjectOfType<ShowQuiestionController>().Answered(false);
             advisor.GetComponent<WorkStation>().ChangeState(StationState.DudaMal);
         }
