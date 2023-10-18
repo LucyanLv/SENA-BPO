@@ -36,7 +36,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7268196246775564492
 SpriteRenderer:
@@ -149,8 +149,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.020565033, y: 0.16079569}
-  m_Size: {x: 1.7156601, y: 2.3215914}
+  m_Offset: {x: -0.0019833248, y: 1.2498002}
+  m_Size: {x: 1.9200523, y: 2.5075822}
   m_Direction: 0
 --- !u!95 &7268196246775564489
 Animator:
@@ -184,7 +184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92a4f4ac6e6cd19408a70b8976e8ca7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedPC: 5
+  speedPC: 7
   canMove: 1
 --- !u!114 &7268196246775564488
 MonoBehaviour:
@@ -198,8 +198,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52fe131909fb51e449693cb98d539635, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxenergia: 20
-  sliderenergia: {fileID: 0}
+  maxEnergy: 50
+  sliderEnergy: {fileID: 0}
 --- !u!114 &2073765119
 MonoBehaviour:
   m_ObjectHideFlags: 0

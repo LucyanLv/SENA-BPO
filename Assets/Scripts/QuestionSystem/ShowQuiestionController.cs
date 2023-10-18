@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using static UnityEngine.Rendering.DebugUI;
+using UnityEngine.Playables;
 
 public class ShowQuiestionController : MonoBehaviour
 {
@@ -13,10 +14,11 @@ public class ShowQuiestionController : MonoBehaviour
     public TextMeshProUGUI questionText;
     public TextMeshProUGUI[] answerButtons;
     public Question question = new Question();
-
-    
-    
-
+    public GameObject fondoVerde;
+    public GameObject chulito;
+    public GameObject fondoRojo;
+    public GameObject cruz;
+    public PlayableDirector playable;
 
     [ContextMenu("HidePanel")]
     public void HideQuestionPanel()
@@ -40,18 +42,24 @@ public class ShowQuiestionController : MonoBehaviour
     public void Answered(bool correct)
     {
         hasAnswered = true;
-        StartCoroutine(Parpadear(correct));
-        
-        
+        if (correct)
+        {
+            HideQuestionPanel();
+
+            StartCoroutine(RespondioBien());
+        }
+        else
+        {
+            HideQuestionPanel();
+
+            StartCoroutine(RespondioMal());
+        }
     }
     public void NotAnswered()
     {
         hasAnswered = true;
-        StartCoroutine(Parpadear(false));
-        
+        StartCoroutine(RespondioMal());
     }
-
-
 
     private void loadQuestion(Question question)
     {
@@ -65,29 +73,22 @@ public class ShowQuiestionController : MonoBehaviour
             answerButtons[i].text = $"{option}) {question.answerOptions[i].answerText} **** {question.answerOptions[i].isCorect} ";
             option++;
         }
-
     }
-    
-
-    private IEnumerator Parpadear(bool correct)
+    private IEnumerator RespondioBien()
     {
-        Debug.Log("a parpadear");
-        float tiempoTotal = 3f;  // Duraci�n total del parpadeo (3 segundos)
-        float tiempoPorColor = 0.5f;  // Tiempo por cada color (0.5 segundos)
-        Color color1 = correct ? Color.green : Color.red;
-        Color color2 = correct ? new Color(0, 255, 179) : new Color(255, 0, 72);
-        while (tiempoTotal > 0f)
-        {
-            questionCanvas.GetComponent<Image>().color = color1;
-            yield return new WaitForSeconds(tiempoPorColor);
-
-            questionCanvas.GetComponent<Image>().color = color2;
-            yield return new WaitForSeconds(tiempoPorColor);
-
-            tiempoTotal -= tiempoPorColor * 2;
-        }
-        HideQuestionPanel();
-
+        fondoVerde.SetActive(true);
+        chulito.SetActive(true);
+        yield return new WaitForSeconds(3);
+        fondoVerde.SetActive(false);
+        chulito.SetActive(false);
     }
-
+    private IEnumerator RespondioMal()
+    {
+        fondoRojo.SetActive(true);
+        cruz.SetActive(true);
+        playable.Play();
+        yield return new WaitForSeconds(3);
+        fondoRojo.SetActive(false);
+        cruz.SetActive(false);
+    }
 }
