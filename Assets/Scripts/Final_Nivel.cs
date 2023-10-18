@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Final_Nivel : MonoBehaviour
@@ -25,7 +26,7 @@ public class Final_Nivel : MonoBehaviour
 
     public void Nivelend()
     {
-        Time.timeScale=0;
+        Time.timeScale=0f;
         panelpreguntas.SetActive(false);
         if(manager.conteoBien>manager.conteoMal)
         {
@@ -39,5 +40,21 @@ public class Final_Nivel : MonoBehaviour
            
         }
 
+    }
+    public void VolverAlMenu(string NombreDeEscena)
+    {
+       SceneManager.LoadScene(NombreDeEscena);
+    }
+    public void SiguienteNivel(string NombreDeNivel)
+    {
+       SceneManager.LoadScene(NombreDeNivel);
+    }
+    public void Reiniciar()
+    {
+       Time.timeScale=1f;
+       panelfinal.SetActive(false);
+       panelmalo.SetActive(false);
+        puntos.SetActive(false);
+       SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
