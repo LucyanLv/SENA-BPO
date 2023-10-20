@@ -31,6 +31,8 @@ public class MenuPausa : MonoBehaviour
     public void VolverAlMenu(string NombreDeEscena)
     {
         SceneManager.LoadScene(NombreDeEscena);
+        Time.timeScale = 1f;
+
     }
     public void Salir()
     {
