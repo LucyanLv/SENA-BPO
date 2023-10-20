@@ -11,62 +11,44 @@ public class MenuPausa : MonoBehaviour
     public GameObject menuSonido;
     public GameObject laPausa;
     public GameObject BotonP;
-    private bool juegoP;
+    public bool juegoP;
 
-
-
-    private void Start()
-    {
-        
-        
-        
-    }
     public void Update()
     {
-       if(Input.GetKeyDown(KeyCode.Escape))
-       {
-         if(juegoP)
-         {
-            Reanudar();
-         }
-         else
-         {
-            pausa();
-         }
-       }
-        
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (juegoP)
+            {
+                Reanudar();
+            }
+            else
+            {
+                pausa();
+            }
+        }
     }
-
 
     public void VolverAlMenu(string NombreDeEscena)
     {
-       SceneManager.LoadScene(NombreDeEscena);
+        SceneManager.LoadScene(NombreDeEscena);
     }
-
-
-   public void Salir()
-   {
-      Application.Quit();
-   }
-
-   public void Menu_Sonido()
-   {
-       menuSonido.SetActive(true);
-   }
-
-
-   public void volver()
-   {
-      menuOpciones.SetActive (false);
-   }
-
-
-   public void volver1()
-   {
-     menuControles.SetActive(false);
-     menuSonido.SetActive(false);
-   }
-
+    public void Salir()
+    {
+        Application.Quit();
+    }
+    public void Menu_Sonido()
+    {
+        menuSonido.SetActive(true);
+    }
+    public void volver()
+    {
+        menuOpciones.SetActive(false);
+    }
+    public void volver1()
+    {
+        menuControles.SetActive(false);
+        menuSonido.SetActive(false);
+    }
 
     public void Opciones()
     {
@@ -74,32 +56,25 @@ public class MenuPausa : MonoBehaviour
 
     }
 
-
     public void Reanudar()
     {
-        juegoP=false;
+        juegoP = false;
         laPausa.SetActive(false);
         BotonP.SetActive(true);
-        Time.timeScale=1f;
+        Time.timeScale = 1f;
         menuOpciones.SetActive(false);
     }
-
 
     public void Controles()
     {
         menuControles.SetActive(true);
     }
-    
 
     public void pausa()
     {
-        juegoP=true;
+        juegoP = true;
         BotonP.SetActive(false);
         laPausa.SetActive(true);
-        Time.timeScale=0f;
-
+        Time.timeScale = 0f;
     }
-    
-      
-
 }
