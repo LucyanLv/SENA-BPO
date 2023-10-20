@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: Assets/FMOD/AudioSena/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638331600949437548
+  lastModified: 638328924068842274
   FileSizes:
   - Name: Desktop
     Value: 1096
@@ -79,7 +79,7 @@ MonoBehaviour:
   Path: Assets/FMOD/AudioSena/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638331600949437548
+  lastModified: 638328924068830864
   FileSizes:
   - Name: Desktop
     Value: 1036
@@ -99,7 +99,7 @@ MonoBehaviour:
   Path: Assets/FMOD/AudioSena/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638331601237547906
+  lastModified: 638328924068914794
   FileSizes:
   - Name: Desktop
     Value: 918208
@@ -312,7 +312,7 @@ MonoBehaviour:
   - {fileID: -5733400346448596249}
   StringsBanks:
   - {fileID: -8800224106148824348}
-  cacheTime: 638331601237547906
+  cacheTime: 638328924068914794
   cacheVersion: 131605
 --- !u!114 &3836802454644584618
 MonoBehaviour:
@@ -349,7 +349,7 @@ MonoBehaviour:
   Path: Assets/FMOD/AudioSena/Build/Desktop/FX.bank
   Name: FX
   StudioPath: bank:/FX
-  lastModified: 638331601237492827
+  lastModified: 638328924068819026
   FileSizes:
   - Name: Desktop
     Value: 4832
@@ -369,7 +369,7 @@ MonoBehaviour:
   Path: Assets/FMOD/AudioSena/Build/Desktop/Character.bank
   Name: Character
   StudioPath: bank:/Character
-  lastModified: 638331601237492827
+  lastModified: 638328924068809090
   FileSizes:
   - Name: Desktop
     Value: 9280

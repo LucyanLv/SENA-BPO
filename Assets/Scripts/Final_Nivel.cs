@@ -7,8 +7,9 @@ using UnityEngine.UI;
 public class Final_Nivel : MonoBehaviour
 {
     [SerializeField] GameObject panelfinal;
-    [SerializeField] GameObject panelmalo,puntos,panelpreguntas;
+    [SerializeField] GameObject panelmalo,puntos,panelpreguntas,cajaPuntaje,canvas;
     [SerializeField] QuestionsManager manager;
+    [SerializeField] Player_Mov player;
     [SerializeField] Text puntajeBueno;
     [SerializeField] Text puntajeMalo;
     // Start is called before the first frame update
@@ -26,17 +27,20 @@ public class Final_Nivel : MonoBehaviour
 
     public void Nivelend()
     {
-        Time.timeScale=0f;
+        player.canMove=false;
         panelpreguntas.SetActive(false);
+        canvas.SetActive(false);
         if(manager.conteoBien>manager.conteoMal)
         {
             panelfinal.SetActive(true);
             puntos.SetActive(true);
+            cajaPuntaje.SetActive(true);
         }
         else
         {
             panelmalo.SetActive(true);
             puntos.SetActive(true);
+            cajaPuntaje.SetActive(true);
            
         }
 
@@ -44,6 +48,7 @@ public class Final_Nivel : MonoBehaviour
     public void VolverAlMenu(string NombreDeEscena)
     {
        SceneManager.LoadScene(NombreDeEscena);
+         canvas.SetActive(true);
     }
     public void SiguienteNivel(string NombreDeNivel)
     {
@@ -52,9 +57,11 @@ public class Final_Nivel : MonoBehaviour
     public void Reiniciar()
     {
        Time.timeScale=1f;
+       canvas.SetActive(true);
        panelfinal.SetActive(false);
        panelmalo.SetActive(false);
-        puntos.SetActive(false);
+       puntos.SetActive(false);
+       cajaPuntaje.SetActive(false);
        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
