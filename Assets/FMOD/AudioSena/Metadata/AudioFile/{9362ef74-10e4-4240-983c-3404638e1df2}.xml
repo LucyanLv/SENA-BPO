@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{9362ef74-10e4-4240-983c-3404638e1df2}">
+		<property name="assetPath">
+			<value>AbreCanvas.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.5</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{17428460-e97f-4c6c-80d8-c9513ef7eb11}</destination>
+		</relationship>
+	</object>
+</objects>
