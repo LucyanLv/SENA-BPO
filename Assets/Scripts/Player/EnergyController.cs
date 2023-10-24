@@ -1,60 +1,103 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class EnergyController : MonoBehaviour
 {
-    [SerializeField] int maxEnergy;
 
-    [SerializeField] Slider sliderEnergy;
 
-    private int currentEnergy;
+    [SerializeField] private float timeInterval = 60f; // Intervalo de tiempo en segundos
+    [SerializeField] private int initialCoffe = 100;
+    [SerializeField] private int coffeDecreasePerMinute = 5;
+    [SerializeField] private int speedDecrease = 1;
+
+    [SerializeField] private Slider coffeSlider;
+    [SerializeField] private Text timerText; // Referencia al texto del temporizador
+
+    private float timer;
+    private int currentCoffe;
 
     private void Start()
     {
-        currentEnergy = maxEnergy;
-        sliderEnergy.maxValue = maxEnergy;
-        sliderEnergy.value = currentEnergy;
+        timer = timeInterval;
+        currentCoffe = initialCoffe;
+        coffeSlider.maxValue = initialCoffe;
+        coffeSlider.value = currentCoffe;
     }
 
-    public void DecreaseEnergy(int amount)
+    private void Update()
     {
-        currentEnergy -= amount;
-        currentEnergy = Mathf.Clamp(currentEnergy, 0, maxEnergy);
-        sliderEnergy.value = currentEnergy;
+        // Actualizar el temporizador
+        timer -= Time.deltaTime;
 
-        if (currentEnergy <= 0)
+        UpdateTimerUI(); // Actualizar el texto del temporizador en la UI
+
+        if (timer <= 0)
         {
-            Debug.Log("Game Over");
+            DecreaseCoffe(coffeDecreasePerMinute);
+
+            // Reiniciar el temporizador
+            timer = timeInterval;
+        }
+    }
+    [ContextMenu("DecreaseCoffe")]
+    private void DecreaseCoffe(int amount)
+    {
+        int targetCoffe = currentCoffe - amount;
+        targetCoffe = Mathf.Clamp(targetCoffe, 0, initialCoffe);
+
+        // Interpolación suave para disminuir el dinero gradualmente
+        StartCoroutine(LerpCoffe(targetCoffe));
+
+        if (targetCoffe <= 0)
+        {
+            Debug.Log("Game Over - No tienes suficiente energia");
+
+        }
+        if (targetCoffe == 60 || targetCoffe == 30)
+        {
+            FindObjectOfType<Player_Mov>().DecreaseSpeed(speedDecrease);
         }
     }
 
-    public void IncreaseMoney(int amount)
+    private IEnumerator LerpCoffe(int target)
     {
-        currentEnergy += amount;
-        currentEnergy = Mathf.Clamp(currentEnergy, 0, maxEnergy);
-        sliderEnergy.value = currentEnergy;
+        float elapsedTime = 0f;
+        float duration = 1f; // Duración de la interpolación en segundos
 
-        if (currentEnergy <= 0)
+        int startCoffe = currentCoffe;
+
+        while (elapsedTime < duration)
         {
-            Debug.Log("Game Over");
+            currentCoffe = (int)Mathf.Lerp(startCoffe, target, elapsedTime / duration);
+            coffeSlider.value = currentCoffe;
+            elapsedTime += Time.deltaTime;
+            yield return null;
         }
+
+        currentCoffe = target;
+        coffeSlider.value = currentCoffe;
+    }
+
+    private void UpdateTimerUI()
+    {
+        timerText.text = Mathf.Ceil(timer).ToString(); // Mostrar el temporizador en la UI
     }
 
     private void OnTriggerEnter2D(Collider2D Other)
     {
-        Debug.Log("Colisi�n detectada con: " + Other.gameObject.tag);
+        Debug.Log("Colisi�n detectada con: " + Other.gameObject.tag);
         if (Other.gameObject.CompareTag("cafe"))
         {
-            int energyToRegenerate = Mathf.RoundToInt(maxEnergy * 0.2f);
 
-            currentEnergy += energyToRegenerate;
-            currentEnergy = Mathf.Clamp(currentEnergy, 0, maxEnergy);
+            int energyToRegenerate = Mathf.RoundToInt(initialCoffe * 0.2f);
 
-            sliderEnergy.value = currentEnergy;
-            Debug.Log("Energ�a regenerada: " + energyToRegenerate);
+            DecreaseCoffe(-energyToRegenerate);
+
+            Debug.Log("Energ�a regenerada: " + energyToRegenerate);
         }
     }
+
 }
 

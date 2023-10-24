@@ -3,77 +3,55 @@ using UnityEngine.UI;
 
 public class MoneyController : MonoBehaviour
 {
-    [SerializeField] private float timeInterval = 60f; // Intervalo de tiempo en segundos
-    [SerializeField] private int initialMoney = 100;
-    [SerializeField] private int moneyDecreasePerMinute = 5;
+    [SerializeField] int maxMoney;
 
-    [SerializeField] private Slider moneySlider;
-    [SerializeField] private Text timerText; // Referencia al texto del temporizador
+    [SerializeField] Slider sliderMoney;
 
-    private float timer;
     private int currentMoney;
 
     private void Start()
     {
-        timer = timeInterval;
-        currentMoney = initialMoney;
-        moneySlider.maxValue = initialMoney;
-        moneySlider.value = currentMoney;
+        currentMoney = maxMoney/2;
+        sliderMoney.maxValue = maxMoney;
+        sliderMoney.value = currentMoney;
     }
 
-    private void Update()
+    public void DecreaseMoney(int amount)
     {
-        // Actualizar el temporizador
-        timer -= Time.deltaTime;
+        currentMoney -= amount;
+        currentMoney = Mathf.Clamp(currentMoney, 0, maxMoney);
+        sliderMoney.value = currentMoney;
 
-        UpdateTimerUI(); // Actualizar el texto del temporizador en la UI
-
-        if (timer <= 0)
+        if (currentMoney <= 0)
         {
-            // Disminuir dinero
-            DecreaseMoney(moneyDecreasePerMinute);
-
-            // Reiniciar el temporizador
-            timer = timeInterval;
+            Debug.Log("Game Over");
         }
     }
 
-    private void DecreaseMoney(int amount)
+    public void IncreaseMoney(int amount)
     {
-        int targetMoney = currentMoney - amount;
-        targetMoney = Mathf.Clamp(targetMoney, 0, initialMoney);
+        currentMoney += amount;
+        currentMoney = Mathf.Clamp(currentMoney, 0, maxMoney);
+        sliderMoney.value = currentMoney;
 
-        // Interpolación suave para disminuir el dinero gradualmente
-        StartCoroutine(LerpMoney(targetMoney));
-
-        if (targetMoney <= 0)
+        if (currentMoney <= 0)
         {
-            Debug.Log("Game Over - No tienes suficiente dinero");
-
+            Debug.Log("Game Over");
         }
     }
 
-    private System.Collections.IEnumerator LerpMoney(int target)
+    private void OnTriggerEnter2D(Collider2D Other)
     {
-        float elapsedTime = 0f;
-        float duration = 1f; // Duración de la interpolación en segundos
-
-        int startMoney = currentMoney;
-
-        while (elapsedTime < duration)
+        Debug.Log("Colisión detectada con: " + Other.gameObject.tag);
+        if (Other.gameObject.CompareTag("cafe"))
         {
-            currentMoney = (int)Mathf.Lerp(startMoney, target, elapsedTime / duration);
-            moneySlider.value = currentMoney;
-            elapsedTime += Time.deltaTime;
-            yield return null;
+            int moneyToRegenerate = Mathf.RoundToInt(maxMoney * 0.2f);
+
+            currentMoney += moneyToRegenerate;
+            currentMoney = Mathf.Clamp(currentMoney, 0, maxMoney);
+
+            sliderMoney.value = currentMoney;
+            Debug.Log("Energía regenerada: " + moneyToRegenerate);
         }
-
-        currentMoney = target;
-        moneySlider.value = currentMoney;
-    }
-
-    private void UpdateTimerUI()
-    {
-        timerText.text = Mathf.Ceil(timer).ToString(); // Mostrar el temporizador en la UI
     }
 }
