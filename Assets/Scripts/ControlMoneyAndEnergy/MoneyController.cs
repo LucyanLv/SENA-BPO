@@ -24,7 +24,7 @@ public class MoneyController : MonoBehaviour
 
         if (currentMoney <= 0)
         {
-            Debug.Log("Game Over");
+            FindObjectOfType<Final_Nivel>().FinalizacionNivel();
         }
     }
 
@@ -36,7 +36,7 @@ public class MoneyController : MonoBehaviour
 
         if (currentMoney <= 0)
         {
-            Debug.Log("Game Over");
+            FindObjectOfType<Final_Nivel>().FinalizacionNivel();
         }
     }
 
