@@ -25,7 +25,7 @@ public class Final_Nivel : MonoBehaviour
         puntajeMalo.text=""+ manager.conteoMal;
     }
 
-    public void Nivelend()
+    public void FinalizacionNivel()
     {
         player.canMove=false;
         panelpreguntas.SetActive(false);

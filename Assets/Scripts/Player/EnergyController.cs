@@ -52,7 +52,7 @@ public class EnergyController : MonoBehaviour
 
         if (targetCoffe <= 0)
         {
-            Debug.Log("Game Over - No tienes suficiente energia");
+            FindObjectOfType<Final_Nivel>().FinalizacionNivel();
 
         }
         if (targetCoffe == 60 || targetCoffe == 30)
