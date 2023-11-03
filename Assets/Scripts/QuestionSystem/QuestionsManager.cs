@@ -48,7 +48,7 @@ public class QuestionsManager : MonoBehaviour
         else if (questionsLeft <= 0)
         {
             Debug.Log("NIVEL TERMINADOOOOOOOO WIIIIIIIIIII ");
-            final.Nivelend();
+            final.FinalizacionNivel();
             canAsk = false;
         }
     }

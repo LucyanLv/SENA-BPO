@@ -1,10 +1,7 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
-using static UnityEngine.Rendering.DebugUI;
 using UnityEngine.Playables;
 
 public class ShowQuiestionController : MonoBehaviour
@@ -25,7 +22,7 @@ public class ShowQuiestionController : MonoBehaviour
     {
         if (!hasAnswered)
         {
-            FindObjectOfType<EnergyController>().DecreaseEnergy(2);
+            FindObjectOfType<MoneyController>().DecreaseMoney(2);
         }
         questionCanvas.SetActive(false);
         GameObject.FindObjectOfType<Player_Mov>().canMove = true;
@@ -35,6 +32,7 @@ public class ShowQuiestionController : MonoBehaviour
     {
         GameObject.FindObjectOfType<Player_Mov>().canMove = false;
         loadQuestion(question);
+        FMODUnity.RuntimeManager.PlayOneShot("event:/OpenCanvas");
         questionCanvas.SetActive(true);
 
     }
@@ -45,13 +43,13 @@ public class ShowQuiestionController : MonoBehaviour
         if (correct)
         {
             HideQuestionPanel();
-
+            FMODUnity.RuntimeManager.PlayOneShot("event:/RespondeBien");
             StartCoroutine(RespondioBien());
         }
         else
         {
             HideQuestionPanel();
-
+            FMODUnity.RuntimeManager.PlayOneShot("event:/RespondeMal");
             StartCoroutine(RespondioMal());
         }
     }

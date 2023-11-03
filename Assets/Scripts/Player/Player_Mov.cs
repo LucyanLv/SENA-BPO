@@ -60,6 +60,11 @@ public class Player_Mov : MonoBehaviour
 
     //PC
 
+    public void DecreaseSpeed(int speedDecrease)
+    {
+        speedPC-= speedDecrease;
+    }
+
 }
 
 

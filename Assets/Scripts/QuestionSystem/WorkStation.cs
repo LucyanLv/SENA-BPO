@@ -89,7 +89,7 @@ public class WorkStation : MonoBehaviour
                 break;
             case StationState.DudaMal:
                 Debug.Log("Incorrect Answer");
-                FindObjectOfType<EnergyController>().DecreaseEnergy(2);
+                FindObjectOfType<MoneyController>().DecreaseMoney(2);
                 emojis.Find("Emoji_Enojado").gameObject.SetActive(true);
                 duration = (int)Estado;
                 break;

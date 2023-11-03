@@ -4356,9 +4356,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
-  m_WholeNumbers: 0
-  m_Value: 1
+  m_MaxValue: 20
+  m_WholeNumbers: 1
+  m_Value: 20
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -5672,11 +5672,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0700d6b74c53bd46852dbd74770af7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeInterval: 30
-  initialMoney: 100
-  moneyDecreasePerMinute: 5
-  moneySlider: {fileID: 418349576}
-  timerText: {fileID: 915339149}
+  maxMoney: 20
+  sliderMoney: {fileID: 418349576}
 --- !u!1 &592809831
 GameObject:
   m_ObjectHideFlags: 0
@@ -11351,9 +11348,25 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 7268196246775564488, guid: ceadd4b6166dbb44dab00e0eac6b7511, type: 3}
+      propertyPath: timerText
+      value: 
+      objectReference: {fileID: 915339149}
+    - target: {fileID: 7268196246775564488, guid: ceadd4b6166dbb44dab00e0eac6b7511, type: 3}
+      propertyPath: coffeSlider
+      value: 
+      objectReference: {fileID: 1500583094}
+    - target: {fileID: 7268196246775564488, guid: ceadd4b6166dbb44dab00e0eac6b7511, type: 3}
+      propertyPath: moneySlider
+      value: 
+      objectReference: {fileID: 1500583094}
+    - target: {fileID: 7268196246775564488, guid: ceadd4b6166dbb44dab00e0eac6b7511, type: 3}
       propertyPath: sliderEnergy
       value: 
       objectReference: {fileID: 1500583094}
+    - target: {fileID: 7268196246775564488, guid: ceadd4b6166dbb44dab00e0eac6b7511, type: 3}
+      propertyPath: timeInterval
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7268196246775564495, guid: ceadd4b6166dbb44dab00e0eac6b7511, type: 3}
       propertyPath: m_RootOrder
       value: 3
