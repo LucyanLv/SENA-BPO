@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -105,18 +105,150 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Cafetera Lvl 2-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 10
+        width: 303
+        height: 301
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14a23355070bd41448951b17feca161b
+      internalID: -33240682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafetera Lvl 2-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 12
+        width: 300
+        height: 299
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d26f2a989f50b6478fed8bcccd67618
+      internalID: -507587729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafetera Lvl 2-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 11
+        width: 298
+        height: 298
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15fe9346ec4241548a05102af5ae6067
+      internalID: 1055796812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafetera Lvl 2-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 970
+        y: 10
+        width: 299
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30d01c23038b1bc45a09e036108ee099
+      internalID: 1380262711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafetera Lvl 2-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 1289
+        y: 11
+        width: 301
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a340850514f13c42a6fbde994776c16
+      internalID: -1471223225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafetera Lvl 2-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 1611
+        y: 11
+        width: 299
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa75ac33e058c3d4686a5fefa29358ba
+      internalID: 1556412137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 0
+    internalID: 1537655665
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Cafetera Lvl 2-Sheet_3: 1380262711
+      Cafetera Lvl 2-Sheet_1: -507587729
+      Cafetera Lvl 2-Sheet_0: -33240682
+      Cafetera Lvl 2-Sheet_5: 1556412137
+      Cafetera Lvl 2-Sheet_4: -1471223225
+      Cafetera Lvl 2-Sheet_2: 1055796812
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
