@@ -32,6 +32,7 @@ public class ShowQuiestionController : MonoBehaviour
     {
         GameObject.FindObjectOfType<Player_Mov>().canMove = false;
         loadQuestion(question);
+        FMODUnity.RuntimeManager.PlayOneShot("event:/OpenCanvas");
         questionCanvas.SetActive(true);
 
     }
@@ -42,12 +43,13 @@ public class ShowQuiestionController : MonoBehaviour
         if (correct)
         {
             HideQuestionPanel();
-
+            FMODUnity.RuntimeManager.PlayOneShot("event:/RespondeBien");
             StartCoroutine(RespondioBien());
         }
         else
         {
             HideQuestionPanel();
+            FMODUnity.RuntimeManager.PlayOneShot("event:/RespondeMal");
             StartCoroutine(RespondioMal());
         }
     }

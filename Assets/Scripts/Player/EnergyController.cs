@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 public class EnergyController : MonoBehaviour
 {
-
-
     [SerializeField] private float timeInterval = 60f; // Intervalo de tiempo en segundos
     [SerializeField] private int initialCoffe = 100;
     [SerializeField] private int coffeDecreasePerMinute = 5;
@@ -90,7 +88,7 @@ public class EnergyController : MonoBehaviour
         Debug.Log("Colisi�n detectada con: " + Other.gameObject.tag);
         if (Other.gameObject.CompareTag("cafe"))
         {
-
+            FMODUnity.RuntimeManager.PlayOneShot("event:/DrinkCoffee");
             int energyToRegenerate = Mathf.RoundToInt(initialCoffe * 0.2f);
 
             DecreaseCoffe(-energyToRegenerate);
