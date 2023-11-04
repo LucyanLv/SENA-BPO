@@ -50,9 +50,12 @@ public class Final_Nivel : MonoBehaviour
        SceneManager.LoadScene(NombreDeEscena);
          canvas.SetActive(true);
     }
-    public void SiguienteNivel(string NombreDeNivel)
+    public void SiguienteNivel(/*string NombreDeNivel*/)
     {
-       SceneManager.LoadScene(NombreDeNivel);
+//       SceneManager.LoadScene(NombreDeNivel);
+
+        int indiceActual = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(indiceActual + 1);
     }
     public void Reiniciar()
     {

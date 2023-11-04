@@ -5560,14 +5560,14 @@ MonoBehaviour:
   timeSinceLastHandRaise: 0
   timeShowingQuiestion: 10
   timeBetwenHandsRaise: 80
-  questionsLeft: 10
+  questionsLeft: 20
   workStationadvisors:
   - {fileID: 1283504865}
   - {fileID: 1575913366}
   - {fileID: 864666509}
   - {fileID: 2029580280}
   questions: []
-  myLevel: 1
+  myLevel: 2
   final: {fileID: 1172698948}
   conteoBien: 0
   conteoMal: 0
@@ -5672,11 +5672,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0700d6b74c53bd46852dbd74770af7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeInterval: 30
-  initialMoney: 100
-  moneyDecreasePerMinute: 5
-  moneySlider: {fileID: 418349576}
-  timerText: {fileID: 915339149}
+  maxMoney: 20
+  sliderMoney: {fileID: 418349576}
 --- !u!1 &592809831
 GameObject:
   m_ObjectHideFlags: 0
@@ -7973,6 +7970,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2077794537}
     m_Modifications:
+    - target: {fileID: 2600032133595686276, guid: 299e14104e659b44f89586e6ff0af37b, type: 3}
+      propertyPath: m_Size.x
+      value: 5.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 2600032133595686276, guid: 299e14104e659b44f89586e6ff0af37b, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 5962845567625098108, guid: 299e14104e659b44f89586e6ff0af37b, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -11481,6 +11486,14 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 7268196246775564488, guid: ceadd4b6166dbb44dab00e0eac6b7511, type: 3}
+      propertyPath: timerText
+      value: 
+      objectReference: {fileID: 915339149}
+    - target: {fileID: 7268196246775564488, guid: ceadd4b6166dbb44dab00e0eac6b7511, type: 3}
+      propertyPath: coffeSlider
+      value: 
+      objectReference: {fileID: 1500583094}
+    - target: {fileID: 7268196246775564488, guid: ceadd4b6166dbb44dab00e0eac6b7511, type: 3}
       propertyPath: sliderEnergy
       value: 
       objectReference: {fileID: 1500583094}
@@ -11544,6 +11557,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2077794537}
     m_Modifications:
+    - target: {fileID: 2854155879043464432, guid: 31bc7037d498c934bb5441446e8c578a, type: 3}
+      propertyPath: m_Size.x
+      value: 5.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 2854155879043464432, guid: 31bc7037d498c934bb5441446e8c578a, type: 3}
+      propertyPath: m_Offset.y
+      value: -2.62
+      objectReference: {fileID: 0}
     - target: {fileID: 3309514926128589858, guid: 31bc7037d498c934bb5441446e8c578a, type: 3}
       propertyPath: level
       value: 1
@@ -18100,7 +18121,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1172698948}
         m_TargetAssemblyTypeName: Final_Nivel, Assembly-CSharp
         m_MethodName: SiguienteNivel
-        m_Mode: 5
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -18478,6 +18499,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2077794537}
     m_Modifications:
+    - target: {fileID: 2854155879043464432, guid: 31bc7037d498c934bb5441446e8c578a, type: 3}
+      propertyPath: m_Size.x
+      value: 5.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 2854155879043464432, guid: 31bc7037d498c934bb5441446e8c578a, type: 3}
+      propertyPath: m_Offset.y
+      value: -2.62
+      objectReference: {fileID: 0}
     - target: {fileID: 4075204650651009058, guid: 31bc7037d498c934bb5441446e8c578a, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -18600,6 +18629,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2077794537}
     m_Modifications:
+    - target: {fileID: 2600032133595686276, guid: 299e14104e659b44f89586e6ff0af37b, type: 3}
+      propertyPath: m_Size.x
+      value: 5.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 2600032133595686276, guid: 299e14104e659b44f89586e6ff0af37b, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 5962845567625098108, guid: 299e14104e659b44f89586e6ff0af37b, type: 3}
       propertyPath: m_RootOrder
       value: -1

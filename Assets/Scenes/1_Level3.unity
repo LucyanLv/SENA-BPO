@@ -1553,6 +1553,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 208823133}
   m_CullTransparentMesh: 1
+--- !u!1 &210096171 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8708774127003243868, guid: 3f5d0b78afcc18140b2fe3201f0ebeab, type: 3}
+  m_PrefabInstance: {fileID: 1936003515}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &217136171
 GameObject:
   m_ObjectHideFlags: 0
@@ -5529,14 +5534,16 @@ MonoBehaviour:
   timeSinceLastHandRaise: 0
   timeShowingQuiestion: 10
   timeBetwenHandsRaise: 80
-  questionsLeft: 10
+  questionsLeft: 30
   workStationadvisors:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1912170109}
+  - {fileID: 885206082}
+  - {fileID: 1977787721}
+  - {fileID: 210096171}
+  - {fileID: 788212730}
+  - {fileID: 1077197490}
   questions: []
-  myLevel: 1
+  myLevel: 3
   final: {fileID: 1172698948}
   conteoBien: 0
   conteoMal: 0
@@ -5641,11 +5648,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0700d6b74c53bd46852dbd74770af7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeInterval: 30
-  initialMoney: 100
-  moneyDecreasePerMinute: 5
-  moneySlider: {fileID: 418349576}
-  timerText: {fileID: 915339149}
+  maxMoney: 20
+  sliderMoney: {fileID: 418349576}
 --- !u!1001 &569920304
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5654,6 +5658,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2077794537}
     m_Modifications:
+    - target: {fileID: 3890209975507948590, guid: 79d2ceb94fadfc649b055d92d0abad7d, type: 3}
+      propertyPath: m_Size.x
+      value: 5.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 3890209975507948590, guid: 79d2ceb94fadfc649b055d92d0abad7d, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.85
+      objectReference: {fileID: 0}
     - target: {fileID: 4839590985292382934, guid: 79d2ceb94fadfc649b055d92d0abad7d, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -6717,6 +6729,11 @@ MonoBehaviour:
   m_BoundingShape2D: {fileID: 160040972}
   m_Damping: 0
   m_MaxWindowSize: -1
+--- !u!1 &788212730 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8708774127003243868, guid: 3f5d0b78afcc18140b2fe3201f0ebeab, type: 3}
+  m_PrefabInstance: {fileID: 1536285145}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &793992066
 GameObject:
   m_ObjectHideFlags: 0
@@ -7294,6 +7311,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 881265012}
   m_CullTransparentMesh: 1
+--- !u!1 &885206082 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4839590985292382935, guid: 79d2ceb94fadfc649b055d92d0abad7d, type: 3}
+  m_PrefabInstance: {fileID: 1953631094}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &915339147
 GameObject:
   m_ObjectHideFlags: 0
@@ -8014,6 +8036,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2077794537}
     m_Modifications:
+    - target: {fileID: 3890209975507948590, guid: 79d2ceb94fadfc649b055d92d0abad7d, type: 3}
+      propertyPath: m_Size.x
+      value: 5.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 3890209975507948590, guid: 79d2ceb94fadfc649b055d92d0abad7d, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.85
+      objectReference: {fileID: 0}
     - target: {fileID: 4839590985292382934, guid: 79d2ceb94fadfc649b055d92d0abad7d, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -8756,6 +8786,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1076861695}
   m_CullTransparentMesh: 1
+--- !u!1 &1077197490 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8708774127003243868, guid: 3f5d0b78afcc18140b2fe3201f0ebeab, type: 3}
+  m_PrefabInstance: {fileID: 1812222216}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1088441214
 GameObject:
   m_ObjectHideFlags: 0
@@ -11088,6 +11123,14 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 7268196246775564488, guid: ceadd4b6166dbb44dab00e0eac6b7511, type: 3}
+      propertyPath: timerText
+      value: 
+      objectReference: {fileID: 915339149}
+    - target: {fileID: 7268196246775564488, guid: ceadd4b6166dbb44dab00e0eac6b7511, type: 3}
+      propertyPath: coffeSlider
+      value: 
+      objectReference: {fileID: 1500583094}
+    - target: {fileID: 7268196246775564488, guid: ceadd4b6166dbb44dab00e0eac6b7511, type: 3}
       propertyPath: sliderEnergy
       value: 
       objectReference: {fileID: 1500583094}
@@ -11900,6 +11943,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2077794537}
     m_Modifications:
+    - target: {fileID: 7479970194401307017, guid: 3f5d0b78afcc18140b2fe3201f0ebeab, type: 3}
+      propertyPath: m_Size.x
+      value: 5.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 7479970194401307017, guid: 3f5d0b78afcc18140b2fe3201f0ebeab, type: 3}
+      propertyPath: m_Offset.y
+      value: -2.43
+      objectReference: {fileID: 0}
     - target: {fileID: 8708774127003243867, guid: 3f5d0b78afcc18140b2fe3201f0ebeab, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -13866,6 +13917,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2077794537}
     m_Modifications:
+    - target: {fileID: 7479970194401307017, guid: 3f5d0b78afcc18140b2fe3201f0ebeab, type: 3}
+      propertyPath: m_Size.x
+      value: 5.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 7479970194401307017, guid: 3f5d0b78afcc18140b2fe3201f0ebeab, type: 3}
+      propertyPath: m_Offset.y
+      value: -2.43
+      objectReference: {fileID: 0}
     - target: {fileID: 8708774127003243867, guid: 3f5d0b78afcc18140b2fe3201f0ebeab, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -14685,6 +14744,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1902849532}
   m_CullTransparentMesh: 1
+--- !u!1 &1912170109 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4839590985292382935, guid: 79d2ceb94fadfc649b055d92d0abad7d, type: 3}
+  m_PrefabInstance: {fileID: 569920304}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1916005839
 GameObject:
   m_ObjectHideFlags: 0
@@ -14902,6 +14966,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2077794537}
     m_Modifications:
+    - target: {fileID: 7479970194401307017, guid: 3f5d0b78afcc18140b2fe3201f0ebeab, type: 3}
+      propertyPath: m_Size.x
+      value: 5.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 7479970194401307017, guid: 3f5d0b78afcc18140b2fe3201f0ebeab, type: 3}
+      propertyPath: m_Offset.y
+      value: -2.43
+      objectReference: {fileID: 0}
     - target: {fileID: 8708774127003243867, guid: 3f5d0b78afcc18140b2fe3201f0ebeab, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -15098,6 +15170,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2077794537}
     m_Modifications:
+    - target: {fileID: 3890209975507948590, guid: 79d2ceb94fadfc649b055d92d0abad7d, type: 3}
+      propertyPath: m_Size.x
+      value: 5.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 3890209975507948590, guid: 79d2ceb94fadfc649b055d92d0abad7d, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.85
+      objectReference: {fileID: 0}
     - target: {fileID: 4839590985292382934, guid: 79d2ceb94fadfc649b055d92d0abad7d, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -15360,6 +15440,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1977787721 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4839590985292382935, guid: 79d2ceb94fadfc649b055d92d0abad7d, type: 3}
+  m_PrefabInstance: {fileID: 984650041}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1983436288
 GameObject:
   m_ObjectHideFlags: 0
@@ -18328,7 +18413,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1172698948}
         m_TargetAssemblyTypeName: Final_Nivel, Assembly-CSharp
         m_MethodName: SiguienteNivel
-        m_Mode: 5
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

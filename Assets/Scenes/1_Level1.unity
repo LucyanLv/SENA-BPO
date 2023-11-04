@@ -8092,6 +8092,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2077794537}
     m_Modifications:
+    - target: {fileID: 2600032133595686276, guid: 299e14104e659b44f89586e6ff0af37b, type: 3}
+      propertyPath: m_Size.x
+      value: 5.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 2600032133595686276, guid: 299e14104e659b44f89586e6ff0af37b, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 5962845567625098108, guid: 299e14104e659b44f89586e6ff0af37b, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -11477,22 +11485,6 @@ PrefabInstance:
       propertyPath: coffeSlider
       value: 
       objectReference: {fileID: 1500583094}
-    - target: {fileID: 7268196246775564488, guid: ceadd4b6166dbb44dab00e0eac6b7511, type: 3}
-      propertyPath: moneySlider
-      value: 
-      objectReference: {fileID: 1500583094}
-    - target: {fileID: 7268196246775564488, guid: ceadd4b6166dbb44dab00e0eac6b7511, type: 3}
-      propertyPath: sliderEnergy
-      value: 
-      objectReference: {fileID: 1500583094}
-    - target: {fileID: 7268196246775564488, guid: ceadd4b6166dbb44dab00e0eac6b7511, type: 3}
-      propertyPath: timeInterval
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7268196246775564488, guid: ceadd4b6166dbb44dab00e0eac6b7511, type: 3}
-      propertyPath: coffeDecreasePerMinute
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 7268196246775564495, guid: ceadd4b6166dbb44dab00e0eac6b7511, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -11539,10 +11531,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 7268196246775564495, guid: ceadd4b6166dbb44dab00e0eac6b7511, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1696907050}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ceadd4b6166dbb44dab00e0eac6b7511, type: 3}
 --- !u!1001 &1444303097
@@ -11553,6 +11542,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2077794537}
     m_Modifications:
+    - target: {fileID: 2854155879043464432, guid: 31bc7037d498c934bb5441446e8c578a, type: 3}
+      propertyPath: m_Size.x
+      value: 5.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 2854155879043464432, guid: 31bc7037d498c934bb5441446e8c578a, type: 3}
+      propertyPath: m_Offset.y
+      value: -2.85
+      objectReference: {fileID: 0}
     - target: {fileID: 3309514926128589858, guid: 31bc7037d498c934bb5441446e8c578a, type: 3}
       propertyPath: level
       value: 1
@@ -12973,37 +12970,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4340603859684354170, guid: 37f1302b82858ec408f8e2c973e32fad, type: 3}
   m_PrefabInstance: {fileID: 5790541792022479821}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1696907049
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1696907050}
-  m_Layer: 0
-  m_Name: SeguimientoCamara
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1696907050
+--- !u!4 &1696907050 stripped
 Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 4785167214870920419, guid: ceadd4b6166dbb44dab00e0eac6b7511, type: 3}
+  m_PrefabInstance: {fileID: 1443817641}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1696907049}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.66, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2073765118}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1700375253
 GameObject:
   m_ObjectHideFlags: 0
@@ -17730,11 +17701,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2058621032}
   m_CullTransparentMesh: 1
---- !u!4 &2073765118 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7268196246775564495, guid: ceadd4b6166dbb44dab00e0eac6b7511, type: 3}
-  m_PrefabInstance: {fileID: 1443817641}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2073765121 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7268196246775564493, guid: ceadd4b6166dbb44dab00e0eac6b7511, type: 3}
@@ -18108,7 +18074,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1172698948}
         m_TargetAssemblyTypeName: Final_Nivel, Assembly-CSharp
         m_MethodName: SiguienteNivel
-        m_Mode: 5
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -18486,6 +18452,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2077794537}
     m_Modifications:
+    - target: {fileID: 2854155879043464432, guid: 31bc7037d498c934bb5441446e8c578a, type: 3}
+      propertyPath: m_Size.x
+      value: 5.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 2854155879043464432, guid: 31bc7037d498c934bb5441446e8c578a, type: 3}
+      propertyPath: m_Offset.y
+      value: -2.85
+      objectReference: {fileID: 0}
     - target: {fileID: 4075204650651009058, guid: 31bc7037d498c934bb5441446e8c578a, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -18608,6 +18582,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2077794537}
     m_Modifications:
+    - target: {fileID: 2600032133595686276, guid: 299e14104e659b44f89586e6ff0af37b, type: 3}
+      propertyPath: m_Size.x
+      value: 5.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 2600032133595686276, guid: 299e14104e659b44f89586e6ff0af37b, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 5962845567625098108, guid: 299e14104e659b44f89586e6ff0af37b, type: 3}
       propertyPath: m_RootOrder
       value: -1
