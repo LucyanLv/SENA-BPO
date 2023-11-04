@@ -34,24 +34,24 @@ public class MoneyController : MonoBehaviour
         currentMoney = Mathf.Clamp(currentMoney, 0, maxMoney);
         sliderMoney.value = currentMoney;
 
-        if (currentMoney <= 0)
-        {
-            FindObjectOfType<Final_Nivel>().FinalizacionNivel();
-        }
+        //if (currentMoney <= 0)
+        //{
+        //    FindObjectOfType<Final_Nivel>().FinalizacionNivel();
+        //}
     }
 
-    private void OnTriggerEnter2D(Collider2D Other)
-    {
-        Debug.Log("Colisión detectada con: " + Other.gameObject.tag);
-        if (Other.gameObject.CompareTag("cafe"))
-        {
-            int moneyToRegenerate = Mathf.RoundToInt(maxMoney * 0.2f);
+    //private void OnTriggerEnter2D(Collider2D Other)
+    //{
+    //    Debug.Log("Colisión detectada con: " + Other.gameObject.tag);
+    //    if (Other.gameObject.CompareTag("cafe"))
+    //    {
+    //        int moneyToRegenerate = Mathf.RoundToInt(maxMoney * 0.2f);
 
-            currentMoney += moneyToRegenerate;
-            currentMoney = Mathf.Clamp(currentMoney, 0, maxMoney);
+    //        currentMoney += moneyToRegenerate;
+    //        currentMoney = Mathf.Clamp(currentMoney, 0, maxMoney);
 
-            sliderMoney.value = currentMoney;
-            Debug.Log("Energía regenerada: " + moneyToRegenerate);
-        }
-    }
+    //        sliderMoney.value = currentMoney;
+    //        Debug.Log("Energía regenerada: " + moneyToRegenerate);
+    //    }
+    //}
 }

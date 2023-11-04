@@ -11489,6 +11489,10 @@ PrefabInstance:
       propertyPath: timeInterval
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 7268196246775564488, guid: ceadd4b6166dbb44dab00e0eac6b7511, type: 3}
+      propertyPath: coffeDecreasePerMinute
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7268196246775564495, guid: ceadd4b6166dbb44dab00e0eac6b7511, type: 3}
       propertyPath: m_RootOrder
       value: 3

@@ -84,6 +84,7 @@ public class WorkStation : MonoBehaviour
                 break;
             case StationState.DudaOk:
                 Debug.Log("Correct Answer!");
+                FindObjectOfType<MoneyController>().IncreaseMoney(1);
                 emojis.Find("Emoji_OK").gameObject.SetActive(true);
                 duration = (int)Estado;
                 break;
