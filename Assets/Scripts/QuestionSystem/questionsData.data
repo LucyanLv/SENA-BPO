@@ -54,11 +54,11 @@
             }, {
                 "answerText": "Un proyecto específico para el que se contrata un Contact Center.",
                 "isCorect": true,
-                "id": 2
+                "id": 3
             }, {
                 "answerText": "El número total de agentes en un centro.",
                 "isCorect": false,
-                "id": 2
+                "id": 4
             }
         ]
     }, {
@@ -79,7 +79,7 @@
             }, {
                 "answerText": "Coordinar el soporte técnico de la empresa.",
                 "isCorect": false,
-                "id": 2
+                "id": 4
             }
         ]
     }, {
@@ -96,7 +96,7 @@
             }, {
                 "answerText": "Procesar datos de clientes.",
                 "isCorect": false,
-                "id": 2
+                "id": 4
             }, {
                 "answerText": "Desconectarse del sistema al finalizar la sesión.",
                 "isCorect": true,
@@ -121,7 +121,7 @@
             }, {
                 "answerText": "Tercerización de procesos de fabricación.",
                 "isCorect": false,
-                "id": 2
+                "id": 4
             }
         ]
     }, {
@@ -138,7 +138,7 @@
             }, {
                 "answerText": "Realizar ventas en campo.",
                 "isCorect": false,
-                "id": 2
+                "id": 4
             }, {
                 "answerText": "Gestionar el contacto con los clientes.",
                 "isCorect": true,
@@ -163,7 +163,7 @@
             }, {
                 "answerText": "Tercerización de procesos de atención al cliente.",
                 "isCorect": false,
-                "id": 2
+                "id": 4
             }
         ]
     }, {
@@ -180,7 +180,7 @@
             }, {
                 "answerText": "Gestionar la infraestructura tecnológica.",
                 "isCorect": false,
-                "id": 2
+                "id": 4
             }, {
                 "answerText": "Coordinar la logística interna del centro.",
                 "isCorect": false,
@@ -191,22 +191,971 @@
         "questionText": "¿Cuál es el propósito del LOG IN en el contexto de un centro de contacto?",
         "level": 1,
         "answerOptions": [{
-                " answerText ": " Registrar las ventas realizadas.",
-                " isCorect ": false,
+                "answerText": " Registrar las ventas realizadas.",
+                "isCorect": false,
                 " id ": 1
             }, {
-                " answerText ": " Iniciar una campaña de marketing.",
-                " isCorect ": false,
+                "answerText": " Iniciar una campaña de marketing.",
+                "isCorect": false,
+                "id": 3
+            }, {
+                "answerText": " Ingresar al sistema con usuario y contraseña.",
+                "isCorect": true,
+                " id ": 2
+            }, {
+                "answerText": " Desconectarse del sistema al final del día.",
+                "isCorect": false,
+                "id": 4
+            }
+        ]
+    }, {
+        "questionText": "¿Qué se entiende por CONTACTO en el contexto de campañas outbound?",
+        "level": 2,
+        "answerOptions": [{
+                "answerText": " El tiempo que la llamada queda en espera cuando es atendida.",
+                "isCorect": false,
+                " id ": 1
+            }, {
+                "answerText": "Horario cambiante para agentes según necesidad de la campaña.",
+                "isCorect": false,
+                "id": 2
+            }, {
+                "answerText": "Respuesta al otro lado del teléfono en campañas outbound.",
+                "isCorect": true,
                 " id ": 3
             }, {
-                " answerText ": " Ingresar al sistema con usuario y contraseña.",
-                " isCorect ": true,
-                " id ": 2
+                "answerText": "Mesa de ayuda a la operación.",
+                "isCorect": false,
+                "id": 4
+            }
+        ]
+    }, {
+        "questionText": "¿Cuál es el propósito principal de establecer un PROTOCOLO en una campaña de Contact Center?",
+        "level": 2,
+        "answerOptions": [{
+                "answerText": " Establecer reglas obligatorias para los agentes.",
+                "isCorect": true,
+                " id ": 1
             }, {
-                " answerText ": " Desconectarse del sistema al final del día.",
-                " isCorect ": false,
-                " id ": 2
+                "answerText": "Facilitar la rotación de los agentes.",
+                "isCorect": false,
+                "id": 2
+            }, {
+                "answerText": "Mejorar la retroalimentación entre emisor y receptor.",
+                "isCorect": false,
+                " id ": 3
+            }, {
+                "answerText": "Gestionar la infraestructura propia del centro.",
+                "isCorect": false,
+                "id": 4
+            }
+        ]
+    }, {
+        "questionText": "¿Cómo se define el término TURNO ROTATIVO en el contexto laboral de un Contact Center?",
+        "level": 2,
+        "answerOptions": [{
+                "answerText": "Horario fijo para todos los agentes.",
+                "isCorect": false,
+                " id ": 1
+            }, {
+                "answerText": " Horario que cambia según la necesidad de la campaña.",
+                "isCorect": true,
+                "id": 2
+            }, {
+                "answerText": "Rotación de agentes entre diferentes campañas.",
+                "isCorect": false,
+                " id ": 3
+            }, {
+                "answerText": "Duración total de una jornada laboral.",
+                "isCorect": false,
+                "id": 4
+            }
+        ]
+    }, {
+        "questionText": "¿Cuál es la finalidad de un servicio de HELP DESK en un centro de contacto?",
+        "level": 2,
+        "answerOptions": [{
+                "answerText": "Coordinar las campañas de marketing.",
+                "isCorect": false,
+                " id ": 1
+            }, {
+                "answerText": " Administrar infraestructura propia del centro.",
+                "isCorect": false,
+                "id": 2
+            }, {
+                "answerText": " Establecer reglas obligatorias en campañas.",
+                "isCorect": false,
+                " id ": 3
+            }, {
+                "answerText": "Brindar asistencia y soporte operativo.",
+                "isCorect": true,
+                "id": 4
+            }
+        ]
+    }, {
+        "questionText": "¿Cuál es la definición de SCRIPT en el contexto de un centro de contacto?",
+        "level": 2,
+        "answerOptions": [{
+                "answerText": "Programa informático utilizado para gestionar llamadas.",
+                "isCorect": false,
+                " id ": 1
+            }, {
+                "answerText": "Documento que establece reglas obligatorias en campañas.",
+                "isCorect": false,
+                "id": 2
+            }, {
+                "answerText": " Guión establecido para utilizar en diálogo con el usuario.",
+                "isCorect": true,
+                " id ": 3
+            }, {
+                "answerText": "Herramienta de retroalimentación entre emisor y receptor.",
+                "isCorect": false,
+                "id": 4
+            }
+        ]
+    }, {
+        "questionText": "¿Qué significa IN HOUSE en la gestión de un Contact Center?",
+        "level": 2,
+        "answerOptions": [{
+                "answerText": " Utilización de infraestructura propia del centro.",
+                "isCorect": true,
+                " id ": 1
+            }, {
+                "answerText": "Tercerización de procesos tecnológicos.
+                ",
+                "isCorect": false,
+                "id": 2
+            }, {
+                "answerText": "Rotación de agentes en diferentes campañas.",
+                "isCorect": false,
+                " id ": 3
+            }, {
+                "answerText": "Cumplimiento de protocolos específicos.",
+                "isCorect": false,
+                "id": 4
+            }
+        ]
+    }, {
+        "questionText": "¿Cómo se define el HOLD TIME en el contexto de un Contact Center?",
+        "level": 2,
+        "answerOptions": [{
+                "answerText": "Tiempo que los agentes pasan en pausa.",
+                "isCorect": false,
+                " id ": 1
+            }, {
+                "answerText": " Duración total de una llamada.",
+                "isCorect": false,
+                "id": 2
+            }, {
+                "answerText": "Tiempo que la llamada queda en espera cuando es atendida.",
+                "isCorect": true,
+                " id ": 3
+            }, {
+                "answerText": "Tiempo que los agentes están disponibles para recibir llamadas.",
+                "isCorect": false,
+                "id": 4
+            }
+        ]
+    }, {
+        "questionText": "¿Cuál es la función principal de un sistema IVR en un centro de contacto?",
+        "level": 2,
+        "answerOptions": [{
+                "answerText": "Registrar las llamadas recibidas.
+                ",
+                "isCorect": false,
+                " id ": 1
+            }, {
+                "answerText": "Proporcionar una respuesta interactiva de voz.",
+                "isCorect": true,
+                "id": 2
+            }, {
+                "answerText": "Gestionar las operaciones diarias del centro.",
+                "isCorect": false,
+                " id ": 3
+            }, {
+                "answerText": "Coordinar las campañas de marketing.",
+                "isCorect": false,
+                "id": 4
+            }
+        ]
+    }, {
+        "questionText": "¿Qué implica la ADHERENCIA AL TURNO en un centro de contacto?",
+        "level": 2,
+        "answerOptions": [{
+                "answerText": "Rotación de los agentes durante la jornada laboral.",
+                "isCorect": false,
+                " id ": 1
+            }, {
+                "answerText": "Cumplimiento de los agentes a sus programaciones de trabajo.",
+                "isCorect": true,
+                "id": 2
+            }, {
+                "answerText": " Uso eficiente de los recursos de la empresa.",
+                "isCorect": false,
+                " id ": 3
+            }, {
+                "answerText": " Implementación de nuevas políticas de personal.",
+                "isCorect": false,
+                "id": 4
+            }
+        ]
+    }, {
+        "questionText": "¿Cuál es la definición de TURNO en el contexto de un Contact Center?",
+        "level": 2,
+        "answerOptions": [{
+                "answerText": "Rotación de agentes en diferentes campañas.",
+                "isCorect": false,
+                " id ": 1
+            }, {
+                "answerText": " Duración total de una jornada laboral.",
+                "isCorect": false,
+                "id": 2
+            }, {
+                "answerText": "Horario fijo para todos los agentes.",
+                "isCorect": false,
+                " id ": 3
+            }, {
+                "answerText": " Horario que se establece de acuerdo con la necesidad de la campaña.",
+                "isCorect": true,
+                "id": 4
+            }
+        ]
+    }, {
+        "questionText": "¿Qué implica el término FEEBACK en las operaciones de un Contact Center?",
+        "level": 2,
+        "answerOptions": [{
+                "answerText": "Uso eficiente de los recursos de la empresa.",
+                "isCorect": false,
+                " id ": 1
+            }, {
+                "answerText": " Coordinación de las campañas de marketing.",
+                "isCorect": false,
+                "id": 2
+            }, {
+                "answerText": " Retroalimentación entre emisor y receptor.",
+                "isCorect": true,
+                " id ": 3
+            }, {
+                "answerText": "Administración de infraestructura propia del centro.",
+                "isCorect": false,
+                "id": 4
+            }
+        ]
+    }, {
+        "questionText": "¿Cuál es la función principal de un SERVIDOR IVR? ",
+        "level": 3,
+        "answerOptions": [{
+                "answerText": "Gestionar la base de datos del cliente.",
+                "isCorect": false,
+                " id ": 1
+            }, {
+                "answerText": "Resumir el motivo de la llamada.",
+                "isCorect": false,
+                "id": 2
+            }, {
+                "answerText": "Proporcionar una respuesta de voz interactiva para que el cliente se autoatienda.",
+                "isCorect": true,
+                " id ": 3
+            }, {
+                "answerText": "Coordinar el enrutamiento de llamadas.",
+                "isCorect": false,
+                "id": 4
+            }
+        ]
+    }, {
+        "questionText": "¿Qué significa el término QUALITY en el contexto de un centro de contacto?",
+        "level": 3,
+        "answerOptions": [{
+                "answerText": "Asignación lógica del ACD a personal especializado.",
+                "isCorect": false,
+                " id ": 1
+            }, {
+                "answerText": "dentificación automática del número.",
+                "isCorect": false,
+                "id": 2
+            }, {
+                "answerText": "Agente de control de calidad.",
+                "isCorect": true,
+                " id ": 3
+            }, {
+                "answerText": "Respuesta de voz interactiva para el cliente.",
+                "isCorect": false,
+                "id": 4
+            }
+        ]
+    }, {
+        "questionText": "¿Cómo se define TIPIFICACION en la gestión de llamadas?",
+        "level": 3,
+        "answerOptions": [{
+                "answerText": "Rangos de tiempo en los cuales se hacen mediciones al agente.",
+                "isCorect": false,
+                " id ": 1
+            }, {
+                "answerText": "Resumen del motivo de la llamada.",
+                "isCorect": true,
+                "id": 2
+            }, {
+                "answerText": "Acción del ACD para dirigir llamadas entrantes al agente adecuado.",
+                "isCorect": false,
+                " id ": 3
+            }, {
+                "answerText": "Métrica utilizada para medir la gestión cualitativa y cuantitativa.",
+                "isCorect": false,
+                "id": 4
+            }
+        ]
+    }, {
+        "questionText": "¿Cuál es la responsabilidad principal de un ACD en un centro de contacto?",
+        "level": 3,
+        "answerOptions": [{
+                "answerText": "Identificar automáticamente el número del cliente.",
+                "isCorect": false,
+                " id ": 1
+            }, {
+                "answerText": "Distribuir automáticamente las llamadas.",
+                "isCorect": true,
+                "id": 2
+            }, {
+                "answerText": "Gestionar la base de datos del cliente.",
+                "isCorect": false,
+                " id ": 3
+            }, {
+                "answerText": " Coordinar el enrutamiento de llamadas entrantes.",
+                "isCorect": false,
+                "id": 4
+            }
+        ]
+    }, {
+        "questionText": "¿Qué implica la BASE DE DATOS en el contexto de un centro de contacto?",
+        "level": 3,
+        "answerOptions": [{
+                "answerText": " Respuesta de voz interactiva para el cliente.",
+                "isCorect": false,
+                " id ": 1
+            }, {
+                "answerText": "Tiempo promedio dedicado a una interacción con un cliente.",
+                "isCorect": false,
+                "id": 2
+            }, {
+                "answerText": "Conjunto de datos importantes del cliente.",
+                "isCorect": true,
+                " id ": 3
+            }, {
+                "answerText": " Resumen del motivo de la llamada.",
+                "isCorect": false,
+                "id": 4
+            }
+        ]
+    }, {
+        "questionText": "¿Cuál es el propósito del CMS en la gestión de llamadas?",
+        "level": 3,
+        "answerOptions": [{
+                "answerText": "Asignar lógicamente el ACD a personal especializado.",
+                "isCorect": false,
+                " id ": 1
+            }, {
+                "answerText": " Identificar automáticamente el número del cliente.",
+                "isCorect": false,
+                "id": 2
+            }, {
+                "answerText": "Gestionar la distribución de llamadas.",
+                "isCorect": false,
+                " id ": 3
+            }, {
+                "answerText": " Ayudar a identificar las necesidades del cliente.",
+                "isCorect": true,
+                "id": 4
+            }
+        ]
+    }, {
+        "questionText": "¿Qué representa el término ANI en un centro de contacto?",
+        "level": 3,
+        "answerOptions": [{
+                "answerText": "Identificación automática del número.",
+                "isCorect": true,
+                " id ": 1
+            }, {
+                "answerText": " Acción del ACD para dirigir llamadas entrantes al agente adecuado.",
+                "isCorect": false,
+                "id": 2
+            }, {
+                "answerText": "Respuesta de voz interactiva para el cliente.",
+                "isCorect": false,
+                " id ": 3
+            }, {
+                "answerText": "Resumen del motivo de la llamada",
+                "isCorect": false,
+                "id": 4
+            }
+        ]
+    }, {
+        "questionText": "¿Cuál es el significado de SKILL en el contexto de un centro de contacto?",
+        "level": 3,
+        "answerOptions": [{
+                "answerText": " Tiempo promedio dedicado a una interacción con un cliente.",
+                "isCorect": false,
+                " id ": 1
+            }, {
+                "answerText": " Asignación lógica del ACD a personal especializado.",
+                "isCorect": true,
+                "id": 2
+            }, {
+                "answerText": " Rangos de tiempo en los cuales se hacen mediciones al agente.",
+                "isCorect": false,
+                " id ": 3
+            }, {
+                "answerText": " Métrica utilizada para medir la gestión cualitativa y cuantitativa.",
+                "isCorect": false,
+                "id": 4
+            }
+        ]
+    }, {
+        "questionText": "¿Qué representa el término TMO en la gestión de llamadas?",
+        "level": 3,
+        "answerOptions": [{
+                "answerText": "Identificación automática del número.",
+                "isCorect": false,
+                " id ": 1
+            }, {
+                "answerText": "Respuesta de voz interactiva para el cliente.",
+                "isCorect": false,
+                "id": 2
+            }, {
+                "answerText": "Tiempo promedio dedicado a una interacción con un cliente.",
+                "isCorect": true,
+                " id ": 3
+            }, {
+                "answerText": "Resumen del motivo de la llamada.",
+                "isCorect": false,
+                "id": 4
+            }
+        ]
+    }, {
+        "questionText": "¿Cuál es la definición de INTERVALO en el ámbito de la medición de agentes?",
+        "level": 3,
+        "answerOptions": [{
+                "answerText": "Métrica utilizada para medir la gestión cualitativa y cuantitativa.",
+                "isCorect": false,
+                " id ": 1
+            }, {
+                "answerText": "Rangos de tiempo en los cuales se hacen mediciones al agente.",
+                "isCorect": true,
+                "id": 2
+            }, {
+                "answerText": "Distribución automática de llamadas.",
+                "isCorect": false,
+                " id ": 3
+            }, {
+                "answerText": "Resumen del motivo de la llamada.",
+                "isCorect": false,
+                "id": 4
+            }
+        ]
+    }, {
+        "questionText": "¿Cuál es el propósito de la ENRUTAMIENTO en un ACD?",
+        "level": 3,
+        "answerOptions": [{
+                "answerText": "Gestionar la base de datos del cliente.",
+                "isCorect": false,
+                " id ": 1
+            }, {
+                "answerText": " Dirigir llamadas entrantes al agente adecuado.",
+                "isCorect": true,
+                "id": 2
+            }, {
+                "answerText": " Identificar automáticamente el número del cliente.",
+                "isCorect": false,
+                " id ": 3
+            }, {
+                "answerText": " Resumir el motivo de la llamada.",
+                "isCorect": false,
+                "id": 4
+            }
+        ]
+    }, {
+        "questionText": "¿Cómo se define el término INDICADOR en la medición de campañas?",
+        "level": 3,
+        "answerOptions": [{
+                "answerText": " Métrica utilizada para medir la gestión cualitativa y cuantitativa.",
+                "isCorect": true,
+                " id ": 1
+            }, {
+                "answerText": "Resumen del motivo de la llamada.",
+                "isCorect": false,
+                "id": 2
+            }, {
+                "answerText": "Tiempo promedio dedicado a una interacción con un cliente.",
+                "isCorect": false,
+                " id ": 3
+            }, {
+                "answerText": " Conjunto de datos importantes del cliente.",
+                "isCorect": false,
+                "id": 4
+            }
+        ]
+    }, {
+        "questionText": "¿Cuál es la función principal de un sistema NICE en un centro de contacto?",
+        "level": 4,
+        "answerOptions": [{
+                "answerText": "Marcación automática de contactos.",
+                "isCorect": false,
+                " id ": 1
+            }, {
+                "answerText": "Medición del tiempo de respuesta de las llamadas.",
+                "isCorect": false,
+                "id": 2
+            }, {
+                "answerText": "Análisis selectivo y por demanda de la calidad del servicio.",
+                "isCorect": true,
+                " id ": 3
+            }, {
+                "answerText": "Gestión cuantificada realizada por el agente.",
+                "isCorect": false,
+                "id": 4
+            }
+        ]
+    }, {
+        
+        "questionText" : "¿Qué implica el término DIMENSIONAMIENTO en el contexto de un centro de contacto ?",
+        "level": 4,
+        "answerOptions": [{
+                "answerText": "Eliminación de No Conformidades reales.",
+                "isCorect": false,
+                " id ": 1
+            }, {
+                "answerText": "Cálculo para saber el número de agentes necesarios en una campaña.",
+                "isCorect": true,
+                "id": 2
+            }, {
+                "answerText": " Traslado de la actividad comercial de la empresa a otro país.",
+                "isCorect": false,
+                " id ": 3
+            }, {
+                "answerText": "Tarea para evitar No Conformidades potenciales.",
+                "isCorect": false,
+                "id": 4
+            }
+        ]
+    }, {
+        "questionText": "¿Cuál es la característica principal del CTI en la gestión de llamadas?",
+        "level": 4,
+        "answerOptions": [{
+                "answerText": "Software facilitador en la gestión de llamadas telefónicas y PC coordinadamente.",
+                "isCorect": true,
+                " id ": 1
+            }, {
+                "answerText": "Marcación automática de contactos incluidos en la base de datos.",
+                "isCorect": false,
+                "id": 2
+            }, {
+                "answerText": "Sistema de grabación selectiva y por demanda.",
+                "isCorect": false,
+                " id ": 3
+            }, {
+                "answerText": "Medición del tiempo de respuesta de las llamadas.",
+                "isCorect": false,
+                "id": 4
+            }
+        ]
+    }, {
+        "questionText": "¿En qué consiste el Offshoring en términos de actividad comercial?",
+        "level": 4,
+        "answerOptions": [{
+                "answerText": "Traslado de la actividad comercial de la empresa a otro país.",
+                "isCorect": true,
+                " id ": 1
+            }, {
+                "answerText": "Utilización de servicios especializados tercerizados.",
+                "isCorect": false,
+                "id": 2
+            }, {
+                "answerText": "Cálculo para saber el número de agentes necesarios en una campaña.",
+                "isCorect": false,
+                " id ": 3
+            }, {
+                "answerText": " Eliminación de No Conformidades reales.",
+                "isCorect": false,
+                "id": 4
+            }
+        ]
+    }, {
+        "questionText": "¿Cuál es la diferencia entre MARCADOR PREDICTIVO y MARCADOR PROGRESIVO?",
+        "level": 4,
+        "answerOptions": [{
+                "answerText": "Marcación automática seleccionada por el agente.",
+                "isCorect": false,
+                " id ": 1
+            }, {
+                "answerText": "Marcación automática de contactos incluidos en la base de datos.",
+                "isCorect": true,
+                "id": 2
+            }, {
+                "answerText": " Marcación automática de un contacto por cada agente disponible.",
+                "isCorect": false,
+                " id ": 3
+            }, {
+                "answerText": "Marcación previa seleccionada por el agente.",
+                "isCorect": false,
+                "id": 4
+            }
+        ]
+    }, {
+        "questionText": "¿Qué representa la sigla ASA en la gestión de un centro de atención telefónica?",
+        "level": 4,
+        "answerOptions": [{
+                "answerText": "Gestión cuantificada realizada por el agente.",
+                "isCorect": false,
+                " id ": 1
+            }, {
+                "answerText": "Medición del tiempo de respuesta de las llamadas.",
+                "isCorect": true,
+                "id": 2
+            }, {
+                "answerText": "Eliminación de No Conformidades reales.",
+                "isCorect": false,
+                " id ": 3
+            }, {
+                "answerText": "Marcación automática de contactos incluidos en la base de datos.",
+                "isCorect": false,
+                "id": 4
+            }
+        ]
+    }, {
+        "questionText": "¿Cuál es el propósito de una ACCION CORRECTIVA en el sistema de gestión de calidad?",
+        "level": 4,
+        "answerOptions": [{
+                "answerText": " Tarea para evitar No Conformidades potenciales.",
+                "isCorect": false,
+                " id ": 1
+            }, {
+                "answerText": "Eliminación de No Conformidades reales.",
+                "isCorect": true,
+                "id": 2
+            }, {
+                "answerText": "Cálculo para saber el número de agentes necesarios en una campaña.",
+                "isCorect": false,
+                " id ": 3
+            }, {
+                "answerText": "Traslado de la actividad comercial de la empresa a otro país.",
+                "isCorect": false,
+                "id": 4
+            }
+        ]
+    }, {
+        "questionText": "¿En qué consiste una ACCION PREVENTIVA en un sistema de gestión?",
+        "level": 4,
+        "answerOptions": [{
+                "answerText": "Cálculo para saber el número de agentes necesarios en una campaña.",
+                "isCorect": false,
+                " id ": 1
+            }, {
+                "answerText": "Tarea para evitar No Conformidades potenciales.",
+                "isCorect": true,
+                "id": 2
+            }, {
+                "answerText": "Eliminación de No Conformidades reales.",
+                "isCorect": false,
+                " id ": 3
+            }, {
+                "answerText": "Utilización de servicios especializados tercerizados.",
+                "isCorect": false,
+                "id": 4
+            }
+        ]
+    }, {
+        "questionText": "¿Cuál es la función de un MARCADOR PREVIO en la gestión de llamadas?",
+        "level": 4,
+        "answerOptions": [{
+                "answerText": "Marcación automática de contactos incluidos en la base de datos.",
+                "isCorect": false,
+                " id ": 1
+            }, {
+                "answerText": "Marcación automática seleccionada por el agente.",
+                "isCorect": true,
+                "id": 2
+            }, {
+                "answerText": "Sistema de grabación selectiva y por demanda.",
+                "isCorect": false,
+                " id ": 3
+            }, {
+                "answerText": "Traslado de la actividad comercial de la empresa a otro país.",
+                "isCorect": false,
+                "id": 4
+            }
+        ]
+    }, {
+        "questionText": "¿Qué significa OUTSOURCING en el contexto empresarial?",
+        "level": 4,
+        "answerOptions": [{
+                "answerText": "Cálculo para saber el número de agentes necesarios en una campaña.",
+                "isCorect": false,
+                " id ": 1
+            }, {
+                "answerText": "Utilización de servicios especializados tercerizados.",
+                "isCorect": true,
+                "id": 2
+            }, {
+                "answerText": " Eliminación de No Conformidades reales.",
+                "isCorect": false,
+                " id ": 3
+            }, {
+                "answerText": "Marcación automática de contactos incluidos en la base de datos.",
+                "isCorect": false,
+                "id": 4
+            }
+        ]
+    }, {
+        "questionText": "¿Cuál es el propósito de un MARCADOR PROGRESIVO en un centro de contacto?",
+        "level": 4,
+        "answerOptions": [{
+                "answerText": "Marcación automática de contactos incluidos en la base de datos.",
+                "isCorect": false,
+                " id ": 1
+            }, {
+                "answerText": "Marcación automática de un contacto por cada agente disponible.",
+                "isCorect": true,
+                "id": 2
+            }, {
+                "answerText": "Sistema de grabación selectiva y por demanda.",
+                "isCorect": false,
+                " id ": 3
+            }, {
+                "answerText": "Tarea para evitar No Conformidades potenciales.",
+                "isCorect": false,
+                "id": 4
+            }
+        ]
+    }, {
+        "questionText": "¿Qué implica la PRODUCTIVIDAD en la gestión de un agente?",
+        "level": 4,
+        "answerOptions": [{
+                "answerText": "Utilización de servicios especializados tercerizados.,"
+                "isCorect": false,
+                " id ": 1
+            }, {
+                "answerText": "Gestión cuantificada realizada por el agente.",
+                "isCorect": true,
+                "id": 2
+            }, {
+                "answerText": "Eliminación de No Conformidades reales.",
+                "isCorect": false,
+                " id ": 3
+            }, {
+                "answerText": "Marcación automática de contactos incluidos en la base de datos.",
+                "isCorect": false,
+                "id": 4
+            }
+        ]
+    }, {
+        "questionText": "Cuantas constituciones  tiene colombia hasta el año 2023",
+        "level": 0,
+        "answerOptions": [{
+                "answerText": "2",
+                "isCorect": false,
+                " id ": 1
+            }, {
+                "answerText": "4",
+                "isCorect": false,
+                "id": 2
+            }, {
+                "answerText": "15",
+                "isCorect": true,
+                " id ": 3
+            }, {
+                "answerText": "9",
+                "isCorect": false,
+                "id": 4
+            }
+        ]
+    }, {
+        "questionText": "Hasta el año 2023 la ley que rige al SENA es:",
+        "level": 0,
+        "answerOptions": [{
+                "answerText": "1952 de 2019",
+                "isCorect": false,
+                " id ": 1
+            }, {
+                "answerText": "1437 de 2011",
+                "isCorect": false,
+                "id": 2
+            }, {
+                "answerText": "2220 de 2022",
+                "isCorect": false,
+                " id ": 3
+            }, {
+                "answerText": "119 de 1994",
+                "isCorect": true,
+                "id": 4
+            }
+        ]
+    }, {
+        "questionText": "El Servicio Nacional de aprendizaje,  fue  fundado el :",
+        "level": 0,
+        "answerOptions": [{
+                "answerText": "21 junio de 1957",
+                "isCorect": true,
+                " id ": 1
+            }, {
+                "answerText": "21 julio de 1967",
+                "isCorect": false,
+                "id": 2
+            }, {
+                "answerText": "21 julio de 1810",
+                "isCorect": false,
+                " id ": 3
+            }, {
+                "answerText": "21 julio de 1857",
+                "isCorect": false,
+                "id": 4
+            }
+        ]
+    }, {
+        "questionText": "El SENA, nació con el decreto ley :",
+        "level": 0,
+        "answerOptions": [{
+                "answerText": "118 de 1957",
+                "isCorect": true,
+                " id ": 1
+            }, {
+                "answerText": "119 de 1994",
+                "isCorect": false,
+                "id": 2
+            }, {
+                "answerText": "57 de 1887",
+                "isCorect": false,
+                " id ": 3
+            }, {
+                "answerText": "30 de 1992",
+                "isCorect": false,
+                "id": 4
+            }
+        ]
+    }, {
+        "questionText": "El Servicio nacional de aprendizaje SENA , fue creado en el gobierno de:",
+        "level": 0,
+        "answerOptions": [{
+                "answerText": "Simón Bolívar",
+                "isCorect": false,
+                " id ": 1
+            }, {
+                "answerText": "Antonio Nariño",
+                "isCorect": false,
+                "id": 2
+            }, {
+                "answerText": "Alfonso López",
+                "isCorect": false,
+                " id ": 3
+            }, {
+                "answerText": "Gustavo Rojas Pinilla",
+                "isCorect": true,
+                "id": 4
+            }
+        ]
+    }, {
+        "questionText": "El país ganador  en 1958, del mundial de fútbol fue:",
+        "level": 0,
+        "answerOptions": [{
+                "answerText": "Colombia",
+                "isCorect": false,
+                " id ": 1
+            }, {
+                "answerText": "Suecia",
+                "isCorect": true,
+                "id": 2
+            }, {
+                "answerText": "Brasil",
+                "isCorect": false,
+                " id ": 3
+            }, {
+                "answerText": "Alemania",
+                "isCorect": false,
+                "id": 4
+            }
+        ]
+    }, {
+        "questionText": "Hasta 2023, el país de américa que más mundiales de fútbol ha ganado es :",
+        "level": 0,
+        "answerOptions": [{
+                "answerText": "Argentina",
+                "isCorect": false,
+                " id ": 1
+            }, {
+                "answerText": "Brasil",
+                "isCorect": true,
+                "id": 2
+            }, {
+                "answerText": "Chile",
+                "isCorect": false,
+                " id ": 3
+            }, {
+                "answerText": "Ecuador",
+                "isCorect": false,
+                "id": 4
+            }
+        ]
+    }, {
+        "questionText": "El primer  jugador colombiano que jugo en el Real Madrid es:",
+        "level": 0,
+        "answerOptions": [{
+                "answerText": "James Rodríguez",
+                "isCorect": false,
+                " id ": 1
+            }, {
+                "answerText": "Edwin Congo",
+                "isCorect": false,
+                "id": 2
+            }, {
+                "answerText": "Juan José Narváez",
+                "isCorect": false,
+                " id ": 3
+            }, {
+                "answerText": "Freddy  Rincón",
+                "isCorect": true,
+                "id": 4
+            }
+        ]
+    }, {
+        "questionText": "La formación del  SENA es:",
+        "level": 0,
+        "answerOptions": [{
+                "answerText": "Formación por competencias",
+                "isCorect": false,
+                " id ": 1
+            }, {
+                "answerText": "Formación por proyectos",
+                "isCorect": false,
+                "id": 2
+            }, {
+                "answerText": "Formación por módulos",
+                "isCorect": false,
+                " id ": 3
+            }, {
+                "answerText": "Formación  profesional Integral",
+                "isCorect": true,
+                "id": 4
+            }
+        ]
+    }, {
+        "questionText": "La corriente pedagógica que trabajamos en el SENA es:",
+        "level": 0,
+        "answerOptions": [{
+                "answerText": "Cognitiva",
+                "isCorect": false,
+                " id ": 1
+            }, {
+                "answerText": "Conductista",
+                "isCorect": false,
+                "id": 2
+            }, {
+                "answerText": "Constructivismo",
+                "isCorect": true,
+                " id ": 3
+            }, {
+                "answerText": "Ninguno de anteriores",
+                "isCorect": false,
+                "id": 4
             }
         ]
     }
+}
 ]
