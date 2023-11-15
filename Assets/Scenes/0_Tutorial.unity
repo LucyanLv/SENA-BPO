@@ -10423,9 +10423,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1104656218}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43d3bb75acb27e0498478ffe2627f4f8, type: 3}
+  m_Script: {fileID: 11500000, guid: 6ade337c4118763499357c221167fcdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  b1: {fileID: 828389633}
+  b2: {fileID: 717375634}
+  b3: {fileID: 572178394}
+  b4: {fileID: 461163067}
+  textin: {fileID: 1092814506}
+  questionpanel: {fileID: 1104656218}
+  canvasDialogo: {fileID: 512889120}
 --- !u!114 &1104656220
 MonoBehaviour:
   m_ObjectHideFlags: 0
