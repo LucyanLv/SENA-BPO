@@ -593,7 +593,7 @@ GameObject:
   - component: {fileID: 62960578}
   m_Layer: 0
   m_Name: "Caf\xE9"
-  m_TagString: Untagged
+  m_TagString: cafe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3113,8 +3113,7 @@ MonoBehaviour:
   menuSonido: {fileID: 1763103874}
   laPausa: {fileID: 139121229}
   BotonP: {fileID: 524120994}
-  musica: {fileID: 1146321827}
-  efectos: {fileID: 1594552506}
+  juegoP: 0
 --- !u!114 &340439725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8384,7 +8383,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 822142617}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.09647, y: -5.80761, z: -10}
+  m_LocalPosition: {x: -5.089834, y: -5.80758, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10427,13 +10426,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43d3bb75acb27e0498478ffe2627f4f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  b1: {fileID: 828389633}
-  b2: {fileID: 717375634}
-  b3: {fileID: 572178394}
-  b4: {fileID: 461163067}
-  textin: {fileID: 1092814506}
-  questionpanel: {fileID: 1104656218}
-  canvasDialogo: {fileID: 512889120}
 --- !u!114 &1104656220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10725,7 +10717,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1147351155}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -18.554085, y: 1.9771323, z: 0}
+  m_LocalPosition: {x: -18.56072, y: 1.9771023, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -19265,8 +19257,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52fe131909fb51e449693cb98d539635, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxenergia: 20
-  sliderenergia: {fileID: 0}
+  timeInterval: 60
+  initialCoffe: 100
+  coffeDecreasePerMinute: 5
+  speedDecrease: 1
+  coffeSlider: {fileID: 0}
+  timerText: {fileID: 0}
 --- !u!4 &7268196246086713276
 Transform:
   m_ObjectHideFlags: 0
