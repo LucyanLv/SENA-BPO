@@ -12,7 +12,7 @@ public class Login : MonoBehaviour
     public InputField usernameInput;
     public InputField passwordInput;
     public Button loginButton;
-    public Button goToRegisterButton;
+//    public Button goToRegisterButton;
 
     ArrayList credentials;
 
@@ -20,7 +20,7 @@ public class Login : MonoBehaviour
     void Start()
     {
         loginButton.onClick.AddListener(login);
-        goToRegisterButton.onClick.AddListener(moveToRegister);
+//        goToRegisterButton.onClick.AddListener(moveToRegister);
 
         if (File.Exists(Application.dataPath + "/credentials.txt"))
         {
