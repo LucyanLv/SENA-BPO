@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using static UsuarioGuardado;
 
 public class Final_Nivel : MonoBehaviour
 {
@@ -12,10 +13,11 @@ public class Final_Nivel : MonoBehaviour
     [SerializeField] Player_Mov player;
     [SerializeField] Text puntajeBueno;
     [SerializeField] Text puntajeMalo;
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] Text usernameText;
+
+    private void Start()
     {
-        
+        usernameText.text = PlayerData.Username;
     }
 
     // Update is called once per frame
@@ -35,6 +37,7 @@ public class Final_Nivel : MonoBehaviour
             panelfinal.SetActive(true);
             puntos.SetActive(true);
             cajaPuntaje.SetActive(true);
+
         }
         else
         {

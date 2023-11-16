@@ -5,6 +5,7 @@ using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using static UsuarioGuardado;
 
 public class Login : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class Login : MonoBehaviour
     public InputField usernameInput;
     public InputField passwordInput;
     public Button loginButton;
-//    public Button goToRegisterButton;
+    public Button goToRegisterButton;
 
     ArrayList credentials;
 
@@ -20,7 +21,7 @@ public class Login : MonoBehaviour
     void Start()
     {
         loginButton.onClick.AddListener(login);
-//        goToRegisterButton.onClick.AddListener(moveToRegister);
+        goToRegisterButton.onClick.AddListener(moveToRegister);
 
         if (File.Exists(Application.dataPath + "/credentials.txt"))
         {
@@ -45,13 +46,15 @@ public class Login : MonoBehaviour
         foreach (var i in credentials)
         {
             string line = i.ToString();
-            //Debug.Log(line);
-            //Debug.Log(line.Substring(11));
-            //substring 0-indexof(:) - indexof(:)+1 - i.length-1
+
             if (i.ToString().Substring(0, i.ToString().IndexOf(":")).Equals(usernameInput.text) &&
                 i.ToString().Substring(i.ToString().IndexOf(":") + 1).Equals(passwordInput.text))
             {
                 isExists = true;
+
+                // Asigna el nombre de usuario a PlayerData
+                PlayerData.Username = usernameInput.text;
+
                 break;
             }
         }

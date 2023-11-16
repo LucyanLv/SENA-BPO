@@ -10608,7 +10608,7 @@ GameObject:
   - component: {fileID: 1846712938}
   - component: {fileID: 1846712937}
   - component: {fileID: 1846712936}
-  - component: {fileID: 1846712939}
+  - component: {fileID: 1846712942}
   - component: {fileID: 1846712940}
   - component: {fileID: 1846712941}
   m_Layer: 5
@@ -10683,7 +10683,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1846712940}
+      - m_Target: {fileID: 1575247425}
         m_TargetAssemblyTypeName: AudioCanvas, Assembly-CSharp
         m_MethodName: PlaySoundEvent
         m_Mode: 1
@@ -10695,9 +10695,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1846712939}
-        m_TargetAssemblyTypeName: PanelSelect, Assembly-CSharp
-        m_MethodName: changePanel
+      - m_Target: {fileID: 1846712942}
+        m_TargetAssemblyTypeName: SceneID, Assembly-CSharp
+        m_MethodName: ChangeSceneID
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10707,9 +10707,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 419797405}
-        m_TargetAssemblyTypeName: PanelManager, Assembly-CSharp
-        m_MethodName: LoadController
+      - m_Target: {fileID: 1876451625}
+        m_TargetAssemblyTypeName: Changescene, Assembly-CSharp
+        m_MethodName: loadScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10757,19 +10757,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1846712934}
   m_CullTransparentMesh: 1
---- !u!114 &1846712939
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1846712934}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a17266666fdc5624388117750782b3d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  panelSelect: 6
 --- !u!114 &1846712940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10804,6 +10791,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &1846712942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1846712934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e30940865f5110a489fcdb8390d9baf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneID: 6
 --- !u!1 &1862453161
 GameObject:
   m_ObjectHideFlags: 0
