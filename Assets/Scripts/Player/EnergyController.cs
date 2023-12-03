@@ -29,8 +29,6 @@ public class EnergyController : MonoBehaviour
         // Actualizar el temporizador
         timer -= Time.deltaTime;
 
-        UpdateTimerUI(); // Actualizar el texto del temporizador en la UI
-
         if (timer <= 0)
         {
             DecreaseCoffe(coffeDecreasePerMinute);
@@ -78,10 +76,7 @@ public class EnergyController : MonoBehaviour
         coffeSlider.value = currentCoffe;
     }
 
-    private void UpdateTimerUI()
-    {
-        timerText.text = Mathf.Ceil(timer).ToString(); // Mostrar el temporizador en la UI
-    }
+    
 
     private void OnTriggerEnter2D(Collider2D Other)
     {

@@ -13,15 +13,14 @@ public class RegisterController : MonoBehaviour
     public InputField PasswordInput;
     public Button Registerbutton;
     public Button Gotologinbutton;
-    ArrayList credentials;
+    //ArrayList credentials;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        PlayerPrefs.DeleteAll();
         Registerbutton.onClick.AddListener(writeStufflofile);
-        Gotologinbutton.onClick.AddListener(goToLoginScene);
-        if (File.Exists(Application.dataPath + "/ credentials.txt *"))
+        /*if (File.Exists(Application.dataPath + "/ credentials.txt *"))
         {
             credentials = new ArrayList(File.ReadAllLines(Application.dataPath + "/ credentials.txt *"));
         }
@@ -29,18 +28,18 @@ public class RegisterController : MonoBehaviour
         else
         {
             File.WriteAllText(Application.dataPath + "/ credentials.txt ", "");
-        }
+        }*/
     }
 
-    void goToLoginScene()
+    void goToLevel1()
     {
-        SceneManager.LoadScene("Login");
+        SceneManager.LoadScene(3);
     }
 
 
     void writeStufflofile()
     {
-        bool isExists = false;
+        /*bool isExists = false;
         credentials = new ArrayList(File.ReadAllLines(Application.dataPath + "/credentials.txt"));
         Debug.Log(Application.dataPath + "/credentials.txt");
         foreach (var i in credentials)
@@ -60,7 +59,12 @@ public class RegisterController : MonoBehaviour
             credentials.Add(UsernameInput.text + ":" + PasswordInput.text);
             File.WriteAllLines(Application.dataPath + "/ credentials.txt", (String[])credentials.ToArray(typeof(string)));
             Debug.Log("Account Registered");
-        }
+        }*/
+        PlayerPrefs.SetString("username", UsernameInput.text);
+        PlayerPrefs.SetString("password", PasswordInput.text);
+        goToLevel1();
+        PlayerPrefs.Save();
     }
+
 
 }

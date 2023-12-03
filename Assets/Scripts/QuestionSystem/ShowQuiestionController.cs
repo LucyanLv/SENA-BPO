@@ -68,7 +68,8 @@ public class ShowQuiestionController : MonoBehaviour
         questionText.text = question.questionText;
         for (int i = 0; i < question.answerOptions.Count; i++)
         {
-            answerButtons[i].text = $"{option}) {question.answerOptions[i].answerText}";
+            answerButtons[i].text = $"{option}) {question.answerOptions[i].answerText} {question.answerOptions[i].isCorect}";
+          //  answerButtons[i].text = $"{option}) {question.answerOptions[i].answerText}";
             option++;
         }
     }

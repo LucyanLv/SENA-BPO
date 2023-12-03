@@ -14,6 +14,7 @@ public class MoneyController : MonoBehaviour
         currentMoney = maxMoney/2;
         sliderMoney.maxValue = maxMoney;
         sliderMoney.value = currentMoney;
+
     }
 
     public void DecreaseMoney(int amount)

@@ -17,6 +17,9 @@ public class QuestionsManager : MonoBehaviour
 
     public List<GameObject> workStationadvisors = new List<GameObject>();
     public List<Question> questions = new List<Question>();
+    public List<Question> relaxQuestions = new List<Question>();
+    public List<Question> alreadyAnswered = new List<Question>();
+    public List<Question> alreadySeen = new List<Question>();
 
     private Question lastPrinted = null;
 
@@ -25,22 +28,51 @@ public class QuestionsManager : MonoBehaviour
 
     [SerializeField] private int myLevel;
 
-    [SerializeField]  Final_Nivel final;
-    public  int conteoBien=0;
-    public int conteoMal=0;
+    [SerializeField] Final_Nivel final;
+    public int conteoBien = 0;
+    public int conteoMal = 0;
+
+    private void Awake()
+    {
+        FindObjectOfType<TimestampManager>().SaveTimestamp("lvl1Ini");
+        PlayerPrefs.SetInt("maxlvl", myLevel);
+        PlayerPrefs.Save();
+    }
 
     private void Start()
     {
-        List<Question> levelQuestions = GetComponent<QuestionsReader>().questions.Where(q => q.level <= myLevel).ToList<Question>();
+        List<Question> levelQuestions = GetComponent<QuestionsReader>().questions.Where(q => q.level <= myLevel && q.level >= 0).ToList<Question>();
         questions.AddRange(levelQuestions);
-        
+        loadAviableQuestions();
+    }
+
+    private void loadAviableQuestions()
+    {
+
+        foreach (Question question in alreadyAnswered)
+        {
+            questions.Remove(question);
+        }
+        if (questions.Count > 0)
+        {
+            foreach (Question question in alreadySeen)
+            {
+                questions.Remove(question);
+            }
+        }
+        else
+        {
+            questions.AddRange(alreadySeen);
+            alreadySeen = new List<Question>();
+        }
+        Debug.Log($"son rn total {questions.Count} preguntas... con {alreadySeen} vistas y {alreadyAnswered} bien respondidas");
     }
 
     private void Update()
     {
         timeSinceLastHandRaise += canAsk ? Time.deltaTime : 0;
         Debug.Log("timeSinceLastHandRaise " + Mathf.Floor(timeSinceLastHandRaise));
-        
+
         if (timeSinceLastHandRaise >= Random.Range(4f, 8f) && canAsk && questionsLeft > 0)
         {
             LaunchQuestion();
@@ -55,9 +87,7 @@ public class QuestionsManager : MonoBehaviour
 
     private void LaunchQuestion()
     {
-        Debug.Log("////////////// inicio a preguntar ///////////////");
         advisor = workStationadvisors[Random.Range(0, workStationadvisors.Count)];
-        Debug.Log("yo el asistente del " + advisor.gameObject.name + " y empezare a preguntar");
         if (canAsk)
         {
             isAsking = true;
@@ -77,10 +107,13 @@ public class QuestionsManager : MonoBehaviour
 
     private Question GetRandomQuestion()
     {
+        loadAviableQuestions();
         Question random = lastPrinted;
         while (random == lastPrinted)
         {
-            random = questions[Random.Range(0, questions.Count)];
+            random = Random.Range(0, 1) > 0.3 ? 
+                questions[Random.Range(0, questions.Count)] : 
+                relaxQuestions[Random.Range(0,relaxQuestions.Count)];
         }
         random.sortAnswersRandomly();
         randomQuestion = random;
@@ -90,19 +123,24 @@ public class QuestionsManager : MonoBehaviour
     public void CheckAnswer(int answerIndex)
     {
         Debug.Log($"respondio {answerIndex} que es {randomQuestion.answerOptions[answerIndex].answerText}");
+        if (randomQuestion.level != 0)
+        {
+            if (randomQuestion.answerOptions[answerIndex].isCorect)
+            {
+                questionsLeft--;
+                conteoBien++;
+                FindObjectOfType<ShowQuiestionController>().Answered(true);
+                advisor.GetComponent<WorkStation>().ChangeState(StationState.DudaOk);
+                alreadyAnswered.Add(randomQuestion);
 
-        if (randomQuestion.answerOptions[answerIndex].isCorect)
-        {
-            questionsLeft--;
-            conteoBien++;
-            FindObjectOfType<ShowQuiestionController>().Answered(true);
-            advisor.GetComponent<WorkStation>().ChangeState(StationState.DudaOk);
-        }
-        else
-        {
-            conteoMal++;
-            FindObjectOfType<ShowQuiestionController>().Answered(false);
-            advisor.GetComponent<WorkStation>().ChangeState(StationState.DudaMal);
+            }
+            else
+            {
+                conteoMal++;
+                FindObjectOfType<ShowQuiestionController>().Answered(false);
+                advisor.GetComponent<WorkStation>().ChangeState(StationState.DudaMal);
+                alreadySeen.Add(randomQuestion);
+            }
         }
         canAsk = false;
     }
