@@ -27,7 +27,6 @@ public class WorkStation : MonoBehaviour
         if (!Estado.Equals(StationState.Trabajando))
         {
             duration -= Time.deltaTime;
-            Debug.Log(Mathf.Floor(duration));
             if (duration <= 0f)
             {
                 
@@ -84,13 +83,11 @@ public class WorkStation : MonoBehaviour
                 break;
             case StationState.DudaOk:
                 Debug.Log("Correct Answer!");
-                FindObjectOfType<MoneyController>().IncreaseMoney(1);
                 emojis.Find("Emoji_OK").gameObject.SetActive(true);
                 duration = (int)Estado;
                 break;
             case StationState.DudaMal:
                 Debug.Log("Incorrect Answer");
-                FindObjectOfType<MoneyController>().DecreaseMoney(2);
                 emojis.Find("Emoji_Enojado").gameObject.SetActive(true);
                 duration = (int)Estado;
                 break;

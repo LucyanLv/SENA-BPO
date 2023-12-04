@@ -41,7 +41,8 @@ public class QuestionsManager : MonoBehaviour
 
     private void Start()
     {
-        List<Question> levelQuestions = GetComponent<QuestionsReader>().questions.Where(q => q.level <= myLevel && q.level >= 0).ToList<Question>();
+        List<Question> levelQuestions = GetComponent<QuestionsReader>().questions.Where(q => q.level <= myLevel && q.level > 0).ToList<Question>();
+        relaxQuestions = GetComponent<QuestionsReader>().questions.Where(q => q.level == 0).ToList<Question>();
         questions.AddRange(levelQuestions);
         loadAviableQuestions();
     }
@@ -58,6 +59,7 @@ public class QuestionsManager : MonoBehaviour
             foreach (Question question in alreadySeen)
             {
                 questions.Remove(question);
+                relaxQuestions.Remove(question);
             }
         }
         else
@@ -65,13 +67,12 @@ public class QuestionsManager : MonoBehaviour
             questions.AddRange(alreadySeen);
             alreadySeen = new List<Question>();
         }
-        Debug.Log($"son rn total {questions.Count} preguntas... con {alreadySeen} vistas y {alreadyAnswered} bien respondidas");
+        Debug.Log($"son rn total {questions.Count} preguntas... con {alreadySeen.Count} vistas y {alreadyAnswered.Count} bien respondidas");
     }
 
     private void Update()
     {
         timeSinceLastHandRaise += canAsk ? Time.deltaTime : 0;
-        Debug.Log("timeSinceLastHandRaise " + Mathf.Floor(timeSinceLastHandRaise));
 
         if (timeSinceLastHandRaise >= Random.Range(4f, 8f) && canAsk && questionsLeft > 0)
         {
@@ -111,9 +112,9 @@ public class QuestionsManager : MonoBehaviour
         Question random = lastPrinted;
         while (random == lastPrinted)
         {
-            random = Random.Range(0, 1) > 0.3 ? 
-                questions[Random.Range(0, questions.Count)] : 
-                relaxQuestions[Random.Range(0,relaxQuestions.Count)];
+            random = Random.Range(1, 100) > 20 ?
+                questions[Random.Range(0, questions.Count)] :
+                relaxQuestions[Random.Range(0, relaxQuestions.Count)];
         }
         random.sortAnswersRandomly();
         randomQuestion = random;
@@ -123,25 +124,35 @@ public class QuestionsManager : MonoBehaviour
     public void CheckAnswer(int answerIndex)
     {
         Debug.Log($"respondio {answerIndex} que es {randomQuestion.answerOptions[answerIndex].answerText}");
-        if (randomQuestion.level != 0)
+        string am = randomQuestion.level != 0 ? "normal" : "relax";
+        Debug.Log($"respondio una pregunta {am} que es {randomQuestion.answerOptions[answerIndex].answerText}");
+
+        if (randomQuestion.answerOptions[answerIndex].isCorect)
         {
-            if (randomQuestion.answerOptions[answerIndex].isCorect)
+            if (randomQuestion.level != 0)
             {
                 questionsLeft--;
-                conteoBien++;
-                FindObjectOfType<ShowQuiestionController>().Answered(true);
-                advisor.GetComponent<WorkStation>().ChangeState(StationState.DudaOk);
                 alreadyAnswered.Add(randomQuestion);
-
+                FindObjectOfType<MoneyController>().IncreaseMoney(1);
+                conteoBien++;
             }
-            else
+            FindObjectOfType<ShowQuiestionController>().Answered(true);
+            advisor.GetComponent<WorkStation>().ChangeState(StationState.DudaOk);
+            
+
+        }
+        else
+        {
+            if (randomQuestion.level != 0)
             {
                 conteoMal++;
-                FindObjectOfType<ShowQuiestionController>().Answered(false);
-                advisor.GetComponent<WorkStation>().ChangeState(StationState.DudaMal);
-                alreadySeen.Add(randomQuestion);
+                FindObjectOfType<MoneyController>().DecreaseMoney(2);
             }
+            FindObjectOfType<ShowQuiestionController>().Answered(false);
+            advisor.GetComponent<WorkStation>().ChangeState(StationState.DudaMal);
+            alreadySeen.Add(randomQuestion);
         }
+
         canAsk = false;
     }
 }
