@@ -1060,7 +1060,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b65c6d8119a8a014e91291ec5ab4f7b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollViewContent: {fileID: 1669868861}
+  scrollViewContent: {fileID: 1156187426}
   userDetailsViewPrefab: {fileID: 1436090309249297824, guid: bdc52ef36889ee840b1a8d60769ef81f, type: 3}
 --- !u!1 &149070483
 GameObject:
@@ -8043,7 +8043,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.99999595, y: 1}
-  m_AnchoredPosition: {x: 0.3, y: 0}
+  m_AnchoredPosition: {x: 0.29999924, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1585848384
