@@ -11,7 +11,7 @@ public class RecordDataView : MonoBehaviour
 
     public void UpdateUserData(UserData userData)
     {
-        user.text = userData.userName;
+        user.text = userData.userName + "\n" + userData.code;
         points.text = string.Concat( userData.correctAnswer, "/", userData.maxLevel, "0");
     }
 }
