@@ -34,7 +34,6 @@ public class QuestionsManager : MonoBehaviour
 
     private void Awake()
     {
-        FindObjectOfType<TimestampManager>().SaveTimestamp("lvl1Ini");
         PlayerPrefs.SetInt("maxlvl", myLevel);
         PlayerPrefs.Save();
     }
@@ -67,7 +66,6 @@ public class QuestionsManager : MonoBehaviour
             questions.AddRange(alreadySeen);
             alreadySeen = new List<Question>();
         }
-        Debug.Log($"son rn total {questions.Count} preguntas... con {alreadySeen.Count} vistas y {alreadyAnswered.Count} bien respondidas");
     }
 
     private void Update()
@@ -123,9 +121,7 @@ public class QuestionsManager : MonoBehaviour
 
     public void CheckAnswer(int answerIndex)
     {
-        Debug.Log($"respondio {answerIndex} que es {randomQuestion.answerOptions[answerIndex].answerText}");
         string am = randomQuestion.level != 0 ? "normal" : "relax";
-        Debug.Log($"respondio una pregunta {am} que es {randomQuestion.answerOptions[answerIndex].answerText}");
 
         if (randomQuestion.answerOptions[answerIndex].isCorect)
         {
@@ -135,6 +131,8 @@ public class QuestionsManager : MonoBehaviour
                 alreadyAnswered.Add(randomQuestion);
                 FindObjectOfType<MoneyController>().IncreaseMoney(1);
                 conteoBien++;
+                PlayerPrefs.SetInt($"correctaslvl{myLevel}", conteoBien);
+                PlayerPrefs.Save();
             }
             FindObjectOfType<ShowQuiestionController>().Answered(true);
             advisor.GetComponent<WorkStation>().ChangeState(StationState.DudaOk);

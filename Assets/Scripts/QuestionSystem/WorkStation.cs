@@ -64,10 +64,7 @@ public class WorkStation : MonoBehaviour
     }
     public void ChangeState(StationState nuevoEstado)
     {
-        Debug.Log("new estadoooo");
         Estado = nuevoEstado;
-
-
         switch (Estado)
         {
             case StationState.HandRaised:
@@ -76,24 +73,20 @@ public class WorkStation : MonoBehaviour
                 duration = (int)Estado; ;
                 break;
             case StationState.Preguntando:
-                Debug.Log("yo el asistente ESTOY PREGUNTANDO PRRO");
                 emojis.Find("Emoji_Pregunta").gameObject.SetActive(false);
                 FindObjectOfType<QuestionsManager>().LaunchQuestionPanel();
                 duration = (int)Estado - (level * 10) >= 30 ? (int)Estado - (level * 10) : 30;
                 break;
             case StationState.DudaOk:
-                Debug.Log("Correct Answer!");
                 emojis.Find("Emoji_OK").gameObject.SetActive(true);
                 duration = (int)Estado;
                 break;
             case StationState.DudaMal:
-                Debug.Log("Incorrect Answer");
                 emojis.Find("Emoji_Enojado").gameObject.SetActive(true);
                 duration = (int)Estado;
                 break;
             case StationState.Trabajando:
             default:
-                Debug.Log("trabajando ando ...................................... ");
                 emojis.Find("Emoji_Pregunta").gameObject.SetActive(false);
                 emojis.Find("Emoji_OK").gameObject.SetActive(false);
                 emojis.Find("Emoji_Enojado").gameObject.SetActive(false);
@@ -108,12 +101,10 @@ public class WorkStation : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(Estado + "   ///   " + collision.tag);
         if (Estado.Equals(StationState.HandRaised) && collision.CompareTag("Player"))
         {
             ChangeState(StationState.Preguntando);
         }
-        Debug.Log(Estado);
     }
 
 }

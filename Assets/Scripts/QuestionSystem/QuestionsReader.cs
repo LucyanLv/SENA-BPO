@@ -21,6 +21,7 @@ public class QuestionsReader : MonoBehaviour
     [ContextMenu("Load")]
     public void Load()
     {
+        questions.Clear();
         string path = Path.Combine(Application.streamingAssetsPath, FileName);
         string questionsInfoJson = File.ReadAllText(path);
         List<Question> loadedQuestions = JsonUtility.FromJson<QuestionWrapper>("{\"questions\":" + questionsInfoJson + "}").questions;

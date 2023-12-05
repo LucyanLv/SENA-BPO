@@ -474,6 +474,50 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
+--- !u!1 &190698911
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 190698914}
+  - component: {fileID: 190698913}
+  m_Layer: 0
+  m_Name: UsersManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &190698913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190698911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed8d7aa434500a544abc73ebe9264c83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &190698914
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190698911}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1155.2301, y: 540.9813, z: 3.4224815}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &203626936
 GameObject:
   m_ObjectHideFlags: 0
@@ -898,9 +942,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UsernameInput: {fileID: 1459640763}
-  PasswordInput: {fileID: 1834673892}
+  CodeInput: {fileID: 1834673892}
   Registerbutton: {fileID: 1820943790}
-  Gotologinbutton: {fileID: 0}
 --- !u!1 &1459640761
 GameObject:
   m_ObjectHideFlags: 0

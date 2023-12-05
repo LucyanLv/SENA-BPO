@@ -6,13 +6,14 @@ using System.IO;
 using UnityEngine.SceneManagement;
 using System.Net;
 using System;
+using static UnityEngine.UIElements.UxmlAttributeDescription;
 
 public class RegisterController : MonoBehaviour
 {
     public InputField UsernameInput;
-    public InputField PasswordInput;
+    public InputField CodeInput;
     public Button Registerbutton;
-    public Button Gotologinbutton;
+
     //ArrayList credentials;
 
     // Start is called before the first frame update
@@ -20,15 +21,7 @@ public class RegisterController : MonoBehaviour
     {
         PlayerPrefs.DeleteAll();
         Registerbutton.onClick.AddListener(writeStufflofile);
-        /*if (File.Exists(Application.dataPath + "/ credentials.txt *"))
-        {
-            credentials = new ArrayList(File.ReadAllLines(Application.dataPath + "/ credentials.txt *"));
-        }
 
-        else
-        {
-            File.WriteAllText(Application.dataPath + "/ credentials.txt ", "");
-        }*/
     }
 
     void goToLevel1()
@@ -39,31 +32,10 @@ public class RegisterController : MonoBehaviour
 
     void writeStufflofile()
     {
-        /*bool isExists = false;
-        credentials = new ArrayList(File.ReadAllLines(Application.dataPath + "/credentials.txt"));
-        Debug.Log(Application.dataPath + "/credentials.txt");
-        foreach (var i in credentials)
-        {
-            if (i.ToString().Contains(UsernameInput.text))
-            {
-                isExists = true;
-                break;
-            }
-        }
-        if (isExists)
-        {
-            Debug.Log($"Usernam  ' {UsernameInput.text}' already exists");
-        }
-        else
-        {
-            credentials.Add(UsernameInput.text + ":" + PasswordInput.text);
-            File.WriteAllLines(Application.dataPath + "/ credentials.txt", (String[])credentials.ToArray(typeof(string)));
-            Debug.Log("Account Registered");
-        }*/
         PlayerPrefs.SetString("username", UsernameInput.text);
-        PlayerPrefs.SetString("password", PasswordInput.text);
-        goToLevel1();
+        PlayerPrefs.SetString("code", CodeInput.text);
         PlayerPrefs.Save();
+        goToLevel1();
     }
 
 

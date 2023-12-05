@@ -17,7 +17,7 @@ public class Final_Nivel : MonoBehaviour
 
     private void Start()
     {
-        usernameText.text = PlayerData.Username;
+        usernameText.text = PlayerPrefs.GetString("username", "un nombre x");
     }
 
     // Update is called once per frame
@@ -55,7 +55,8 @@ public class Final_Nivel : MonoBehaviour
     }
     public void SiguienteNivel(/*string NombreDeNivel*/)
     {
-//       SceneManager.LoadScene(NombreDeNivel);
+        //       SceneManager.LoadScene(NombreDeNivel);
+        FindObjectOfType<UserDataReader>().SaveActualUser();
 
         int indiceActual = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(indiceActual + 1);

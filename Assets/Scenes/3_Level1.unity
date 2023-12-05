@@ -11515,7 +11515,7 @@ PrefabInstance:
       objectReference: {fileID: 1500583094}
     - target: {fileID: 7268196246775564488, guid: ceadd4b6166dbb44dab00e0eac6b7511, type: 3}
       propertyPath: initialCoffe
-      value: 1000
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 7268196246775564495, guid: ceadd4b6166dbb44dab00e0eac6b7511, type: 3}
       propertyPath: m_RootOrder

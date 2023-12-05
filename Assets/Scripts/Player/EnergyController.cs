@@ -80,7 +80,6 @@ public class EnergyController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D Other)
     {
-        Debug.Log("Colisi�n detectada con: " + Other.gameObject.tag);
         if (Other.gameObject.CompareTag("cafe"))
         {
             FMODUnity.RuntimeManager.PlayOneShot("event:/DrinkCoffee");
