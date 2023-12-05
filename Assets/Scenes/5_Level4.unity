@@ -5721,9 +5721,9 @@ MonoBehaviour:
   canAsk: 1
   isAsking: 0
   timeSinceLastHandRaise: 0
-  timeShowingQuiestion: 10
+  timeShowingQuiestion: 15
   timeBetwenHandsRaise: 80
-  questionsLeft: 40
+  questionsLeft: 18
   workStationadvisors:
   - {fileID: 5097555898374779472}
   - {fileID: 170631733}
@@ -7789,7 +7789,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 915339147}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
@@ -10020,7 +10020,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: bda226ac91bf5f34cbbf86ff4f872964, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f7ed385d102c1eb42a4ba5e3f07d00b8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -19117,7 +19117,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: bac02879a04a9ce458222de8db00d3a6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 776d0406d35244944b6b62166c0ad74b, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1

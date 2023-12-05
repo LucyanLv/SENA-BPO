@@ -11,7 +11,7 @@ public class EnergyController : MonoBehaviour
     [SerializeField] private int speedDecrease = 1;
 
     [SerializeField] private Slider coffeSlider;
-    [SerializeField] private Text timerText; // Referencia al texto del temporizador
+    //[SerializeField] private Text timerText; // Referencia al texto del temporizador
 
     private float timer;
     private int currentCoffe;
