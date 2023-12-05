@@ -4,15 +4,28 @@ using UnityEngine;
 
 public class RecordsFiller : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private List<UserData> _records = new List<UserData>();
 
-    // Update is called once per frame
-    void Update()
+    [SerializeField] public GameObject scrollViewContent;
+    [SerializeField] public RecordDataView userDetailsViewPrefab;
+
+    private void Start()
     {
-        
+        _records = FindObjectOfType<UserDataReader>().usersList;
+        Debug.Log(_records.Count + "*******************");
+        ShowUserDetailsListPanel();
+    }
+    public void ShowUserDetailsListPanel()
+    {
+
+        foreach (UserData userDetails in _records)
+        {
+            RecordDataView userDetailsObj = Instantiate(userDetailsViewPrefab) as RecordDataView;
+            userDetailsObj.gameObject.SetActive(true);
+            userDetailsObj.UpdateUserData(userDetails);
+            userDetailsObj.transform.SetParent(scrollViewContent.transform, false);
+        }
+
+
     }
 }
