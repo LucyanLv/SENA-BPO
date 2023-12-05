@@ -8,7 +8,7 @@ using static UsuarioGuardado;
 public class Final_Nivel : MonoBehaviour
 {
     [SerializeField] GameObject panelfinal;
-    [SerializeField] GameObject panelmalo,puntos,panelpreguntas,cajaPuntaje,canvas;
+    [SerializeField] GameObject panelmalo, puntos, panelpreguntas, cajaPuntaje, canvas;
     [SerializeField] QuestionsManager manager;
     [SerializeField] Player_Mov player;
     [SerializeField] Text puntajeBueno;
@@ -23,35 +23,33 @@ public class Final_Nivel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        puntajeBueno.text=""+ manager.conteoBien;
-        puntajeMalo.text=""+ manager.conteoMal;
+        puntajeBueno.text = "" + manager.conteoBien;
+        puntajeMalo.text = "" + manager.conteoMal;
     }
 
     public void FinalizacionNivel()
     {
-        player.canMove=false;
+        player.canMove = false;
         panelpreguntas.SetActive(false);
         canvas.SetActive(false);
-        if(manager.conteoBien>manager.conteoMal)
+        if (manager.conteoBien > manager.conteoMal && manager.conteoBien >= PlayerPrefs.GetInt("questionsTotal") - 5)
         {
             panelfinal.SetActive(true);
             puntos.SetActive(true);
             cajaPuntaje.SetActive(true);
-
         }
         else
         {
             panelmalo.SetActive(true);
             puntos.SetActive(true);
             cajaPuntaje.SetActive(true);
-           
         }
 
     }
     public void VolverAlMenu(string NombreDeEscena)
     {
-       SceneManager.LoadScene(NombreDeEscena);
-         canvas.SetActive(true);
+        SceneManager.LoadScene(NombreDeEscena);
+        canvas.SetActive(true);
     }
     public void SiguienteNivel(/*string NombreDeNivel*/)
     {
@@ -63,12 +61,12 @@ public class Final_Nivel : MonoBehaviour
     }
     public void Reiniciar()
     {
-       Time.timeScale=1f;
-       canvas.SetActive(true);
-       panelfinal.SetActive(false);
-       panelmalo.SetActive(false);
-       puntos.SetActive(false);
-       cajaPuntaje.SetActive(false);
-       SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Time.timeScale = 1f;
+        canvas.SetActive(true);
+        panelfinal.SetActive(false);
+        panelmalo.SetActive(false);
+        puntos.SetActive(false);
+        cajaPuntaje.SetActive(false);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

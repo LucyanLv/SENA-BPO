@@ -14,6 +14,7 @@ public class QuestionsManager : MonoBehaviour
     [SerializeField] private float timeBetwenHandsRaise = 60f;
 
     [SerializeField] private int questionsLeft = 10;
+    private int questionsTotal;
 
     public List<GameObject> workStationadvisors = new List<GameObject>();
     public List<Question> questions = new List<Question>();
@@ -35,6 +36,7 @@ public class QuestionsManager : MonoBehaviour
     private void Awake()
     {
         PlayerPrefs.SetInt("maxlvl", myLevel);
+        PlayerPrefs.SetInt("questionsTotal", questionsLeft);
         PlayerPrefs.Save();
     }
 
@@ -78,7 +80,6 @@ public class QuestionsManager : MonoBehaviour
         }
         else if (questionsLeft <= 0)
         {
-            Debug.Log("NIVEL TERMINADOOOOOOOO WIIIIIIIIIII ");
             final.FinalizacionNivel();
             canAsk = false;
         }
