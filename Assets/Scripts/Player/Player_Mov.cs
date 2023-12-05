@@ -1,34 +1,40 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Player_Mov : MonoBehaviour
 {
     Rigidbody2D rb;
+    Animator animator;
 
     [Header("PC")]
-
     public float speedPC;
-    // public float desx, desy;
+    public float velocidadInicio = 10f;
     private Vector2 input;
-    // private Vector2 direccionMov;
     private bool IsMoving;
-    private Animator animator;
-    [SerializeField]
+    private bool cambioVelocidad = false;
     public bool canMove = true;
-
 
     public void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
+
     public void Update()
     {
-
         input.x = Input.GetAxis("Horizontal");
         input.y = Input.GetAxis("Vertical");
 
+        if (Time.time < 40f)
+        {
+            CambiarVelocidadInicial();
+        }
+        else if (!cambioVelocidad)
+        {
+            CambiarVelocidadNormal();
+        }
 
         if (input != Vector2.zero && canMove)
         {
@@ -44,27 +50,21 @@ public class Player_Mov : MonoBehaviour
         }
 
         animator.SetBool("IsMoving", IsMoving);
-
     }
-    /*IEnumerator Move(Vector3 targetpos)
-    {
-        IsMoving = true;
-        while((targetpos - transform.position).sqrMagnitude> Mathf.Epsilon)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, targetpos, speedPC * Time.deltaTime);
-            yield return null;
-        }
-        transform.position = targetpos;
-        IsMoving = false;
-    }*/
 
-    //PC
+    private void CambiarVelocidadInicial()
+    {
+        speedPC = velocidadInicio;
+    }
+
+    private void CambiarVelocidadNormal()
+    {
+        speedPC = 7;
+        cambioVelocidad = true;
+    }
 
     public void DecreaseSpeed(int speedDecrease)
     {
-        speedPC-= speedDecrease;
+        speedPC -= speedDecrease;
     }
-
 }
-
-
