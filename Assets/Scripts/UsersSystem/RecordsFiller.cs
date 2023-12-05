@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class RecordsFiller : MonoBehaviour
@@ -12,7 +13,7 @@ public class RecordsFiller : MonoBehaviour
     private void Start()
     {
         _records = FindObjectOfType<UserDataReader>().usersList;
-        Debug.Log(_records.Count + "*******************");
+        _records = _records.OrderByDescending(record => record.maxLevel).ThenByDescending(record => record.correctAnswer).ToList();
         ShowUserDetailsListPanel();
     }
     public void ShowUserDetailsListPanel()
