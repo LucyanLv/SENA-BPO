@@ -412,9 +412,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Genial!!
-
-    Damos por fin el tutorial.'
+  m_Text: "\xA1\xA1Genial!!\r\nDamos por finalizado el tutorial.\r"
 --- !u!222 &24299601
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2115,7 +2113,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Cuando apareza acercate
+  m_Text: 'Cuando aparezcan acercate
 
     sobre el.'
 --- !u!222 &235139549
@@ -2649,7 +2647,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Diviertete, nos veremos \nen otra \rocasion."
+  m_Text: "Divi\xE9rtete, nos veremos \nen otra \rocasi\xF3n."
 --- !u!222 &308820779
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3033,7 +3031,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Aparecera este icono cada \nvez que tengan preguntas."
+  m_Text: "Aparecer\xE1 este \xEDcono cada \nvez que tengan preguntas."
 --- !u!222 &317863861
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3851,7 +3849,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Te dare algunos consejos \nque te podrian servir\npara jugar."
+  m_Text: "Te dar\xE9 algunos consejos \nque te podr\xEDan servir\npara jugar."
 --- !u!222 &408610939
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5848,7 +5846,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'En el juego, tendras una
 
-    barra de energia y dinero.'
+    barra de dinero.'
 --- !u!222 &492815007
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14490,7 +14488,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Bienvenido a senabpo!!
+  m_Text: Bienvenido a SENA BPO!!
 --- !u!222 &1486079227
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -16753,7 +16751,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: eres nuevo por aqui no?
+  m_Text: "Eres nuevo por aqu\xED, no?"
 --- !u!222 &1889908375
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -17579,7 +17577,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Si respondes mal se ira \ndisminuyendo, los empleados \npueden reaccionar
+  m_Text: "Si respondes mal se ir\xE1 \ndisminuyendo, los empleados \npueden reaccionar
     de varias\nmaneras."
 --- !u!222 &1993688149
 CanvasRenderer:
@@ -19269,7 +19267,6 @@ MonoBehaviour:
   coffeDecreasePerMinute: 5
   speedDecrease: 1
   coffeSlider: {fileID: 0}
-  timerText: {fileID: 0}
 --- !u!4 &7268196246086713276
 Transform:
   m_ObjectHideFlags: 0
@@ -19333,6 +19330,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedPC: 5
+  velocidadInicio: 10
   canMove: 1
 --- !u!212 &7268196246086713279
 SpriteRenderer:

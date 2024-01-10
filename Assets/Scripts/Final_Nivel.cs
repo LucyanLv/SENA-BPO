@@ -32,7 +32,7 @@ public class Final_Nivel : MonoBehaviour
         player.canMove = false;
         panelpreguntas.SetActive(false);
         canvas.SetActive(false);
-        if (manager.conteoBien > manager.conteoMal && manager.conteoBien >= PlayerPrefs.GetInt("questionsTotal") - 5)
+        if (manager.conteoBien > manager.conteoMal && manager.conteoBien >= Mathf.RoundToInt(PlayerPrefs.GetInt("questionsTotal") * 0.7f))
         {
             panelfinal.SetActive(true);
             puntos.SetActive(true);
