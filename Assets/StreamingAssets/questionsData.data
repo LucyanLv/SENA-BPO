@@ -1050,64 +1050,64 @@
             }
         ]
     }, {
-        "questionText": "El país ganador  en 1958, del mundial de fútbol fue",
+        "questionText": "Quién escribió cien años de soledad",
         "level": 0,
         "answerOptions": [{
-                "answerText": "Colombia",
+                "answerText": "Pedro Castañeda",
                 "isCorect": false,
                 " id ": 1
             }, {
-                "answerText": "Suecia",
+                "answerText": "Gabriel Garcia Marquez",
                 "isCorect": true,
                 "id": 2
             }, {
-                "answerText": "Brasil",
+                "answerText": "Reina Rodriguez",
                 "isCorect": false,
                 " id ": 3
             }, {
-                "answerText": "Alemania",
+                "answerText": "Erich Fromm",
                 "isCorect": false,
                 "id": 4
             }
         ]
     }, {
-        "questionText": "Hasta 2023, el país de américa que más mundiales de fútbol ha ganado es ",
+        "questionText": "En qué gobierno las mujeres pueden Votar?",
         "level": 0,
         "answerOptions": [{
-                "answerText": "Argentina",
+                "answerText": "Juan Manuel Santos",
                 "isCorect": false,
                 " id ": 1
             }, {
-                "answerText": "Brasil",
+                "answerText": "Gustavo Rojas Pinilla",
                 "isCorect": true,
                 "id": 2
             }, {
-                "answerText": "Chile",
+                "answerText": "Simon Bolivar",
                 "isCorect": false,
                 " id ": 3
             }, {
-                "answerText": "Ecuador",
+                "answerText": "Antonio Nariño",
                 "isCorect": false,
                 "id": 4
             }
         ]
     }, {
-        "questionText": "El primer  jugador colombiano que jugo en el Real Madrid es",
+        "questionText": "Quién es el fundador del SENA?",
         "level": 0,
         "answerOptions": [{
-                "answerText": "James Rodríguez",
+                "answerText": "Jorge Eduardo Londoño",
                 "isCorect": false,
                 " id ": 1
             }, {
-                "answerText": "Edwin Congo",
+                "answerText": "Carlos Mario Estrada",
                 "isCorect": false,
                 "id": 2
             }, {
-                "answerText": "Juan José Narváez",
+                "answerText": "Alfonso Prada",
                 "isCorect": false,
                 " id ": 3
             }, {
-                "answerText": "Freddy  Rincón",
+                "answerText": "Rodolfo Martínez Tono",
                 "isCorect": true,
                 "id": 4
             }
